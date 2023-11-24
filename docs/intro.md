@@ -1,6 +1,22 @@
 ---
+slug: /
 sidebar_position: 1
+title: Hello World
+description: the readme file
 ---
+
+# Hello World
+
+這個網站整理了一些我自己需要的筆記內容，由於自己一直存在著記憶力不太好的問題，覺得透過筆記來學習跟歸納可以幫助自己保存更多技術知識，就算一時忘記了也能快速查找筆記恢復記憶，是個不錯的方法。
+
+期望可以一直持續筆記下去！！
+
+# About Me
+
+* Software Developer
+* Self Learner
+* Cycling Enthusiast
+
 
 # Tutorial Intro
 
