@@ -33,6 +33,13 @@ const sidebars = {
         'Flutter/introduction'
       ],
     },
+    {
+      type: 'category',
+      label: 'Android',
+      items: [
+        'Android/introduction'
+      ],
+    },
     // {
     //   type: 'category',
     //   label: 'Tutorial',
