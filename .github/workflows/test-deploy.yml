@@ -2,7 +2,7 @@ name: Test deployment
 
 on:
   workflow_dispatch:
-  pull_request:
+  push:
     branches:
       - dev
     # Review gh actions docs if you want to further define triggers, paths, etc
@@ -17,7 +17,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: yarn
+          cache: 'npm'
+          cache-dependency-path: 'package-lock.json'
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
