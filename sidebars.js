@@ -21,6 +21,13 @@ const sidebars = {
     'intro',
     {
       type: 'category',
+      label: 'Markdown',
+      items: [
+        'Markdown/markdown-syntax'
+      ],
+    },
+    {
+      type: 'category',
       label: 'Dart',
       items: [
         'Dart/introduction'
