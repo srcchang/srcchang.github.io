@@ -2,7 +2,7 @@
 title: Markdown 語法筆記
 ---
 
-此篇紀錄關於 markdown 我較常用的寫作語法與最佳實踐。
+此篇文章紀錄關於 markdown 自己較常用的寫作語法與最佳實踐。
 
 ## Headings 標題
 
