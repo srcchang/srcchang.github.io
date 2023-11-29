@@ -4,7 +4,7 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -22,7 +22,7 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'srcchang', // Usually your GitHub org/user name.
   projectName: 'srcchang.github.io', // Usually your repo name.
-  trailingSlash:false,
+  trailingSlash: false,
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -88,7 +88,7 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          { to: '/blog', label: 'Blog', position: 'left' },
           // {
           //   href: 'https://github.com/facebook/docusaurus',
           //   label: 'GitHub',
@@ -147,6 +147,11 @@ const config = {
         additionalLanguages: ['dart', 'java']
       },
     }),
+
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
 };
 
 export default config;
