@@ -2,6 +2,8 @@
 title: Singleton Pattern 單例模式
 ---
 
+> It's important for some classes to have exactly one instance. Although there can be many printers in a system, there should be only one printer spooler. There should be only one file system and one window manager...
+
 確保該類別的物件只會有一個實例 (instance) 存在。
 
 * 會有一個 static property ***instance*** 來存這個類別實體的引用
@@ -44,5 +46,5 @@ class Singleton {
 final singleton = Singleton();
 ```
 
-
-
+參考：
+* [Design Patterns](https://en.wikipedia.org/wiki/Design_Patterns)
