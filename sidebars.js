@@ -56,7 +56,7 @@ const sidebars = {
         'Design Patterns/singleton',
         'Design Patterns/adapter',
         'Design Patterns/template-method',
-        'Design Patterns/composite',
+        'Design Patterns/composite/composite',
         'Design Patterns/strategy',
         'Design Patterns/state',
         'Design Patterns/facade',
