@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksrc_dev=self.webpackChunksrc_dev||[]).push([[3031],{3274:e=>{e.exports=JSON.parse('{"label":"facebook","permalink":"/ko-KR/blog/tags/facebook","allTagsPath":"/ko-KR/blog/tags","count":1,"unlisted":false}')}}]);
