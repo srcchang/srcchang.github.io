@@ -19,21 +19,21 @@ const sidebars = {
   // But you can create a sidebar manually
   docsSidebar: [
     'intro',
-    {
-      type: 'category',
-      label: 'Markdown',
-      items: [
-        'Markdown/markdown-syntax'
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Dart',
-      items: [
-        'Dart/syntax-basics',
-        'Dart/constructors',
-      ],
-    },
+    // {
+    //   type: 'category',
+    //   label: 'Markdown',
+    //   items: [
+    //     'Markdown/markdown-syntax'
+    //   ],
+    // },
+    // {
+    //   type: 'category',
+    //   label: 'Dart',
+    //   items: [
+    //     'Dart/syntax-basics',
+    //     'Dart/constructors',
+    //   ],
+    // },
     // {
     //   type: 'category',
     //   label: 'Flutter',
@@ -48,36 +48,36 @@ const sidebars = {
     //     'Android/introduction'
     //   ],
     // },
-    {
-      type: 'category',
-      label: 'Design Patterns',
-      items: [
-        'Design Patterns/intro',
-        'Design Patterns/singleton',
-        'Design Patterns/adapter',
-        'Design Patterns/template-method',
-        'Design Patterns/composite/composite',
-        'Design Patterns/strategy',
-        'Design Patterns/state',
-        'Design Patterns/facade',
-        'Design Patterns/interpreter',
-        'Design Patterns/iterator',
-        'Design Patterns/factory-method',
-        'Design Patterns/abstract-factory',
-        'Design Patterns/command',
-        'Design Patterns/memento',
-        'Design Patterns/prototype',
-        'Design Patterns/proxy',
-        'Design Patterns/decorator',
-        'Design Patterns/bridge',
-        'Design Patterns/builder',
-        'Design Patterns/flyweight',
-        'Design Patterns/chain-of-responsibility',
-        'Design Patterns/visitor',
-        'Design Patterns/mediator',
-        'Design Patterns/observer',
-      ],
-    },
+    // {
+    //   type: 'category',
+    //   label: 'Design Patterns',
+    //   items: [
+    //     'Design Patterns/intro',
+    //     'Design Patterns/singleton',
+    //     'Design Patterns/adapter',
+    //     'Design Patterns/template-method',
+    //     'Design Patterns/composite/composite',
+    //     'Design Patterns/strategy',
+    //     'Design Patterns/state',
+    //     'Design Patterns/facade',
+    //     'Design Patterns/interpreter',
+    //     'Design Patterns/iterator',
+    //     'Design Patterns/factory-method',
+    //     'Design Patterns/abstract-factory',
+    //     'Design Patterns/command',
+    //     'Design Patterns/memento',
+    //     'Design Patterns/prototype',
+    //     'Design Patterns/proxy',
+    //     'Design Patterns/decorator',
+    //     'Design Patterns/bridge',
+    //     'Design Patterns/builder',
+    //     'Design Patterns/flyweight',
+    //     'Design Patterns/chain-of-responsibility',
+    //     'Design Patterns/visitor',
+    //     'Design Patterns/mediator',
+    //     'Design Patterns/observer',
+    //   ],
+    // },
     // {
     //   type: 'category',
     //   label: 'Tutorial',
