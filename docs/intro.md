@@ -1,63 +1,82 @@
 ---
 slug: /
 sidebar_position: 1
-title: Hello World
-description: the readme file
+title: Project SRC
 ---
 
-# Hello World
+# About Project SRC
 
-<!-- 這個網站整理了一些我自己需要的筆記內容，由於自己一直存在著記憶力不太好的問題，覺得透過筆記來學習跟歸納可以幫助自己保存更多技術知識，就算一時忘記了也能快速查找筆記恢復記憶，是個不錯的方法。
+* Side Project made by a mobile app developer
+* Created a series of Mobile Apps based on my own needs
+* Firebase serverless architecture
+* Flutter cross-platform framework
 
-期望可以一直持續筆記下去！！ -->
+## Amusement Parks
 
-# About Me
+### Universal Studios Japan Waiting Time
 
-* Software Developer
-* Self Learner
-* Cycling Enthusiast
+[![usj](./img/usj_logo.png)](usj)
 
+We provide real-time info on waiting times to help you plan your trip to Universal Studios Japan.
 
-# Tutorial Intro
+### Universal Studios Singapore Waiting Time
 
-Let's discover **Docusaurus in less than 5 minutes**.
+[![uss](./img/uss_logo.png)](uss)
 
-## Getting Started
+We provide real-time/history waiting time to help you plan your trip to Universal Studios Singapore.
 
-Get started by **creating a new site**.
+### Tokyo DisneySea Waiting Time
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+[![tds](./img/tds_logo.png)](tds)
 
-### What you'll need
+We provide real-time info on waiting times to help you plan your trip to Tokyo DisneySea.
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+## Driving License Test
 
-## Generate a new site
+### 2023 Taiwan Driving License Test Tips for Motorcycle
 
-Generate a new Docusaurus site using the **classic template**.
+[![dlm](./img/dlm_logo.png)](dlm)
 
-The classic template will automatically be added to your project after you run the command:
+Provides useful information for 2023 Taiwan motorcycle driving license test.
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+### 2023 Taiwan Driving License Test Tips for Automobile
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+[![dla](./img/dla_logo.png)](dla)
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+Provides useful information for 2023 Taiwan automobile driving license test.
 
-## Start your site
+## Weather Forecast
 
-Run the development server:
+### 天氣助理 - 與昨日氣溫對比更好掌握
 
-```bash
-cd my-website
-npm run start
-```
+[![wea](./img/wea_logo.png)](wea)
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+提供昨日氣溫與今日預報對比，讓您更好掌握天氣動態，預先防範大幅度的天氣改變。
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+## Route Database
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+### CyclingMap - Taiwan Cycling Routes Database
+
+[![cyc](./img/cyc_logo.png)](cyc)
+
+Collecting bicycle routes from various regions of Taiwan.
+
+## Open Data
+
+### 水庫水情e把抓 - 台灣即時水庫水情
+
+[![res](./img/res_logo.png)](res)
+
+使用經濟部水利署提供的 Open Data 來呈現台灣即時水庫/水壩水情，提供視覺化的即時蓄水量與水庫狀態。
+
+### 浪浪不流浪 - 台灣流浪動物認養/領養資料庫
+
+[![pet](./img/pet_logo.png)](pet)
+
+浪浪不流浪是等待認養/領養的流浪動物資料庫，使用行政院農業委員會提供的 Open Data，並以照片為主的顯示方式，方便快速瀏覽與尋找您想照顧的浪浪們。
+
+### 求職放大鏡 - 快速找公職 / 找工作
+
+[![gov](./img/gov_logo.png)](gov)
+
+找工作嗎？整理行政院人事行政總處以及台灣就業通所公告的職缺列表，方便您快速整理想要的職缺，讓您的求職更順利。 

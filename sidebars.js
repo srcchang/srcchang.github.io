@@ -19,6 +19,16 @@ const sidebars = {
   // But you can create a sidebar manually
   docsSidebar: [
     'intro',
+    'usj',
+    'uss',
+    'tds',
+    'dlm',
+    'dla',
+    'wea',
+    'cyc',
+    'res',
+    'pet',
+    'gov',
     // {
     //   type: 'category',
     //   label: 'Markdown',

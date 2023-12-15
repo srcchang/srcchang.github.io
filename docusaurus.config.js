@@ -8,7 +8,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'src.dev',
+  title: 'Project SRC',
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon-src.ico',
 
@@ -32,7 +32,25 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    // locales: ['en', 'zh-TW', 'zh-CN', 'ja-JP', 'ko-KR'],
+    locales: ['en', 'zh-TW'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+      },
+      'zh-TW': {
+        label: '繁體中文',
+      },
+      // 'zh-CN': {
+      //   label: '简体中文',
+      // },
+      // 'ja-JP': {
+      //   label: '日本語',
+      // },
+      // 'ko-KR': {
+      //   label: '한국인',
+      // }
+    }
   },
 
   presets: [
@@ -76,9 +94,9 @@ const config = {
         disableSwitch: true,
       },
       navbar: {
-        title: 'src.dev',
+        title: 'Project SRC',
         logo: {
-          alt: 'src.dev',
+          alt: 'Project SRC',
           src: 'img/logo-src.svg',
         },
         items: [
@@ -86,14 +104,18 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'docsSidebar',
             position: 'left',
-            label: 'Docs',
+            label: 'Apps',
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
+          // { to: '/blog', label: 'Blog', position: 'left' },
           // {
           //   href: 'https://github.com/facebook/docusaurus',
           //   label: 'GitHub',
           //   position: 'right',
           // },
+          {
+            type: 'localeDropdown',
+            position: 'right'
+          }
         ],
       },
       footer: {

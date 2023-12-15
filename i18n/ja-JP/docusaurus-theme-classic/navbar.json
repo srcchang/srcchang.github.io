@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "Project SRC",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Project SRC",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Apps": {
+    "message": "Apps",
+    "description": "Navbar item with label Apps"
+  }
+}
