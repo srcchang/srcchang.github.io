@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksrc_dev=self.webpackChunksrc_dev||[]).push([[8350],{3196:e=>{e.exports=JSON.parse('{"permalink":"/ja-JP/blog/tags/hola","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
