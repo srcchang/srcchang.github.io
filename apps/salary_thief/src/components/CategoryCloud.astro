@@ -1,0 +1,27 @@
+---
+import type { Locale } from '../i18n/config';
+import { getTranslations, t } from '../i18n/translations';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const tr = getTranslations(locale);
+const cat = t(tr, 'categories') as any;
+---
+
+<section class="py-16 md:py-24 bg-bg-muted/50" data-reveal>
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="text-center mb-10">
+      <h2 class="font-brand font-bold text-h1 mb-3">{cat.title}</h2>
+      <p class="text-body-lg text-text-secondary">{cat.subtitle}</p>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-2 max-w-2xl mx-auto">
+      {cat.tags.map((tag: string) => (
+        <span class="category-tag">{tag}</span>
+      ))}
+    </div>
+  </div>
+</section>

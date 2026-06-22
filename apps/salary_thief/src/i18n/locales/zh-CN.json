@@ -1,0 +1,415 @@
+{
+  "404": {
+    "title": "页面不存在",
+    "desc": "你似乎迷路了，这不是划水的好地方",
+    "cta": "回到首页"
+  },
+  "meta": {
+    "brand": "Salary Thief 摸鱼账本"
+  },
+  "nav": {
+    "logo": "摸鱼账本",
+    "features": "功能特色",
+    "achievements": "成就徽章",
+    "faq": "常见问题",
+    "download": "下载 App",
+    "about": "关于我们",
+    "share": "分享卡片",
+    "themeToggle": "切换深浅色模式",
+    "menu": "菜单",
+    "langLabel": "切换语言"
+  },
+  "hero": {
+    "badge": "上班族都在用的划水神器",
+    "title1": "划水，也是一种才能",
+    "title2": "把你的休息时间，变成看得见的工资",
+    "subtitle": "一键计时 · 即时薪资换算 · 趣味成就徽章",
+    "cta": "免费下载",
+    "timerLabel": "即时换算",
+    "demo": {
+      "timerLabel": "划水计时器",
+      "status": "计时中",
+      "rate": 50,
+      "rateText": "时薪",
+      "categories": [
+        "☕ 咖啡",
+        "📱 刷手机",
+        "💭 发呆"
+      ]
+    }
+  },
+  "trust": {
+    "languages": "支持语言",
+    "languagesSuffix": "",
+    "achievements": "成就徽章",
+    "achievementsSuffix": "",
+    "privacy": "数据本地储存",
+    "privacySuffix": "%",
+    "platformsLabel": "iOS + Android",
+    "platformsSuffix": ""
+  },
+  "timer": {
+    "title": "算算你划水值多少钱",
+    "subtitle": "输入你的时薪，按开始计时，看看不知不觉中你偷了多少工资",
+    "rateLabel": "你的时薪",
+    "perHour": "/ 小时",
+    "defaultRate": 50,
+    "presets": [
+      {
+        "label": "最低工资",
+        "rate": 24
+      },
+      {
+        "label": "平均薪资",
+        "rate": 50
+      },
+      {
+        "label": "高薪族群",
+        "rate": 120
+      }
+    ],
+    "start": "▶ 开始划水",
+    "stop": "⏸ 暂停",
+    "reset": "重新计时",
+    "timeLabel": "划水时间",
+    "earnedLabel": "偷到的工资"
+  },
+  "features": {
+    "title": "为什么选择摸鱼账本？",
+    "subtitle": "把上班的小休息，变成每天的小确幸",
+    "items": [
+      {
+        "title": "一键计时器",
+        "desc": "轻触开始，即时把划水时间换算成工资"
+      },
+      {
+        "title": "每日每月统计",
+        "desc": "精美图表呈现你的划水记录、趋势与分类占比"
+      },
+      {
+        "title": "连续划水天数",
+        "desc": "记录你的 Streak，看看自己连续几天没认真上班"
+      },
+      {
+        "title": "趣味成就系统",
+        "desc": "解锁各种划水成就，累积你的里程碑"
+      },
+      {
+        "title": "年假进度计算",
+        "desc": "把划水时间换算成偷到的年假天数"
+      },
+      {
+        "title": "快速补记功能",
+        "desc": "忘了计时也没关系，手动输入时间和类别"
+      }
+    ]
+  },
+  "stats": {
+    "title": "你的划水数据，比你想象的精彩",
+    "subtitle": "精美的统计图表，让你回顾每一天的「努力成果」",
+    "daily": "每日统计",
+    "dailyDesc": "饼图一目了然：今天划水都花在什么地方？",
+    "monthly": "每月趋势",
+    "monthlyDesc": "柱状图显示整月变化，看看哪周最「认真」",
+    "streak": "连续偷薪",
+    "streakDesc": "连续天数记录，断了就要重新累积",
+    "pto": "年假进度",
+    "ptoDesc": "把划水时间换算成偷到几天年假",
+    "demo": {
+      "cat1": "☕ 咖啡",
+      "cat2": "📱 刷手机",
+      "streakUnit": "天",
+      "streakText": "连续 {n} 天",
+      "ptoUnit": "天",
+      "ptoGoal": "目标 {n} 天"
+    }
+  },
+  "achievements": {
+    "title": "划水成就殿堂",
+    "subtitle": "21 个趣味徽章等你来解锁",
+    "categories": {
+      "time": "时间类",
+      "amount": "金额类",
+      "category": "类别类",
+      "pto": "年假类"
+    },
+    "items": {
+      "first_record": "初试啼声",
+      "first_record_desc": "完成第一笔划水记录",
+      "streak_7": "一周连划",
+      "streak_7_desc": "连续 7 天都有划水记录",
+      "streak_30": "满月全勤",
+      "streak_30_desc": "连续 30 天不间断划水",
+      "coffee_50": "咖啡达人",
+      "coffee_50_desc": "累积 50 次咖啡时间",
+      "fake_600": "会议魔人",
+      "fake_600_desc": "假装开会 600 次",
+      "social_600": "社交之王",
+      "social_600_desc": "刷手机 600 次"
+    },
+    "more": "+ 还有 {count} 个成就等你解锁！"
+  },
+  "categories": {
+    "title": "各种划水方式，应有尽有",
+    "subtitle": "21 种预设分类 + 自订类别，每种划水都值得被记录",
+    "tags": [
+      "☕ 咖啡时间",
+      "📱 刷手机",
+      "💭 发呆放空",
+      "📋 假装开会",
+      "🚬 抽烟休息",
+      "🛒 线上购物",
+      "📺 追剧",
+      "🎮 偷玩游戏",
+      "📖 看小说",
+      "💬 跟同事聊天",
+      "🪟 看窗外",
+      "🚻 上厕所",
+      "🏃 出去走走",
+      "📞 私人电话",
+      "🍜 吃东西",
+      "🧹 假装整理",
+      "📝 写笔记",
+      "🎧 听音乐",
+      "📸 刷社群",
+      "💻 逛网页",
+      "✍️ 划水装忙"
+    ]
+  },
+  "shareCards": {
+    "title": "把你的战绩分享出去",
+    "subtitle": "一键生成精美数据卡，跟同事朋友炫耀你的划水成果",
+    "types": {
+      "daily": "日报卡片",
+      "weekly": "周报卡片",
+      "monthly": "月报卡片",
+      "achievement": "成就卡片",
+      "single": "单次记录"
+    },
+    "cta": "下载 App 制作你的专属卡片",
+    "cards": {
+      "watermark": "摸鱼账本 — 记录你的上班小确幸",
+      "daily": {
+        "title": "今日摸鱼日报",
+        "amount": "1,250",
+        "stats": [
+          "时间：1h 30m",
+          "次数：5"
+        ]
+      },
+      "weekly": {
+        "title": "本周摸鱼周报",
+        "amount": "8,400",
+        "stats": [
+          "6h 20m 总时长",
+          "28 次记录"
+        ]
+      },
+      "monthly": {
+        "title": "六月 摸鱼月报",
+        "amount": "32,000",
+        "stats": [
+          "总时长：26h",
+          "记录次数：112",
+          "最爱类别：咖啡"
+        ]
+      },
+      "single": {
+        "title": "上班摸鱼记录",
+        "amount": "260",
+        "stats": [
+          "25 分钟",
+          "2026/06/13"
+        ]
+      },
+      "achievement": {
+        "title": "解锁成就",
+        "name": "初试啼声",
+        "desc": "完成第一笔划水记录",
+        "date": "解锁于 2026/06/13"
+      }
+    }
+  },
+  "currency": {
+    "title": "不管你在哪个国家上班",
+    "subtitle": "划水的价值都看得到",
+    "support": "支持多种货币：TWD · USD · JPY · KRW · CNY"
+  },
+  "faq": {
+    "title": "常见问题",
+    "viewAll": "查看全部常见问题",
+    "metaDesc": "摸鱼账本常见问题：免费吗？老板会知道吗？支持哪些货币与语言？",
+    "items": [
+      {
+        "q": "摸鱼账本是免费的吗？",
+        "a": "是的！基础功能完全免费。部分进阶功能可通过观看广告解锁。"
+      },
+      {
+        "q": "老板会知道我在用吗？",
+        "a": "绝对不会。所有资料只储存在你的手机本地，不上传、不同步、不追踪。"
+      },
+      {
+        "q": "支援哪些货币和语言？",
+        "a": "支援 TWD、USD、JPY、KRW、CNY 五种货币，以及简繁中文、English、日本語、한국어 五种语言。"
+      },
+      {
+        "q": "忘记计时怎么办？",
+        "a": "别担心！App 提供「快速补记」功能，随时补上遗漏的记录。"
+      }
+    ]
+  },
+  "brand": {
+    "title": "关于摸鱼账本",
+    "story": "每个上班族都需要喘息的空间。摸鱼账本把日常的小休息变成有趣的数字游戏。",
+    "mission": "我们相信，工作不只是数字，休息也是一种艺术。",
+    "ctaTitle": "准备好开始划水了吗？",
+    "ctaSubtitle": "下载摸鱼账本，把你的休息时间变成成就感"
+  },
+  "footer": {
+    "product": "产品",
+    "productDesc": "摸鱼账本 - 上班族划水计时器",
+    "legal": "法律",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "contact": "联系我们",
+    "email": "srcchang@gmail.com",
+    "copyright": "© 2026 Project SRC. All rights reserved."
+  },
+  "about": {
+    "title": "关于摸鱼账本",
+    "metaTitle": "关于摸鱼账本 — Salary Thief",
+    "metaDesc": "了解摸鱼账本的品牌理念与开发故事",
+    "alt": {
+      "welcome": "欢迎画面",
+      "salary": "薪资设定",
+      "workHours": "工时设定"
+    },
+    "story": [
+      "摸鱼账本的诞生，来自一个简单的念头：为什么上班划水这么开心，却没有人把这个开心量化？",
+      "我们是一群相信「休息也是生产力」的开发者。",
+      "所有资料都留在你的手机，没有账号、没有云端、没有追踪。"
+    ],
+    "values": [
+      {
+        "title": "隐私优先",
+        "desc": "不收集任何个人资料"
+      },
+      {
+        "title": "幽默看待",
+        "desc": "用轻松的态度面对工作的压力"
+      },
+      {
+        "title": "品质至上",
+        "desc": "精美的设计与流畅的体验"
+      }
+    ],
+    "cta": "立即下载摸鱼账本"
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "metaTitle": "隐私政策 — Salary Thief 摸鱼账本",
+    "metaDesc": "摸鱼账本的隐私政策说明",
+    "content": [
+      {
+        "heading": "资料收集与储存",
+        "body": "摸鱼账本（Salary Thief）重视您的隐私。我们本身不会收集或上传您的个人资料——所有摸鱼记录、设置与成就均仅储存在您手机的本地空间。但本 App 集成的第三方 SDK（详见下方）会收集设备与匿名使用资料。"
+      },
+      {
+        "heading": "第三方服务",
+        "body": "本 App 使用 Firebase Analytics 与 Crashlytics 分析使用情况并上报崩溃，并使用 Google AdMob 提供广告。这些服务可能收集设备标识符、大致位置与匿名使用数据。App 内购买由 Apple App Store 或 Google Play 处理，我们不会接触您的付款信息。"
+      },
+      {
+        "heading": "广告与追踪",
+        "body": "App 内含 Google AdMob 广告。为提供个性化广告，AdMob 可能使用您的广告标识符（iOS 的 IDFA 或 Android 的广告 ID）。在 iOS 上，我们会依据 App Tracking Transparency（ATT）机制征求您的同意；您可随时在设备「设置」中关闭个性化广告或重置广告标识符。"
+      },
+      {
+        "heading": "儿童隐私",
+        "body": "本 App 并非针对 13 岁以下儿童设计，我们不会在知情情况下收集儿童的个人资料。"
+      },
+      {
+        "heading": "资料安全与删除",
+        "body": "由于所有用户资料均储存在本地、不经由我们的服务器传输，您的摸鱼秘密能获得高度安全保障。卸载本 App 即会删除设备上的所有相关资料。"
+      },
+      {
+        "heading": "您的权利与第三方政策",
+        "body": "您可通过设备设置管理广告偏好。关于第三方如何处理数据，请参阅 Google 隐私政策（policies.google.com/privacy）及 Google AdMob 相关政策。"
+      },
+      {
+        "heading": "政策变更",
+        "body": "本隐私政策可能不定时更新，更新后将在本页标示最后更新日期。变更后继续使用本 App，即表示您同意更新后的政策。"
+      },
+      {
+        "heading": "联系我们",
+        "body": "如有任何隐私相关疑问，请来信 srcchang@gmail.com。"
+      }
+    ],
+    "lastUpdated": "最后更新：2026 年 6 月 14 日"
+  },
+  "terms": {
+    "title": "服务条款",
+    "metaTitle": "服务条款 — Salary Thief 摸鱼账本",
+    "metaDesc": "摸鱼账本的服务条款",
+    "content": [
+      {
+        "heading": "接受条款",
+        "body": "下载或使用摸鱼账本（Salary Thief）即表示您同意本服务条款。如不同意，请勿使用本 App。"
+      },
+      {
+        "heading": "使用资格",
+        "body": "您须年满 13 岁（或您所在地区法律规定的最低年龄）方可使用本 App；未达该年龄者，须经父母或监护人同意并在其监督下使用。"
+      },
+      {
+        "heading": "使用授权",
+        "body": "我们授予您个人的、非专属的、不可转让且可撤回的有限授权，在您持有或控制的 iOS 或 Android 设备上使用本 App。"
+      },
+      {
+        "heading": "付费项目",
+        "body": "本 App 提供 App 内购买（如移除广告、解锁功能或订阅）。所有付款、计费与退款均由 Apple App Store 或 Google Play 依其政策处理；退款请依各平台规定申请，我们无法直接受理。"
+      },
+      {
+        "heading": "免责声明",
+        "body": "本 App 仅供娱乐用途，并按「现状」提供，不附任何明示或默示的担保。所有计算结果仅供参考，不构成财务、税务或法律建议。在法律允许的最大范围内，开发者不对因使用本 App 所产生的任何直接或间接损害负责。"
+      },
+      {
+        "heading": "知识产权",
+        "body": "本 App 及其所有内容、商标与设计均为 SRC 所有，未经授权不得复制、修改或散布。"
+      },
+      {
+        "heading": "应用商店条款",
+        "body": "通过 Apple App Store 或 Google Play 下载及使用本 App，亦受各该平台条款约束。就 iOS 版本而言，Apple 并非本条款的缔约方，但为本条款的第三方受益人，并有权据以对您执行本条款。"
+      },
+      {
+        "heading": "服务变更",
+        "body": "我们保留随时修改、暂停或终止服务的权利，恕不另行通知。"
+      },
+      {
+        "heading": "准据法与管辖",
+        "body": "本条款以中华民国（台湾）法律为准据法，因本条款所产生的争议，以台湾台北地方法院为第一审管辖法院。"
+      },
+      {
+        "heading": "联系我们",
+        "body": "如对本条款有任何疑问，请来信 srcchang@gmail.com。"
+      }
+    ],
+    "lastUpdated": "最后更新：2026 年 6 月 14 日"
+  },
+  "shareGallery": {
+    "title": "分享卡片展示",
+    "metaTitle": "分享卡片 — Salary Thief 摸鱼账本",
+    "metaDesc": "看看摸鱼账本的精美分享卡片",
+    "subtitle": "一键生成精美数据卡片，分享你的划水成果",
+    "daily": "日报卡片",
+    "dailyDesc": "每日划水摘要",
+    "weekly": "周报卡片",
+    "weeklyDesc": "一周划水趋势",
+    "monthly": "月报卡片",
+    "monthlyDesc": "整月划水总回顾",
+    "achievement": "成就卡片",
+    "achievementDesc": "解锁新成就的庆祝时刻",
+    "single": "单次记录卡",
+    "singleDesc": "每次划水都可以产出精美记录卡",
+    "cta": "下载摸鱼账本，制作你的专属卡片",
+    "milestone": "里程碑卡片",
+    "milestoneDesc": "达成重要里程碑的纪念卡片"
+  }
+}

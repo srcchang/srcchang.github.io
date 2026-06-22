@@ -1,0 +1,101 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/nunito';
+@import '@fontsource/fredoka/400.css';
+@import '@fontsource/fredoka/500.css';
+@import '@fontsource/fredoka/600.css';
+@import '@fontsource/fredoka/700.css';
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Brand colors — Hub 採 indigo，與各子站區隔 */
+  --color-brand: #4F46E5;
+  --color-brand-light: #6366F1;
+  --color-brand-deep: #4338CA;
+  --color-accent: #DB2777;
+
+  /* Light mode */
+  --color-bg-primary: #F8FAFC;
+  --color-bg-surface: #FFFFFF;
+  --color-bg-muted: #F1F5F9;
+  --color-text-primary: #0F172A;
+  --color-text-secondary: #64748B;
+  --color-text-tertiary: #94A3B8;
+  --color-border-subtle: #E2E8F0;
+  --color-border-strong: #CBD5E1;
+
+  /* Typography */
+  --font-brand: 'Fredoka', system-ui, sans-serif;
+  --font-body: 'Nunito Variable', system-ui, sans-serif;
+  --font-sans: 'Nunito Variable', system-ui, sans-serif;
+
+  --text-hero: clamp(2.75rem, 6vw, 4.5rem);
+  --text-h1: clamp(2rem, 4.5vw, 3rem);
+  --text-h2: clamp(1.5rem, 3.5vw, 2.25rem);
+  --text-h3: clamp(1.125rem, 2.5vw, 1.5rem);
+  --text-body-lg: clamp(1rem, 1.8vw, 1.25rem);
+  --text-body: 1rem;
+  --text-sm: 0.875rem;
+  --text-caption: 0.75rem;
+}
+
+/* Dark mode overrides */
+.dark {
+  --color-bg-primary: #0F172A;
+  --color-bg-surface: #1E293B;
+  --color-bg-muted: #1E293B;
+  --color-text-primary: #F1F5F9;
+  --color-text-secondary: #94A3B8;
+  --color-text-tertiary: #64748B;
+  --color-border-subtle: #334155;
+  --color-border-strong: #475569;
+  --color-brand: #818CF8;
+  --color-brand-deep: #6366F1;
+  --color-accent: #F472B6;
+}
+
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Scroll reveal */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+[data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+[data-reveal-delay="100"] { transition-delay: 100ms; }
+[data-reveal-delay="200"] { transition-delay: 200ms; }
+[data-reveal-delay="300"] { transition-delay: 300ms; }
+
+/* Card */
+.card-border {
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 16px;
+  background: var(--color-bg-surface);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+.card-border:hover {
+  border-color: var(--color-brand);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+.dark .card-border:hover {
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  [data-reveal] { opacity: 1; transform: none; }
+}

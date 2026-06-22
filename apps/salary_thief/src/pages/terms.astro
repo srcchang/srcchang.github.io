@@ -1,0 +1,25 @@
+---
+// 非語系前綴轉址頁：供 App 內嵌 WebView 以 /terms?embed=true&lang=xx 進入，
+// 前端讀 ?lang= 轉址到對應語系的 /{lang}/terms（保留 embed）。
+// 靜態站無法在 build 期讀 query param，故用 runtime inline script 處理。
+---
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex" />
+  <title>Terms of Service</title>
+  <script is:inline>
+    (function () {
+      var p = new URLSearchParams(location.search);
+      var supported = ['zh-TW', 'zh-CN', 'en', 'ja', 'ko'];
+      var lang = p.get('lang');
+      if (supported.indexOf(lang) === -1) lang = 'zh-TW';
+      var embed = p.get('embed') === 'true' ? '?embed=true' : '';
+      // 子站部署於 /salary_thief 路徑下，轉址需帶 base 前綴。
+      location.replace('/salary_thief/' + lang + '/terms' + embed);
+    })();
+  </script>
+</head>
+<body></body>
+</html>

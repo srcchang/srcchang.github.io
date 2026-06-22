@@ -1,0 +1,47 @@
+---
+import type { Locale } from '../i18n/config';
+import { withBase } from '../i18n/config';
+import { getTranslations, t } from '../i18n/translations';
+import ShareCard from './ShareCard.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const tr = getTranslations(locale);
+const sc = t(tr, 'shareCards') as any;
+
+const types = ['daily', 'weekly', 'monthly', 'achievement', 'single'] as const;
+const labelKeys: Record<(typeof types)[number], string> = {
+  daily: 'daily',
+  weekly: 'weekly',
+  monthly: 'monthly',
+  achievement: 'achievement',
+  single: 'single',
+};
+---
+
+<section class="py-16 md:py-24" data-reveal>
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="text-center mb-10">
+      <h2 class="font-brand font-bold text-h1 mb-3">{sc.title}</h2>
+      <p class="text-body-lg text-text-secondary">{sc.subtitle}</p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 max-w-3xl mx-auto">
+      {types.map((type) => (
+        <div class="text-center">
+          <ShareCard type={type} locale={locale} />
+          <div class="font-brand font-semibold text-xs mt-2">{sc.types[labelKeys[type]]}</div>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-8">
+      <a href={withBase(`/${locale}/share`)} class="inline-flex items-center gap-1.5 text-sm text-brand hover:text-brand-deep font-semibold no-underline transition-colors">
+        {sc.cta} →
+      </a>
+    </div>
+  </div>
+</section>

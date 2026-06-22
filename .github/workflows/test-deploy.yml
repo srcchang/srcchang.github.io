@@ -1,26 +1,25 @@
-name: Test deployment
+name: Build check
 
 on:
   workflow_dispatch:
-  push:
+  pull_request:
     branches:
-      - dev
-    # Review gh actions docs if you want to further define triggers, paths, etc
-    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
+      - main
 
 jobs:
-  test-deploy:
-    name: Test deployment
+  build-check:
+    name: Build check
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
           cache: 'npm'
           cache-dependency-path: 'package-lock.json'
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
-      - name: Test build website
-        run: yarn build
+        run: npm ci
+
+      - name: Build all Astro sites
+        run: npm run build

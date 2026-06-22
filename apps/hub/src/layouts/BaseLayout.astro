@@ -1,0 +1,84 @@
+---
+import '../styles/global.css';
+import { locales, stripLocale, ogLocales, withBase, type Locale } from '../i18n/config';
+
+interface Props {
+  title: string;
+  description: string;
+  locale: string;
+  currentPath: string;
+  ogImage?: string;
+  noindex?: boolean;
+}
+
+const { title, description, locale, currentPath, ogImage, noindex = false } = Astro.props;
+const site = Astro.site?.href.replace(/\/$/, '') ?? 'https://srcchang.github.io';
+const siteName = 'Project SRC';
+const canonical = `${site}${withBase(currentPath)}`;
+const ogImg = ogImage || `${site}${withBase('/og-default.jpg')}`;
+const basePath = stripLocale(currentPath);
+---
+
+<!DOCTYPE html>
+<html lang={locale} class="scroll-smooth overflow-x-hidden">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  {noindex && <meta name="robots" content="noindex, follow" />}
+  <link rel="canonical" href={canonical} />
+  <meta name="theme-color" content="#4F46E5" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0F172A" media="(prefers-color-scheme: dark)" />
+  <script is:inline>
+    (function () {
+      var theme = localStorage.getItem('theme');
+      if (theme === 'dark' || (!theme && matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+  {locales.map((l) => (
+    <link rel="alternate" hrefLang={l} href={`${site}${withBase(`/${l}${basePath}`)}`} />
+  ))}
+  <link rel="alternate" hrefLang="x-default" href={`${site}${withBase('/zh-TW/')}`} />
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content={siteName} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  {/* TODO: og-default.jpg 沿用舊社群卡為 1200x675（16:9），非 OG 標準 1200x630；
+       分享預覽可能輕微裁切。日後可換一張 1200x630 的圖。 */}
+  <meta property="og:image" content={ogImg} />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content={ogLocales[locale as Locale] ?? locale} />
+  {locales
+    .filter((l) => l !== locale)
+    .map((l) => <meta property="og:locale:alternate" content={ogLocales[l]} />)}
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImg} />
+
+  <link rel="icon" href={withBase('/favicon-src.ico')} />
+
+  <!-- Google Analytics (sticky from previous site) -->
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-DXESCMJLZF"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DXESCMJLZF', { anonymize_ip: true });
+  </script>
+
+  <script>
+    import '../scripts/scroll-reveal';
+  </script>
+</head>
+<body class="bg-bg-primary text-text-primary font-body antialiased overflow-x-hidden">
+  <slot />
+</body>
+</html>

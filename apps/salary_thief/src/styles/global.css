@@ -1,0 +1,217 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/nunito';
+@import '@fontsource/fredoka/400.css';
+@import '@fontsource/fredoka/500.css';
+@import '@fontsource/fredoka/600.css';
+@import '@fontsource/fredoka/700.css';
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Brand colors (from App) */
+  --color-brand: #15803D;
+  --color-brand-light: #22C55E;
+  --color-brand-deep: #166534;
+  --color-accent: #D97706;
+  --color-accent-light: #F59E0B;
+  --color-accent-deep: #B45309;
+
+  /* Light mode */
+  --color-bg-primary: #F8FAFC;
+  --color-bg-surface: #FFFFFF;
+  --color-bg-muted: #F1F5F9;
+  --color-text-primary: #0F172A;
+  --color-text-secondary: #64748B;
+  --color-text-tertiary: #94A3B8;
+  --color-border-subtle: #E2E8F0;
+  --color-border-strong: #CBD5E1;
+
+  /* Status */
+  --color-success: #16A34A;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+  --color-info: #3B82F6;
+
+  /* Typography */
+  --font-brand: 'Fredoka', system-ui, sans-serif;
+  --font-body: 'Nunito Variable', system-ui, sans-serif;
+  --font-sans: 'Nunito Variable', system-ui, sans-serif;
+
+  /* Font sizes - Tailwind v4: --text-{name} generates text-{name} utility */
+  --text-hero: clamp(2.75rem, 6vw, 4rem);
+  --text-h1: clamp(2rem, 4.5vw, 3rem);
+  --text-h2: clamp(1.5rem, 3.5vw, 2.25rem);
+  --text-h3: clamp(1.125rem, 2.5vw, 1.5rem);
+  --text-body-lg: clamp(1rem, 1.8vw, 1.25rem);
+  --text-body: 1rem;
+  --text-sm: 0.875rem;
+  --text-caption: 0.75rem;
+}
+
+/* Dark mode overrides */
+.dark {
+  --color-bg-primary: #0F172A;
+  --color-bg-surface: #1E293B;
+  --color-bg-muted: #1E293B;
+  --color-text-primary: #F1F5F9;
+  --color-text-secondary: #94A3B8;
+  --color-text-tertiary: #64748B;
+  --color-border-subtle: #334155;
+  --color-border-strong: #475569;
+  --color-brand: #22C55E;
+  --color-brand-deep: #16A34A;
+  --color-accent: #F59E0B;
+  --color-accent-deep: #D97706;
+}
+
+/* Visible keyboard focus ring for all interactive elements */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Scroll reveal animation */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+[data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-reveal-delay="100"] { transition-delay: 100ms; }
+[data-reveal-delay="200"] { transition-delay: 200ms; }
+[data-reveal-delay="300"] { transition-delay: 300ms; }
+[data-reveal-delay="400"] { transition-delay: 400ms; }
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes coin-spin {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+.animate-coin-spin {
+  animation: coin-spin 2s ease-in-out infinite;
+}
+
+/* Phone mockup */
+.phone-frame {
+  width: 240px;
+  height: 480px;
+  border-radius: 36px;
+  border: 3px solid var(--color-border-subtle);
+  background: var(--color-bg-surface);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.dark .phone-frame {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.phone-notch {
+  width: 120px;
+  height: 28px;
+  background: #1a1a2e;
+  border-radius: 0 0 16px 16px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+/* Timer digits animation */
+.timer-digit {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+  transition: transform 0.15s ease-out;
+}
+
+/* Category tag cloud */
+.category-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.813rem;
+  font-weight: 500;
+  border: 1px solid var(--color-border-subtle);
+  transition: all 0.2s ease;
+}
+
+.category-tag:hover {
+  border-color: var(--color-brand);
+  background: color-mix(in srgb, var(--color-brand) 8%, transparent);
+}
+
+/* Card with border style (matching App) */
+.card-border {
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 12px;
+  background: var(--color-bg-surface);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-border:hover {
+  border-color: var(--color-border-strong);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.dark .card-border:hover {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* App 內嵌模式（?embed=true）：隱藏 nav/footer 等 chrome，並縮小為 fixed nav 預留的頂部間距 */
+html.embed [data-embed-hide] {
+  display: none !important;
+}
+
+html.embed .legal-shell {
+  padding-top: 1.5rem;
+}

@@ -1,0 +1,67 @@
+---
+import type { Locale } from '../i18n/config';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from './Nav.astro';
+import Footer from './Footer.astro';
+import DownloadCTA from './DownloadCTA.astro';
+import ShareCard from './ShareCard.astro';
+import { getTranslations, t } from '../i18n/translations';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const tr = getTranslations(locale);
+const sg = t(tr, 'shareGallery') as any;
+
+type CardType = 'daily' | 'weekly' | 'monthly' | 'achievement' | 'single';
+const cardInfo: { type: CardType; labelKey: string; descKey: string }[] = [
+  { type: 'daily', labelKey: 'daily', descKey: 'dailyDesc' },
+  { type: 'weekly', labelKey: 'weekly', descKey: 'weeklyDesc' },
+  { type: 'monthly', labelKey: 'monthly', descKey: 'monthlyDesc' },
+  { type: 'achievement', labelKey: 'achievement', descKey: 'achievementDesc' },
+  { type: 'single', labelKey: 'single', descKey: 'singleDesc' },
+];
+---
+
+<BaseLayout
+  title={sg.metaTitle}
+  description={sg.metaDesc}
+  locale={locale}
+  currentPath={`/${locale}/share`}
+>
+  <Nav locale={locale} currentPath={`/${locale}/share`} />
+  <div class="pt-24 pb-16 relative overflow-hidden">
+    <!-- Decorative glows -->
+    <div class="absolute top-10 right-0 w-72 h-72 opacity-[0.04] dark:opacity-[0.06] pointer-events-none">
+      <svg viewBox="0 0 200 200" fill="#15803D"><circle cx="100" cy="100" r="80"/></svg>
+    </div>
+    <div class="absolute bottom-0 left-0 w-64 h-64 opacity-[0.03] dark:opacity-[0.05] pointer-events-none">
+      <svg viewBox="0 0 200 200" fill="#D97706"><circle cx="100" cy="100" r="100"/></svg>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-4 relative">
+      <div class="text-center mb-12" data-reveal>
+        <h1 class="font-brand font-bold text-hero mb-3">{sg.title}</h1>
+        <p class="text-body-lg text-text-secondary">{sg.subtitle}</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
+        {cardInfo.map((card) => (
+          <div class="card-border p-4" data-reveal>
+            <ShareCard type={card.type} locale={locale} class="mb-3" />
+            <h3 class="font-brand font-semibold text-sm">{sg[card.labelKey]}</h3>
+            <p class="text-xs text-text-tertiary mt-0.5">{sg[card.descKey]}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="text-center" data-reveal>
+        <DownloadCTA size="lg" />
+        <p class="text-sm text-text-tertiary mt-3">{sg.cta}</p>
+      </div>
+    </div>
+  </div>
+  <Footer locale={locale} currentPath={`/${locale}/share`} />
+</BaseLayout>

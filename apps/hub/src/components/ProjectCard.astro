@@ -1,0 +1,45 @@
+---
+import type { Locale } from '../i18n/config';
+import type { Project } from '../data/projects';
+import { getTranslations, t } from '../i18n/translations';
+
+interface Props {
+  project: Project;
+  locale: Locale;
+}
+
+const { project, locale } = Astro.props;
+const tr = getTranslations(locale);
+const isLive = project.status === 'live';
+const name = project.name[locale];
+const tagline = project.tagline[locale];
+
+const Tag = isLive && project.href ? 'a' : 'div';
+const linkProps = isLive && project.href
+  ? {
+      href: project.href,
+      ...(project.external ? { target: '_blank', rel: 'noopener' } : {}),
+    }
+  : {};
+---
+
+<Tag
+  {...linkProps}
+  data-reveal
+  class={`card-border p-6 flex flex-col gap-3 no-underline ${isLive ? '' : 'opacity-60 pointer-events-none'}`}
+>
+  <div class="flex items-center justify-between">
+    <span class="text-4xl" aria-hidden="true">{project.emoji}</span>
+    <span class={`text-caption font-semibold px-2 py-0.5 rounded-full ${isLive ? 'text-brand bg-brand/10' : 'text-text-tertiary bg-bg-muted'}`}>
+      {isLive ? t(tr, 'projects.live') : t(tr, 'projects.coming')}
+    </span>
+  </div>
+  <h3 class="font-brand font-semibold text-h3 text-text-primary">{name}</h3>
+  <p class="text-body text-text-secondary leading-relaxed flex-1">{tagline}</p>
+  {isLive && (
+    <span class="text-sm font-semibold text-brand inline-flex items-center gap-1">
+      {t(tr, 'projects.visit')}
+      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+    </span>
+  )}
+</Tag>

@@ -1,0 +1,26 @@
+---
+import { withBase } from '../i18n/config';
+import { getTranslations, t } from '../i18n/translations';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const locale = 'zh-TW';
+const tr = getTranslations(locale);
+const _404 = t(tr, '404') as { title: string; desc: string; cta: string };
+---
+
+<BaseLayout title={`404 — ${t(tr, 'meta.brand')}`} description={_404.desc} locale={locale} currentPath="/404" noindex>
+  <Nav locale={locale} currentPath="/404" />
+  <div class="min-h-[60vh] flex items-center justify-center pt-16">
+    <div class="text-center px-4">
+      <div class="font-brand font-bold text-8xl text-brand mb-4">404</div>
+      <h1 class="font-brand font-bold text-h1 mb-2">{_404.title}</h1>
+      <p class="text-body-lg text-text-secondary mb-8">{_404.desc}</p>
+      <a href={withBase(`/${locale}/`)} class="inline-flex px-6 py-3 rounded-xl bg-brand text-white font-semibold text-sm hover:bg-brand-deep transition-colors no-underline">
+        {_404.cta}
+      </a>
+    </div>
+  </div>
+  <Footer locale={locale} />
+</BaseLayout>

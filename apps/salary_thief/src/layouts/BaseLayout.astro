@@ -1,0 +1,93 @@
+---
+import '../styles/global.css';
+import { locales, stripLocale, ogLocales, withBase, type Locale } from '../i18n/config';
+
+interface Props {
+  title: string;
+  description: string;
+  locale: string;
+  currentPath: string;
+  ogImage?: string;
+  noindex?: boolean;
+  jsonLd?: Record<string, any> | Record<string, any>[];
+}
+
+const { title, description, locale, currentPath, ogImage, noindex = false, jsonLd } = Astro.props;
+// 部署於 https://srcchang.github.io/salary_thief/；site 取自 astro.config 的 `site`。
+const site = Astro.site?.href.replace(/\/$/, '') ?? 'https://srcchang.github.io';
+const siteName = 'Salary Thief';
+const canonical = `${site}${withBase(currentPath)}`;
+const ogImg = ogImage || `${site}${withBase('/og-default.png')}`;
+const basePath = stripLocale(currentPath);
+---
+
+<!DOCTYPE html>
+<html lang={locale} class="scroll-smooth overflow-x-hidden">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  {noindex && <meta name="robots" content="noindex, follow" />}
+  <link rel="canonical" href={canonical} />
+  <meta name="theme-color" content="#15803D" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0F172A" media="(prefers-color-scheme: dark)" />
+  <script is:inline>
+    (function() {
+      var theme = localStorage.getItem('theme');
+      if (theme === 'dark' || (!theme && matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+      // App 內嵌模式：?embed=true 時隱藏 nav/footer（paint 前同步加 class，避免 FOUC）
+      if (new URLSearchParams(location.search).get('embed') === 'true') {
+        document.documentElement.classList.add('embed');
+      }
+    })();
+  </script>
+  {locales.map((l) => (
+    <link rel="alternate" hrefLang={l} href={`${site}${withBase(`/${l}${basePath}`)}`} />
+  ))}
+  <link rel="alternate" hrefLang="x-default" href={`${site}${withBase('/zh-TW/')}`} />
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content={siteName} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={ogImg} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content={title} />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content={ogLocales[locale as Locale] ?? locale} />
+  {locales
+    .filter((l) => l !== locale)
+    .map((l) => (
+      <meta property="og:locale:alternate" content={ogLocales[l]} />
+    ))}
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImg} />
+
+  <meta name="apple-itunes-app" content="app-id=6778670803" />
+  <link rel="icon" type="image/png" sizes="32x32" href={withBase('/favicon-32.png')} />
+  <link rel="icon" type="image/png" sizes="16x16" href={withBase('/favicon-16.png')} />
+  <link rel="apple-touch-icon" href={withBase('/apple-touch-icon.png')} />
+
+  {jsonLd && (
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  )}
+
+  {/* TODO: 此子站目前無 GA 追蹤；若要與 Hub 統一用 gtag G-DXESCMJLZF
+       全域追蹤整個 srcchang.github.io 網域，可在此加入 gtag script。 */}
+  <script>
+    import '../scripts/scroll-reveal';
+  </script>
+</head>
+<body class="bg-bg-primary text-text-primary font-body antialiased overflow-x-hidden">
+  <slot />
+</body>
+</html>

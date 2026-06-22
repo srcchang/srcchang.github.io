@@ -1,0 +1,55 @@
+---
+import type { Locale } from '../i18n/config';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from './Nav.astro';
+import Footer from './Footer.astro';
+import FAQ from './FAQ.astro';
+import { getTranslations, t } from '../i18n/translations';
+import { Image } from 'astro:assets';
+import noAchievements from '../assets/images/empty_states/no_achievements.webp';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const tr = getTranslations(locale);
+
+const faqItems = t(tr, 'faq.items') as { q: string; a: string }[];
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: item.a },
+  })),
+};
+---
+
+<BaseLayout
+  title={`${t(tr, 'faq.title')} — ${t(tr, 'meta.brand')}`}
+  description={t(tr, 'faq.metaDesc')}
+  locale={locale}
+  currentPath={`/${locale}/faq`}
+  jsonLd={jsonLd}
+>
+  <Nav locale={locale} currentPath={`/${locale}/faq`} />
+  <div class="pt-24 pb-16 relative overflow-hidden">
+    <!-- Decorative glows -->
+    <div class="absolute top-10 right-0 w-64 h-64 opacity-[0.04] dark:opacity-[0.06] pointer-events-none">
+      <svg viewBox="0 0 200 200" fill="#D97706"><circle cx="100" cy="100" r="80"/></svg>
+    </div>
+    <div class="absolute bottom-0 left-0 w-64 h-64 opacity-[0.03] dark:opacity-[0.05] pointer-events-none">
+      <svg viewBox="0 0 200 200" fill="#15803D"><circle cx="100" cy="100" r="100"/></svg>
+    </div>
+
+    <!-- Decorative empty state image -->
+    <div class="flex justify-center pt-4 pb-8" data-reveal>
+      <Image src={noAchievements} alt="" class="w-40 h-auto opacity-60" loading="lazy" />
+    </div>
+
+    <FAQ locale={locale} />
+  </div>
+  <Footer locale={locale} currentPath={`/${locale}/faq`} />
+</BaseLayout>

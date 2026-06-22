@@ -1,0 +1,56 @@
+---
+import type { Locale } from '../i18n/config';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from './Nav.astro';
+import Footer from './Footer.astro';
+import { getTranslations, t } from '../i18n/translations';
+import { Image } from 'astro:assets';
+import privacyImg from '../assets/images/onboarding/privacy.webp';
+import noRecords from '../assets/images/empty_states/no_records.webp';
+
+interface Props {
+  locale: Locale;
+  type: 'privacy' | 'terms';
+}
+
+const { locale, type } = Astro.props;
+const tr = getTranslations(locale);
+const content = t(tr, type) as any;
+const decorImage = type === 'privacy' ? privacyImg : noRecords;
+---
+
+<BaseLayout
+  title={content.metaTitle}
+  description={content.metaDesc}
+  locale={locale}
+  currentPath={`/${locale}/${type}`}
+>
+  <div data-embed-hide><Nav locale={locale} currentPath={`/${locale}/${type}`} /></div>
+  <div class="legal-shell pt-24 pb-16 relative overflow-hidden">
+    <!-- Decorative glows -->
+    <div class="absolute top-10 right-0 w-64 h-64 opacity-[0.04] dark:opacity-[0.06] pointer-events-none">
+      <svg viewBox="0 0 200 200" fill="#15803D"><circle cx="100" cy="100" r="80"/></svg>
+    </div>
+
+    <div class="max-w-3xl mx-auto px-4 relative">
+      <!-- Decorative image -->
+      <div class="flex justify-center mb-8" data-reveal>
+        <Image src={decorImage} alt="" class="w-48 h-auto rounded-xl shadow-sm" loading="lazy" />
+      </div>
+
+      <h1 class="font-brand font-bold text-h1 mb-2 text-center" data-reveal>{content.title}</h1>
+      {content.lastUpdated && (
+        <p class="text-body text-text-secondary text-center mb-8" data-reveal>{content.lastUpdated}</p>
+      )}
+      <div class="space-y-6" data-reveal>
+        {content.content.map((section: any) => (
+          <div>
+            <h2 class="font-brand font-semibold text-h3 mb-2">{section.heading}</h2>
+            <p class="text-body-lg text-text-secondary leading-relaxed">{section.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+  <div data-embed-hide><Footer locale={locale} currentPath={`/${locale}/${type}`} /></div>
+</BaseLayout>

@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "brand": "Project SRC",
+    "title": "Project SRC — Apps & tools portfolio",
+    "description": "A portfolio of side projects by Project SRC — handy apps and small tools."
+  },
+  "nav": {
+    "projects": "Projects",
+    "langLabel": "Switch language"
+  },
+  "hero": {
+    "badge": "Indie maker",
+    "title": "Turning ideas into useful things",
+    "subtitle": "Project SRC is my personal portfolio of apps and small tools — across travel, lifestyle, and productivity. Each project is built independently and kept polished.",
+    "cta": "See projects"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Updated regularly — more projects on the way.",
+    "live": "Live",
+    "coming": "Coming soon",
+    "visit": "Visit"
+  },
+  "footer": {
+    "tagline": "Crafted with care, one small project at a time.",
+    "copyright": "© {year} Project SRC"
+  },
+  "404": {
+    "title": "Page not found",
+    "desc": "This page may have been removed or never existed.",
+    "cta": "Back home"
+  }
+}

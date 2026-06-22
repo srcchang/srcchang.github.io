@@ -1,0 +1,120 @@
+---
+import type { Locale } from '../i18n/config';
+import { getTranslations, t } from '../i18n/translations';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const tr = getTranslations(locale);
+const stats = t(tr, 'stats') as any;
+const features = t(tr, 'features.items') as any[];
+const demo = stats.demo as {
+  cat1: string;
+  cat2: string;
+  streakUnit: string;
+  ptoUnit: string;
+  ptoGoal: string;
+};
+const streakDays = 5;
+const ptoDays = 5.2;
+const ptoTarget = 8;
+
+// Localized narrow weekday labels (Mon–Sun), generated at build time.
+const weekdayFmt = new Intl.DateTimeFormat(locale, { weekday: 'narrow' });
+const weekdays = Array.from({ length: 7 }, (_, i) => weekdayFmt.format(new Date(2024, 0, 1 + i)));
+---
+
+<section id="features" class="py-16 md:py-24 bg-bg-muted/50">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="text-center mb-12" data-reveal>
+      <h2 class="font-brand font-bold text-h1 mb-3">{t(tr, 'features.title')}</h2>
+      <p class="text-body-lg text-text-secondary">{t(tr, 'features.subtitle')}</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      {features.slice(0, 4).map((f: any, i: number) => (
+        <div class="card-border p-5" data-reveal data-reveal-delay={String(i * 100)}>
+          <h3 class="font-brand font-semibold text-h3 mb-2">{f.title}</h3>
+          <p class="text-sm text-text-secondary leading-relaxed">{f.desc}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- Stats preview -->
+    <div class="mt-16" data-reveal>
+      <h2 class="font-brand font-bold text-h1 text-center mb-3">{stats.title}</h2>
+      <p class="text-body-lg text-text-secondary text-center mb-10">{stats.subtitle}</p>
+
+      <div class="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+        <!-- Daily stat card -->
+        <div class="card-border p-5">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="w-8 h-8 rounded-lg bg-brand/10 flex items-center justify-center text-brand font-bold text-sm">📊</span>
+            <span class="font-brand font-semibold text-sm">{stats.daily}</span>
+          </div>
+          <p class="text-xs text-text-tertiary mb-3">{stats.dailyDesc}</p>
+          <!-- Mini pie chart -->
+          <div class="flex h-3 rounded-full overflow-hidden">
+            <span class="bg-brand" style="width: 35%"></span>
+            <span class="bg-accent" style="width: 25%"></span>
+            <span class="bg-blue-500" style="width: 20%"></span>
+            <span class="bg-purple-500" style="width: 20%"></span>
+          </div>
+          <div class="flex justify-between mt-1.5 text-caption text-text-tertiary">
+            <span>{demo.cat1} 35%</span>
+            <span>{demo.cat2} 25%</span>
+          </div>
+        </div>
+
+        <!-- Streak card -->
+        <div class="card-border p-5">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center text-accent font-bold text-sm">🔥</span>
+            <span class="font-brand font-semibold text-sm">{stats.streak}</span>
+          </div>
+          <p class="text-xs text-text-tertiary mb-3">{stats.streakDesc}</p>
+          <div class="flex gap-1">
+            {weekdays.map((label, i) => (
+              <span class={`flex-1 h-8 rounded-md ${i < streakDays ? 'bg-brand' : 'bg-bg-muted border border-border-subtle'} flex items-center justify-center text-caption ${i < streakDays ? 'text-white' : 'text-text-tertiary'}`}>
+                {label}
+              </span>
+            ))}
+          </div>
+          <div class="mt-1.5 text-xs text-text-tertiary">{t(tr, 'stats.demo.streakText', { n: streakDays })} 🔥</div>
+        </div>
+
+        <!-- Monthly trend card -->
+        <div class="card-border p-5">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-500 font-bold text-sm">📈</span>
+            <span class="font-brand font-semibold text-sm">{stats.monthly}</span>
+          </div>
+          <p class="text-xs text-text-tertiary mb-3">{stats.monthlyDesc}</p>
+          <div class="flex items-end gap-1 h-10">
+            {[40, 55, 35, 70, 60, 80, 45, 65, 50, 75, 85, 90].map((h, i) => (
+              <span key={i} class="flex-1 rounded-t-sm" style={{ height: h + '%', backgroundColor: i % 2 === 0 ? 'var(--color-brand)' : 'var(--color-accent)', opacity: 0.7 }}></span>
+            ))}
+          </div>
+        </div>
+
+        <!-- PTO card -->
+        <div class="card-border p-5">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="w-8 h-8 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-500 font-bold text-sm">🏖️</span>
+            <span class="font-brand font-semibold text-sm">{stats.pto}</span>
+          </div>
+          <p class="text-xs text-text-tertiary mb-3">{stats.ptoDesc}</p>
+          <div class="h-3 rounded-full bg-bg-muted border border-border-subtle overflow-hidden">
+            <span class="block h-full rounded-full bg-gradient-to-r from-brand to-accent" style="width: 62%"></span>
+          </div>
+          <div class="flex justify-between mt-1 text-xs">
+            <span class="font-semibold text-brand">{ptoDays} {demo.ptoUnit}</span>
+            <span class="text-text-tertiary">{t(tr, 'stats.demo.ptoGoal', { n: ptoTarget })}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

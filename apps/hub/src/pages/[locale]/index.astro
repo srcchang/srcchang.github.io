@@ -1,0 +1,65 @@
+---
+import type { Locale } from '../../i18n/config';
+import { locales } from '../../i18n/config';
+import { getTranslations, t } from '../../i18n/translations';
+import { projects } from '../../data/projects';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const tr = getTranslations(locale);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Project SRC',
+  url: 'https://srcchang.github.io/',
+};
+---
+
+<BaseLayout
+  title={t(tr, 'meta.title')}
+  description={t(tr, 'meta.description')}
+  locale={locale}
+  currentPath={`/${locale}/`}
+>
+  <Nav locale={locale} currentPath={`/${locale}/`} />
+
+  <main class="pt-16">
+    <!-- Hero -->
+    <section class="max-w-5xl mx-auto px-4 pt-20 pb-16 text-center">
+      <span class="inline-block text-caption font-semibold tracking-wide uppercase text-brand bg-brand/10 px-3 py-1 rounded-full mb-6" data-reveal>
+        {t(tr, 'hero.badge')}
+      </span>
+      <h1 class="font-brand font-bold text-hero leading-tight text-text-primary mb-6" data-reveal data-reveal-delay="100">
+        {t(tr, 'hero.title')}
+      </h1>
+      <p class="text-body-lg text-text-secondary max-w-2xl mx-auto mb-8" data-reveal data-reveal-delay="200">
+        {t(tr, 'hero.subtitle')}
+      </p>
+      <a href="#projects" class="inline-flex px-6 py-3 rounded-xl bg-brand text-white font-semibold text-sm hover:bg-brand-deep transition-colors no-underline" data-reveal data-reveal-delay="300">
+        {t(tr, 'hero.cta')}
+      </a>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="max-w-5xl mx-auto px-4 py-12 scroll-mt-20">
+      <div class="text-center mb-10">
+        <h2 class="font-brand font-bold text-h2 text-text-primary mb-2" data-reveal>{t(tr, 'projects.title')}</h2>
+        <p class="text-body text-text-secondary" data-reveal data-reveal-delay="100">{t(tr, 'projects.subtitle')}</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {projects.map((project) => <ProjectCard project={project} locale={locale} />)}
+      </div>
+    </section>
+  </main>
+
+  <Footer locale={locale} />
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+</BaseLayout>

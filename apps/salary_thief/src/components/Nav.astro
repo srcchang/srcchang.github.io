@@ -1,0 +1,93 @@
+---
+import type { Locale } from '../i18n/config';
+import { localeLabels, stripLocale, withBase } from '../i18n/config';
+import { getTranslations, t } from '../i18n/translations';
+import { Image } from 'astro:assets';
+import appIcon from '../assets/images/app_icon.png';
+
+interface Props {
+  locale: Locale;
+  currentPath: string;
+}
+
+const { locale, currentPath } = Astro.props;
+const tr = getTranslations(locale);
+
+// Determine base path without locale prefix
+const basePath = stripLocale(currentPath);
+const isHome = basePath === '/';
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-bg-primary/80 dark:bg-[#0F172A]/80 backdrop-blur-md border-b border-transparent [&.scrolled]:border-border-subtle">
+  <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+    <!-- Logo -->
+    <a href={isHome ? '#' : withBase(`/${locale}/`)} class="flex items-center gap-2 font-brand font-semibold text-lg text-text-primary no-underline">
+      <Image src={appIcon} alt="" width={64} height={64} class="w-8 h-8 rounded-lg" />
+      {t(tr, 'nav.logo')}
+    </a>
+
+    <!-- Desktop nav -->
+    <div class="hidden md:flex items-center gap-6">
+      <a href={withBase(`/${locale}/#features`)} class="text-sm text-text-secondary hover:text-text-primary transition-colors no-underline">{t(tr, 'nav.features')}</a>
+      <a href={withBase(`/${locale}/#achievements`)} class="text-sm text-text-secondary hover:text-text-primary transition-colors no-underline">{t(tr, 'nav.achievements')}</a>
+      <a href={withBase(`/${locale}/#faq`)} class="text-sm text-text-secondary hover:text-text-primary transition-colors no-underline">{t(tr, 'nav.faq')}</a>
+      <a href={withBase(`/${locale}/about`)} class="text-sm text-text-secondary hover:text-text-primary transition-colors no-underline">{t(tr, 'nav.about')}</a>
+      <a href="https://apps.apple.com/app/id6778670803" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-brand text-white text-sm font-semibold hover:bg-brand-deep transition-colors no-underline">
+        {t(tr, 'nav.download')}
+      </a>
+    </div>
+
+    <!-- Right actions -->
+    <div class="flex items-center gap-3">
+      <!-- Theme Toggle -->
+      <button id="theme-toggle" class="w-9 h-9 flex items-center justify-center rounded-lg hover:bg-bg-muted transition-colors cursor-pointer" aria-label={t(tr, 'nav.themeToggle')}>
+        <svg class="w-5 h-5 text-text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path class="dark:hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+          <path class="hidden dark:block" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+        </svg>
+      </button>
+
+      <!-- Language Switcher -->
+      <div class="relative" data-lang-switcher>
+        <button id="lang-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu" aria-label={t(tr, 'nav.langLabel')} class="w-9 h-9 flex items-center justify-center rounded-lg hover:bg-bg-muted transition-colors text-sm text-text-secondary cursor-pointer">
+          {localeLabels[locale]}
+        </button>
+        <div id="lang-menu" class="absolute right-0 top-full mt-1 py-1 w-36 rounded-xl bg-bg-surface border border-border-subtle shadow-lg opacity-0 invisible [&.open]:opacity-100 [&.open]:visible transition-all duration-200">
+          {Object.entries(localeLabels).map(([code, label]) => (
+            <a
+              href={withBase(`/${code}${basePath}`)}
+              lang={code}
+              aria-current={code === locale ? 'true' : undefined}
+              class={`block px-3 py-1.5 text-sm no-underline transition-colors ${code === locale ? 'text-brand font-semibold bg-brand/5' : 'text-text-secondary hover:text-text-primary hover:bg-bg-muted'}`}
+            >
+              {label}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Hamburger -->
+      <button id="hamburger" class="md:hidden w-9 h-9 flex flex-col items-center justify-center gap-1 rounded-lg hover:bg-bg-muted transition-colors cursor-pointer" aria-label={t(tr, 'nav.menu')}>
+        <span class="block w-5 h-0.5 bg-text-secondary transition-all duration-200 [.open_&]:rotate-45 [.open_&]:translate-y-1.5"></span>
+        <span class="block w-5 h-0.5 bg-text-secondary transition-all duration-200 [.open_&]:opacity-0"></span>
+        <span class="block w-5 h-0.5 bg-text-secondary transition-all duration-200 [.open_&]:-rotate-45 [.open_&]:-translate-y-1.5"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="md:hidden overflow-hidden max-h-0 transition-all duration-300 [&.open]:max-h-96 bg-bg-surface border-b border-border-subtle">
+    <div class="px-4 py-3 flex flex-col gap-2">
+      <a href={withBase(`/${locale}/#features`)} class="px-3 py-2 rounded-lg text-sm text-text-secondary hover:bg-bg-muted no-underline">{t(tr, 'nav.features')}</a>
+      <a href={withBase(`/${locale}/#achievements`)} class="px-3 py-2 rounded-lg text-sm text-text-secondary hover:bg-bg-muted no-underline">{t(tr, 'nav.achievements')}</a>
+      <a href={withBase(`/${locale}/#faq`)} class="px-3 py-2 rounded-lg text-sm text-text-secondary hover:bg-bg-muted no-underline">{t(tr, 'nav.faq')}</a>
+      <a href={withBase(`/${locale}/about`)} class="px-3 py-2 rounded-lg text-sm text-text-secondary hover:bg-bg-muted no-underline">{t(tr, 'nav.about')}</a>
+      <a href="https://apps.apple.com/app/id6778670803" target="_blank" rel="noopener" class="mt-2 block text-center px-4 py-2 rounded-xl bg-brand text-white text-sm font-semibold no-underline">{t(tr, 'nav.download')}</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  import '../scripts/theme-toggle';
+  import '../scripts/nav';
+</script>

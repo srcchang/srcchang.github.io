@@ -1,0 +1,49 @@
+---
+import type { Locale } from '../i18n/config';
+import { withBase } from '../i18n/config';
+import { getTranslations, t } from '../i18n/translations';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const tr = getTranslations(locale);
+const faqItems = t(tr, 'faq.items') as any[];
+---
+
+<section id="faq" class="py-16 md:py-24" data-reveal>
+  <div class="max-w-3xl mx-auto px-4">
+    <div class="text-center mb-10">
+      <h2 class="font-brand font-bold text-h1 mb-3">{t(tr, 'faq.title')}</h2>
+    </div>
+
+    <div class="space-y-2">
+      {faqItems.map((item: any, i: number) => (
+        <div class={`faq-item card-border overflow-hidden ${i === 0 ? 'open' : ''}`}>
+          <button class="faq-question w-full flex items-center justify-between px-5 py-4 text-left cursor-pointer bg-transparent border-none text-text-primary hover:text-brand transition-colors" aria-expanded={i === 0}>
+            <span class="font-brand font-semibold text-sm pr-4">{item.q}</span>
+            <svg class="w-4 h-4 flex-shrink-0 text-text-tertiary transition-transform duration-200 [.open_&]:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-out" style={i === 0 ? 'max-height: 300px' : ''}>
+            <div class="px-5 pb-4 text-sm text-text-secondary leading-relaxed">
+              {item.a}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-8">
+      <a href={withBase(`/${locale}/faq`)} class="text-sm text-brand hover:text-brand-deep font-semibold no-underline transition-colors">
+        {t(tr, 'faq.viewAll')} →
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  import '../scripts/faq';
+</script>

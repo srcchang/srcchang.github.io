@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "brand": "Project SRC",
+    "title": "Project SRC — 個人 App 與工具作品集",
+    "description": "Project SRC 的 side projects 作品集，收錄各種實用 App 與小工具。"
+  },
+  "nav": {
+    "projects": "作品",
+    "langLabel": "切換語言"
+  },
+  "hero": {
+    "badge": "Indie maker",
+    "title": "把點子做成好用的東西",
+    "subtitle": "Project SRC 是我的個人作品集，收錄各種 App 與小工具——從旅遊、生活到生產力。每個專案都獨立打造、持續打磨。",
+    "cta": "看作品"
+  },
+  "projects": {
+    "title": "作品",
+    "subtitle": "持續更新中，更多專案陸續登場。",
+    "live": "上線中",
+    "coming": "即將推出",
+    "visit": "前往"
+  },
+  "footer": {
+    "tagline": "用心打造每一個小專案。",
+    "copyright": "© {year} Project SRC"
+  },
+  "404": {
+    "title": "找不到頁面",
+    "desc": "這個頁面可能已移除或不存在。",
+    "cta": "回首頁"
+  }
+}

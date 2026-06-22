@@ -1,0 +1,22 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  reversed?: boolean;
+  class?: string;
+}
+
+const { title, description, reversed = false, class: className = '' } = Astro.props;
+---
+
+<div class={`flex flex-col ${reversed ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-8 md:gap-12 ${className}`} data-reveal>
+  <!-- Illustration area -->
+  <div class="flex-shrink-0 w-48 h-48 md:w-56 md:h-56 rounded-2xl bg-bg-muted border border-border-subtle flex items-center justify-center">
+    <slot name="illustration" />
+  </div>
+  <!-- Text -->
+  <div class="flex-1 text-center md:text-left">
+    <h3 class="font-brand font-semibold text-h3 mb-2">{title}</h3>
+    <p class="text-body-lg text-text-secondary leading-relaxed">{description}</p>
+  </div>
+</div>

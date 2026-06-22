@@ -1,0 +1,37 @@
+---
+import type { Locale } from '../i18n/config';
+import { getTranslations, t } from '../i18n/translations';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const tr = getTranslations(locale);
+
+const metrics = [
+  { target: 5, suffix: t(tr, 'trust.languagesSuffix'), label: t(tr, 'trust.languages'), color: 'text-brand' },
+  { target: 21, suffix: t(tr, 'trust.achievementsSuffix'), label: t(tr, 'trust.achievements'), color: 'text-accent' },
+  { target: 100, suffix: t(tr, 'trust.privacySuffix'), label: t(tr, 'trust.privacy'), color: 'text-brand' },
+  { target: 2, suffix: t(tr, 'trust.platformsSuffix'), label: t(tr, 'trust.platformsLabel'), color: 'text-accent' },
+];
+---
+
+<section class="py-12 border-y border-border-subtle" data-reveal>
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      {metrics.map((m) => (
+        <div class="text-center">
+          <div class={`font-brand font-bold text-3xl md:text-4xl ${m.color}`}>
+            <span data-target={String(m.target)}>0</span><span>{m.suffix}</span>
+          </div>
+          <div class="text-sm text-text-secondary mt-1">{m.label}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  import '../scripts/counter';
+</script>

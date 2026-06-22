@@ -1,0 +1,75 @@
+---
+import type { Locale } from '../i18n/config';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from './Nav.astro';
+import Footer from './Footer.astro';
+import DownloadCTA from './DownloadCTA.astro';
+import { getTranslations, t } from '../i18n/translations';
+import { Image } from 'astro:assets';
+import welcome from '../assets/images/onboarding/welcome.webp';
+import salarySetup from '../assets/images/onboarding/salary_setup.webp';
+import workHoursSetup from '../assets/images/onboarding/work_hours_setup.webp';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const tr = getTranslations(locale);
+const about = t(tr, 'about') as any;
+---
+
+<BaseLayout
+  title={about.metaTitle}
+  description={about.metaDesc}
+  locale={locale}
+  currentPath={`/${locale}/about`}
+>
+  <Nav locale={locale} currentPath={`/${locale}/about`} />
+  <div class="pt-24 pb-16 relative overflow-hidden">
+    <!-- Decorative glows -->
+    <div class="absolute top-20 right-0 w-72 h-72 opacity-[0.04] dark:opacity-[0.06] pointer-events-none">
+      <svg viewBox="0 0 200 200" fill="#15803D"><circle cx="100" cy="100" r="80"/></svg>
+    </div>
+    <div class="absolute bottom-0 left-0 w-64 h-64 opacity-[0.03] dark:opacity-[0.05] pointer-events-none">
+      <svg viewBox="0 0 200 200" fill="#D97706"><circle cx="100" cy="100" r="100"/></svg>
+    </div>
+
+    <div class="max-w-3xl mx-auto px-4 relative">
+      <div class="text-center mb-12" data-reveal>
+        <h1 class="font-brand font-bold text-hero mb-4">{about.title}</h1>
+      </div>
+
+      <!-- Story -->
+      <div class="space-y-4 mb-12" data-reveal>
+        {about.story.map((p: string) => (
+          <p class="text-body-lg text-text-secondary leading-relaxed">{p}</p>
+        ))}
+      </div>
+
+      <!-- Onboarding preview -->
+      <div class="flex justify-center gap-4 mb-12 overflow-x-auto pb-2" data-reveal>
+        <Image src={welcome} alt={t(tr, 'about.alt.welcome')} class="h-48 w-auto rounded-xl shadow-sm" loading="lazy" />
+        <Image src={salarySetup} alt={t(tr, 'about.alt.salary')} class="h-48 w-auto rounded-xl shadow-sm" loading="lazy" />
+        <Image src={workHoursSetup} alt={t(tr, 'about.alt.workHours')} class="h-48 w-auto rounded-xl shadow-sm" loading="lazy" />
+      </div>
+
+      <!-- Values -->
+      <div class="grid sm:grid-cols-3 gap-4 mb-12" data-reveal>
+        {about.values.map((v: any) => (
+          <div class="card-border p-5 text-center">
+            <div class="font-brand font-semibold text-sm mb-1">{v.title}</div>
+            <p class="text-xs text-text-tertiary">{v.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center" data-reveal>
+        <DownloadCTA size="lg" />
+        <p class="text-sm text-text-tertiary mt-3">{about.cta}</p>
+      </div>
+    </div>
+  </div>
+  <Footer locale={locale} currentPath={`/${locale}/about`} />
+</BaseLayout>

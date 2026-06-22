@@ -1,0 +1,56 @@
+---
+import type { Locale } from '../i18n/config';
+import { getTranslations, t } from '../i18n/translations';
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const tr = getTranslations(locale);
+const ach = t(tr, 'achievements') as any;
+
+const badgeImages = import.meta.glob<{ default: ImageMetadata }>(
+  '../assets/images/achievements/*.webp',
+  { eager: true }
+);
+const badgeFor = (key: string) =>
+  badgeImages[`../assets/images/achievements/${key}.webp`]?.default;
+
+// Six featured badges (names/descriptions live in i18n achievements.items).
+const featured = ['first_record', 'streak_7', 'streak_30', 'coffee_50', 'fake_600', 'social_600'];
+---
+
+<section id="achievements" class="py-16 md:py-24" data-reveal>
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="text-center mb-10">
+      <h2 class="font-brand font-bold text-h1 mb-3">{ach.title}</h2>
+      <p class="text-body-lg text-text-secondary">{ach.subtitle}</p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-2xl mx-auto">
+      {featured.map((key) => {
+        const img = badgeFor(key);
+        return (
+          <div class="card-border p-4 text-center">
+            <div class="w-16 h-16 flex items-center justify-center mx-auto mb-2">
+              {img ? (
+                <Image src={img} alt={ach.items[key]} width={128} height={128} class="w-full h-full object-contain" loading="lazy" />
+              ) : (
+                <span class="text-2xl">🏆</span>
+              )}
+            </div>
+            <div class="font-brand font-semibold text-xs">{ach.items[key]}</div>
+            <div class="text-caption text-text-tertiary mt-0.5">{ach.items[`${key}_desc`]}</div>
+          </div>
+        );
+      })}
+    </div>
+
+    <div class="text-center mt-6">
+      <span class="text-sm text-text-tertiary">{t(tr, 'achievements.more', { count: 15 })}</span>
+    </div>
+  </div>
+</section>

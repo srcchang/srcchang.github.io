@@ -1,0 +1,38 @@
+---
+import type { Locale } from '../i18n/config';
+import { getTranslations, t } from '../i18n/translations';
+import DownloadCTA from './DownloadCTA.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const tr = getTranslations(locale);
+const brand = t(tr, 'brand') as any;
+---
+
+<section class="py-20 md:py-28 relative overflow-hidden" data-reveal>
+  <!-- Decorative glow -->
+  <div class="absolute bottom-0 right-0 w-[500px] h-[500px] opacity-[0.03] dark:opacity-[0.05] pointer-events-none">
+    <svg viewBox="0 0 500 500" fill="#15803D">
+      <circle cx="400" cy="100" r="300" filter="url(#blur)"/>
+    </svg>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 text-center relative">
+    <h2 class="font-brand font-bold text-h2 text-text-primary mb-4">{brand.title}</h2>
+    <p class="text-body-lg text-text-secondary max-w-2xl mx-auto mb-4">{brand.story}</p>
+    <p class="text-sm text-text-tertiary max-w-xl mx-auto mb-10">{brand.mission}</p>
+
+    <div class="border-t border-border-subtle pt-10">
+      <h3 class="font-brand font-bold text-h1 bg-gradient-to-r from-brand to-accent bg-clip-text text-transparent mb-2">
+        {brand.ctaTitle}
+      </h3>
+      <p class="text-body-lg text-text-secondary mb-6">{brand.ctaSubtitle}</p>
+      <div class="flex justify-center gap-3">
+        <DownloadCTA size="lg" />
+      </div>
+    </div>
+  </div>
+</section>

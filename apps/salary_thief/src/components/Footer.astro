@@ -1,0 +1,78 @@
+---
+import type { Locale } from '../i18n/config';
+import { localeLabels, locales, stripLocale, withBase } from '../i18n/config';
+import { getTranslations, t } from '../i18n/translations';
+import { Image } from 'astro:assets';
+import appIcon from '../assets/images/app_icon.png';
+
+interface Props {
+  locale: Locale;
+  currentPath: string;
+}
+
+const { locale, currentPath } = Astro.props;
+const tr = getTranslations(locale);
+const basePath = stripLocale(currentPath);
+---
+
+<footer class="bg-[#0F172A] text-white mt-24">
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <!-- Brand -->
+      <div class="col-span-2 md:col-span-1">
+        <div class="flex items-center gap-2 font-brand font-semibold text-lg mb-3">
+          <Image src={appIcon} alt="" width={64} height={64} class="w-8 h-8 rounded-lg" />
+          {t(tr, 'nav.logo')}
+        </div>
+        <p class="text-sm text-slate-400 leading-relaxed">{t(tr, 'footer.productDesc')}</p>
+      </div>
+
+      <!-- Product links -->
+      <div>
+        <h4 class="text-sm font-semibold mb-3">{t(tr, 'footer.product')}</h4>
+        <div class="flex flex-col gap-2">
+          <a href={withBase(`/${locale}/#features`)} class="text-sm text-slate-400 hover:text-white transition-colors no-underline">{t(tr, 'nav.features')}</a>
+          <a href={withBase(`/${locale}/#achievements`)} class="text-sm text-slate-400 hover:text-white transition-colors no-underline">{t(tr, 'nav.achievements')}</a>
+          <a href={withBase(`/${locale}/share`)} class="text-sm text-slate-400 hover:text-white transition-colors no-underline">{t(tr, 'nav.share')}</a>
+        </div>
+      </div>
+
+      <!-- Legal links -->
+      <div>
+        <h4 class="text-sm font-semibold mb-3">{t(tr, 'footer.legal')}</h4>
+        <div class="flex flex-col gap-2">
+          <a href={withBase(`/${locale}/privacy`)} class="text-sm text-slate-400 hover:text-white transition-colors no-underline">{t(tr, 'footer.privacy')}</a>
+          <a href={withBase(`/${locale}/terms`)} class="text-sm text-slate-400 hover:text-white transition-colors no-underline">{t(tr, 'footer.terms')}</a>
+          <a href={withBase(`/${locale}/faq`)} class="text-sm text-slate-400 hover:text-white transition-colors no-underline">{t(tr, 'nav.faq')}</a>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="text-sm font-semibold mb-3">{t(tr, 'footer.contact')}</h4>
+        <div class="flex flex-col gap-2">
+          <a href="mailto:srcchang@gmail.com" class="text-sm text-slate-400 hover:text-white transition-colors no-underline">{t(tr, 'footer.email')}</a>
+        </div>
+        <!-- Language switcher in footer -->
+        <div class="mt-4">
+          <h4 class="text-sm font-semibold mb-2">Language</h4>
+          <div class="flex flex-wrap gap-2">
+            {locales.map((l) => (
+              <a
+                href={withBase(`/${l}${basePath}`)}
+                class={`text-xs px-2 py-1 rounded-md border no-underline transition-colors ${l === locale ? 'border-brand text-brand' : 'border-slate-700 text-slate-400 hover:text-white hover:border-slate-500'}`}
+              >
+                {localeLabels[l]}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="mt-10 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <p class="text-sm text-slate-500">{t(tr, 'footer.copyright')}</p>
+    </div>
+  </div>
+</footer>

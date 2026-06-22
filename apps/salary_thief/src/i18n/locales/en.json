@@ -1,0 +1,415 @@
+{
+  "404": {
+    "title": "Page Not Found",
+    "desc": "Looks like you're lost. This isn't a good place to slack off.",
+    "cta": "Back to Home"
+  },
+  "meta": {
+    "brand": "Salary Thief"
+  },
+  "nav": {
+    "logo": "Salary Thief",
+    "features": "Features",
+    "achievements": "Achievements",
+    "faq": "FAQ",
+    "download": "Download App",
+    "about": "About",
+    "share": "Share Cards",
+    "themeToggle": "Toggle dark mode",
+    "menu": "Menu",
+    "langLabel": "Change language"
+  },
+  "hero": {
+    "badge": "The #1 slacking timer for office workers",
+    "title1": "Slacking is a talent too",
+    "title2": "Turn your idle time into visible wages",
+    "subtitle": "One-tap timer · Live salary conversion · Fun achievement badges",
+    "cta": "Download Free",
+    "timerLabel": "Live Conversion",
+    "demo": {
+      "timerLabel": "Slacking Timer",
+      "status": "Running",
+      "rate": 30,
+      "rateText": "Rate",
+      "categories": [
+        "☕ Coffee",
+        "📱 Social",
+        "💭 Daydream"
+      ]
+    }
+  },
+  "trust": {
+    "languages": "Languages",
+    "languagesSuffix": "",
+    "achievements": "Achievements",
+    "achievementsSuffix": "",
+    "privacy": "Data Stored Locally",
+    "privacySuffix": "%",
+    "platformsLabel": "iOS + Android",
+    "platformsSuffix": ""
+  },
+  "timer": {
+    "title": "How much does your break earn?",
+    "subtitle": "Enter your hourly rate, tap start, and watch your slacking earnings grow in real time.",
+    "rateLabel": "Your hourly rate",
+    "perHour": "/ hr",
+    "defaultRate": 30,
+    "presets": [
+      {
+        "label": "Minimum",
+        "rate": 15
+      },
+      {
+        "label": "Average",
+        "rate": 30
+      },
+      {
+        "label": "High Income",
+        "rate": 75
+      }
+    ],
+    "start": "▶ Start Slacking",
+    "stop": "⏸ Pause",
+    "reset": "Reset",
+    "timeLabel": "Time Slacked",
+    "earnedLabel": "Wages Stolen"
+  },
+  "features": {
+    "title": "Why Salary Thief?",
+    "subtitle": "Turn every break at work into a fun little win",
+    "items": [
+      {
+        "title": "One-Tap Timer",
+        "desc": "Start tracking your break with a single tap. See your earnings tick up live."
+      },
+      {
+        "title": "Daily & Monthly Stats",
+        "desc": "Beautiful charts show your slacking history, trends, and category breakdown."
+      },
+      {
+        "title": "Slacking Streak",
+        "desc": "Track how many days in a row you've been 'hard at work.'"
+      },
+      {
+        "title": "Achievement System",
+        "desc": "Unlock fun badges as you reach slacking milestones."
+      },
+      {
+        "title": "PTO Progress",
+        "desc": "Turn idle time into 'days of paid leave stolen.'"
+      },
+      {
+        "title": "Quick Log",
+        "desc": "Forgot to track? Manually log your breaks with category and duration."
+      }
+    ]
+  },
+  "stats": {
+    "title": "Your data is more exciting than you think",
+    "subtitle": "Beautiful charts to show off your 'hard work'",
+    "daily": "Daily Stats",
+    "dailyDesc": "Pie chart shows where your slacking time went today",
+    "monthly": "Monthly Trend",
+    "monthlyDesc": "Bar chart showing your slacking across the month",
+    "streak": "Slacking Streak",
+    "streakDesc": "Consecutive days of documenting your breaks",
+    "pto": "PTO Progress",
+    "ptoDesc": "Convert idle time into paid leave days",
+    "demo": {
+      "cat1": "☕ Coffee",
+      "cat2": "📱 Social",
+      "streakUnit": "days",
+      "streakText": "{n}-day streak",
+      "ptoUnit": "days",
+      "ptoGoal": "Goal {n} days"
+    }
+  },
+  "achievements": {
+    "title": "Hall of Slacking Fame",
+    "subtitle": "21 fun badges waiting to be unlocked",
+    "categories": {
+      "time": "Time",
+      "amount": "Amount",
+      "category": "Category",
+      "pto": "PTO"
+    },
+    "items": {
+      "first_record": "First Steps",
+      "first_record_desc": "Log your first slacking record",
+      "streak_7": "Week Warrior",
+      "streak_7_desc": "7 consecutive days of slacking",
+      "streak_30": "Monthly Pro",
+      "streak_30_desc": "30 consecutive days of slacking",
+      "coffee_50": "Coffee Guru",
+      "coffee_50_desc": "50 coffee break logs",
+      "fake_600": "Meeting Master",
+      "fake_600_desc": "600 fake meeting logs",
+      "social_600": "Social King",
+      "social_600_desc": "600 social media break logs"
+    },
+    "more": "+ {count} more achievements to unlock!"
+  },
+  "categories": {
+    "title": "Every kind of break, sorted",
+    "subtitle": "21 preset categories + custom ones for every slacking style",
+    "tags": [
+      "☕ Coffee Break",
+      "📱 Social Media",
+      "💭 Daydreaming",
+      "📋 Fake Meeting",
+      "🚬 Smoke Break",
+      "🛒 Online Shopping",
+      "📺 Streaming",
+      "🎮 Gaming",
+      "📖 Reading",
+      "💬 Chatting",
+      "🪟 Staring Out Window",
+      "🚻 Bathroom",
+      "🏃 Walk Outside",
+      "📞 Personal Call",
+      "🍜 Eating",
+      "🧹 Fake Organizing",
+      "📝 Taking Notes",
+      "🎧 Listening to Music",
+      "📸 Browsing Feeds",
+      "💻 Web Surfing",
+      "✍️ Busy Looking"
+    ]
+  },
+  "shareCards": {
+    "title": "Share your stats with style",
+    "subtitle": "Generate beautiful summary cards to share with friends and coworkers",
+    "types": {
+      "daily": "Daily Card",
+      "weekly": "Weekly Card",
+      "monthly": "Monthly Card",
+      "achievement": "Achievement Card",
+      "single": "Single Record"
+    },
+    "cta": "Download the App & create your cards",
+    "cards": {
+      "watermark": "Salary Thief — Track your little wins at work",
+      "daily": {
+        "title": "Today's slacking report",
+        "amount": "1,250",
+        "stats": [
+          "Time: 1h 30m",
+          "Count: 5"
+        ]
+      },
+      "weekly": {
+        "title": "Weekly slacking report",
+        "amount": "8,400",
+        "stats": [
+          "6h 20m total",
+          "28 records"
+        ]
+      },
+      "monthly": {
+        "title": "June slacking report",
+        "amount": "32,000",
+        "stats": [
+          "Total duration: 26h",
+          "Record count: 112",
+          "Top category: Coffee"
+        ]
+      },
+      "single": {
+        "title": "Slacking record",
+        "amount": "260",
+        "stats": [
+          "25m",
+          "2026/06/13"
+        ]
+      },
+      "achievement": {
+        "title": "Achievement unlocked",
+        "name": "First Steps",
+        "desc": "Log your first slacking record",
+        "date": "Unlocked on 2026/06/13"
+      }
+    }
+  },
+  "currency": {
+    "title": "No matter where you work",
+    "subtitle": "Your slacking has value everywhere",
+    "support": "Multi-currency support: TWD · USD · JPY · KRW · CNY"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "viewAll": "View all FAQs",
+    "metaDesc": "Salary Thief FAQ: Is it free? Will my boss know? Which currencies and languages are supported?",
+    "items": [
+      {
+        "q": "Is Salary Thief free?",
+        "a": "Yes! All basic features are free including the timer, daily stats, and achievement system. Some advanced features like yearly review can be unlocked by watching ads."
+      },
+      {
+        "q": "Will my boss know?",
+        "a": "Absolutely not. All data stays on your device — no uploads, no sync, no tracking. No account needed. Your slacking secrets are safe."
+      },
+      {
+        "q": "What currencies and languages are supported?",
+        "a": "5 currencies: TWD, USD, JPY, KRW, CNY. 5 languages: Traditional Chinese, Simplified Chinese, English, Japanese, Korean."
+      },
+      {
+        "q": "What if I forget to start the timer?",
+        "a": "No worries! Use the Quick Log feature to manually add breaks with category, duration, and time of day."
+      }
+    ]
+  },
+  "brand": {
+    "title": "About Salary Thief",
+    "story": "Everyone needs a break at work. Salary Thief turns your downtime into a fun number game — no guilt, just good vibes and interesting stats.",
+    "mission": "We believe work isn't just about numbers, and rest is an art. Log your little wins and make your workday more fun.",
+    "ctaTitle": "Ready to start slacking?",
+    "ctaSubtitle": "Download Salary Thief and turn your breaks into achievements"
+  },
+  "footer": {
+    "product": "Product",
+    "productDesc": "Salary Thief — Slacking Timer for Office Workers",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contact": "Contact",
+    "email": "srcchang@gmail.com",
+    "copyright": "© 2026 Project SRC. All rights reserved."
+  },
+  "about": {
+    "title": "About Salary Thief",
+    "metaTitle": "About — Salary Thief",
+    "metaDesc": "The story behind Salary Thief — the slacking timer app",
+    "alt": {
+      "welcome": "Welcome screen",
+      "salary": "Salary setup",
+      "workHours": "Work hours setup"
+    },
+    "story": [
+      "Salary Thief was born from a simple idea: why does slacking off feel so good, yet nobody ever measures how good?",
+      "We're a team that believes 'rest is productivity.' Instead of feeling guilty about breaks, turn them into a fun game.",
+      "All data stays on your device. No accounts, no cloud, no tracking. Your slacking secrets are yours alone."
+    ],
+    "values": [
+      {
+        "title": "Privacy First",
+        "desc": "No data collection, no server upload"
+      },
+      {
+        "title": "Lighthearted",
+        "desc": "A fun take on workday stress"
+      },
+      {
+        "title": "Quality Matters",
+        "desc": "Beautiful design, smooth experience"
+      }
+    ],
+    "cta": "Download Salary Thief Now"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "metaTitle": "Privacy Policy — Salary Thief",
+    "metaDesc": "Salary Thief privacy policy",
+    "content": [
+      {
+        "heading": "Data Collection & Storage",
+        "body": "Salary Thief respects your privacy. We do not ourselves collect or upload your personal data—all slacking records, settings, and achievements are stored locally on your device. However, the third-party SDKs integrated into the app (see below) may collect device and anonymous usage data."
+      },
+      {
+        "heading": "Third-Party Services",
+        "body": "The app uses Firebase Analytics and Crashlytics to analyze usage and report crashes, and Google AdMob to serve ads. These services may collect device identifiers, approximate location, and anonymous usage data. In-app purchases are processed by the Apple App Store or Google Play; we never have access to your payment information."
+      },
+      {
+        "heading": "Advertising & Tracking",
+        "body": "The app contains Google AdMob ads. To serve personalized ads, AdMob may use your advertising identifier (IDFA on iOS or Advertising ID on Android). On iOS we request your consent via App Tracking Transparency (ATT); you can disable personalized ads or reset your advertising identifier at any time in your device settings."
+      },
+      {
+        "heading": "Children's Privacy",
+        "body": "The app is not directed to children under 13, and we do not knowingly collect personal data from children."
+      },
+      {
+        "heading": "Data Security & Deletion",
+        "body": "Because all user data stays on your device and is never transmitted through our servers, your slacking secrets enjoy a high level of security. Uninstalling the app deletes all related data from your device."
+      },
+      {
+        "heading": "Your Rights & Third-Party Policies",
+        "body": "You can manage your ad preferences through your device settings. For how third parties handle data, please see the Google Privacy Policy (policies.google.com/privacy) and Google AdMob policies."
+      },
+      {
+        "heading": "Changes to This Policy",
+        "body": "This policy may be updated from time to time, with the latest revision date shown on this page. Continued use of the app after changes constitutes acceptance of the updated policy."
+      },
+      {
+        "heading": "Contact Us",
+        "body": "For any privacy-related questions, email srcchang@gmail.com."
+      }
+    ],
+    "lastUpdated": "Last updated: June 14, 2026"
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "metaTitle": "Terms of Service — Salary Thief",
+    "metaDesc": "Salary Thief terms of service",
+    "content": [
+      {
+        "heading": "Acceptance",
+        "body": "By downloading or using Salary Thief, you agree to these Terms of Service. If you do not agree, do not use the app."
+      },
+      {
+        "heading": "Eligibility",
+        "body": "You must be at least 13 years old (or the minimum age required by the laws of your region) to use the app; if you are below that age, you may use it only with the consent and supervision of a parent or guardian."
+      },
+      {
+        "heading": "License",
+        "body": "We grant you a personal, non-exclusive, non-transferable, revocable, limited license to use the app on iOS or Android devices that you own or control."
+      },
+      {
+        "heading": "Purchases",
+        "body": "The app offers in-app purchases (such as ad removal, feature unlocks, or subscriptions). All payments, billing, and refunds are handled by the Apple App Store or Google Play under their respective policies; refund requests must be made through the relevant platform, as we cannot process them directly."
+      },
+      {
+        "heading": "Disclaimer",
+        "body": "The app is provided for entertainment purposes on an \"as is\" basis, without warranties of any kind, express or implied. All calculations are for reference only and do not constitute financial, tax, or legal advice. To the maximum extent permitted by law, the developer is not liable for any direct or indirect damages arising from use of the app."
+      },
+      {
+        "heading": "Intellectual Property",
+        "body": "The app and all content, trademarks, and designs are owned by SRC and may not be copied, modified, or distributed without authorization."
+      },
+      {
+        "heading": "App Store Terms",
+        "body": "Downloading and using the app through the Apple App Store or Google Play is also subject to the terms of each platform. For the iOS version, Apple is not a party to these Terms but is a third-party beneficiary and may enforce them against you."
+      },
+      {
+        "heading": "Service Changes",
+        "body": "We reserve the right to modify, suspend, or terminate the service at any time without notice."
+      },
+      {
+        "heading": "Governing Law",
+        "body": "These Terms are governed by the laws of Taiwan (R.O.C.), and any disputes shall be subject to the Taiwan Taipei District Court as the court of first instance."
+      },
+      {
+        "heading": "Contact Us",
+        "body": "For any questions about these Terms, email srcchang@gmail.com."
+      }
+    ],
+    "lastUpdated": "Last updated: June 14, 2026"
+  },
+  "shareGallery": {
+    "title": "Share Cards Gallery",
+    "metaTitle": "Share Cards — Salary Thief",
+    "metaDesc": "Beautiful share cards from Salary Thief — generate your own slacking summary cards",
+    "subtitle": "One tap to generate beautiful data cards for sharing",
+    "daily": "Daily Report",
+    "dailyDesc": "Your daily slacking summary with hours and earnings",
+    "weekly": "Weekly Report",
+    "weeklyDesc": "See how 'productive' you were this week",
+    "monthly": "Monthly Report",
+    "monthlyDesc": "Full month slacking review",
+    "achievement": "Achievement Card",
+    "achievementDesc": "Celebrate when you unlock a new badge",
+    "single": "Single Record",
+    "singleDesc": "Every break becomes a shareable card",
+    "cta": "Download Salary Thief & create your cards",
+    "milestone": "Milestone Card",
+    "milestoneDesc": "A keepsake card for reaching a major milestone"
+  }
+}
