@@ -6,6 +6,9 @@
   "workspaces": [
     "apps/*"
   ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
     "build": "node scripts/build-all.mjs",
     "dev:hub": "npm run dev -w apps/hub",
