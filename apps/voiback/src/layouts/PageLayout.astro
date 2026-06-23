@@ -8,7 +8,7 @@ import { headerData, footerData } from '~/navigation';
 import type { MetaData } from '~/types';
 
 import { getUI, type Locale } from '~/i18n/ui';
-import { getPermalink } from '~/utils/permalinks';
+import { getLocalePermalink } from '~/utils/permalinks';
 
 export interface Props {
   metadata?: MetaData;
@@ -19,13 +19,13 @@ const locale = (Astro.currentLocale || 'zh-TW') as Locale;
 const t = getUI(locale);
 
 const headerLinks = [
-  { text: t['nav.features'], href: getPermalink('/#features') },
-  { text: t['nav.faq'], href: getPermalink('/faq') },
+  { text: t['nav.features'], href: getLocalePermalink('/#features', locale) },
+  { text: t['nav.faq'], href: getLocalePermalink('/faq', locale) },
 ];
 
 const footerSecondaryLinks = [
-  { text: t['footer.privacy'], href: getPermalink('/privacy') },
-  { text: t['footer.terms'], href: getPermalink('/terms') },
+  { text: t['footer.privacy'], href: getLocalePermalink('/privacy', locale) },
+  { text: t['footer.terms'], href: getLocalePermalink('/terms', locale) },
 ];
 ---
 

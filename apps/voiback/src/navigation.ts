@@ -1,18 +1,11 @@
-import { getPermalink } from './utils/permalinks';
-
+// 導覽與頁尾連結文字／路徑改由 PageLayout 依當前語系產生（見 getLocalePermalink）。
 export const headerData = {
-  links: [
-    { href: getPermalink('/#features') },
-    { href: getPermalink('/faq') },
-  ],
+  links: [],
 };
 
 export const footerData = {
   links: [],
-  secondaryLinks: [
-    { href: getPermalink('/privacy') },
-    { href: getPermalink('/terms') },
-  ],
+  secondaryLinks: [],
   socialLinks: [],
   footNote: `VOIBACK`,
 };

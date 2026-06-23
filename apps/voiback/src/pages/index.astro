@@ -1,0 +1,40 @@
+---
+// /voiback/ 根入口：依瀏覽器語言偵測導向對應語系首頁，無法判斷時退回 zh-TW。
+---
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <title>VOIBACK</title>
+    <script is:inline>
+      (function () {
+        var supported = ['zh-TW', 'zh-CN', 'en', 'ja', 'ko'];
+        var fallback = 'zh-TW';
+        var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || fallback];
+        var pick = fallback;
+
+        for (var i = 0; i < langs.length; i++) {
+          var l = (langs[i] || '').toLowerCase();
+          if (!l) continue;
+
+          // 完全匹配（如 zh-tw、en-us 取前綴）
+          var exact = supported.filter(function (s) { return s.toLowerCase() === l; })[0];
+          if (exact) { pick = exact; break; }
+
+          var prefix = l.split('-')[0];
+          if (prefix === 'zh') {
+            pick = (l.indexOf('cn') > -1 || l.indexOf('hans') > -1 || l.indexOf('sg') > -1) ? 'zh-CN' : 'zh-TW';
+            break;
+          }
+          if (prefix === 'en') { pick = 'en'; break; }
+          if (prefix === 'ja') { pick = 'ja'; break; }
+          if (prefix === 'ko') { pick = 'ko'; break; }
+        }
+
+        location.replace('/voiback/' + pick + '/');
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

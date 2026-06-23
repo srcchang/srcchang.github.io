@@ -15,9 +15,9 @@ metadata:
   openGraph:
     site_name: VOIBACK
     images:
-      - url: '/voiback/og-default.svg'
+      - url: '/voiback/og-default.png'
         width: 1200
-        height: 628
+        height: 630
     type: website
 
 i18n:

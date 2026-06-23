@@ -16,6 +16,12 @@ export default defineConfig({
 
   integrations: [
     sitemap({
+      // 只收錄帶語系前綴的正式頁面，排除 noindex 的根語言偵測頁與無語系轉址 shim。
+      filter: (page) => {
+        const locales = ['zh-TW', 'zh-CN', 'en', 'ja', 'ko'];
+        const rest = page.replace(/^https?:\/\/[^/]+\/voiback\/?/, '');
+        return locales.includes(rest.split('/')[0]);
+      },
       i18n: {
         defaultLocale: 'zh-TW',
         locales: {
@@ -50,9 +56,5 @@ export default defineConfig({
     defaultLocale: 'zh-TW',
     locales: ['zh-TW', 'zh-CN', 'en', 'ja', 'ko'],
     routing: { prefixDefaultLocale: true },
-  },
-
-  redirects: {
-    '/': '/voiback/zh-TW/',
   },
 });

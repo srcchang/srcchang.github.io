@@ -39,7 +39,9 @@ const lang = locale.replace('_', '-').toLowerCase();
   </head>
 
   <body class="antialiased text-default bg-page tracking-tight">
+    <slot name="header" />
     <slot />
+    <slot name="footer" />
 
     <BasicScripts />
   </body>

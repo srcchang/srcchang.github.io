@@ -12,14 +12,13 @@ import Features3 from '~/components/widgets/Features3.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
-import Button from '~/components/ui/Button.astro';
+import StoreButtons from '~/components/StoreButtons.astro';
 
 import { getUI, type Locale } from '~/i18n/ui';
+import { getLocalePermalink } from '~/utils/permalinks';
 
 const locale = (Astro.currentLocale || 'zh-TW') as Locale;
 const t = getUI(locale);
-const currentPath = Astro.url.pathname;
-const homeHref = currentPath.includes('/voiback/') ? '/voiback/' : '/';
 
 const metadata = {
   title: 'VOIBACK',
@@ -44,14 +43,7 @@ const metadata = {
     <Fragment slot="image">
       <img src="/voiback/hero-placeholder.svg" alt="VOIBACK App" class="mx-auto rounded-md w-full" />
     </Fragment>
-    <div slot="actions" class="flex flex-wrap gap-4">
-      <Button variant="primary" href={t['store.appstore']}>
-        {t['hero.cta.appstore']}
-      </Button>
-      <Button variant="secondary" href={t['store.googleplay']}>
-        {t['hero.cta.googleplay']}
-      </Button>
-    </div>
+    <StoreButtons slot="actions" locale={locale} />
   </Hero2>
 
   <!-- How It Works ************ -->
@@ -131,18 +123,21 @@ const metadata = {
     ]}
   />
 
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 -mt-6 mb-4 text-center">
+    <a
+      href={getLocalePermalink('/faq', locale)}
+      class="inline-flex items-center gap-1 cursor-pointer text-primary font-medium hover:underline transition-colors duration-150"
+    >
+      {t['faq.more']}
+      <span aria-hidden="true">→</span>
+    </a>
+  </div>
+
   <!-- CTA ********************* -->
   <CallToAction
     title={t['cta.title']}
     subtitle={t['cta.subtitle']}
   >
-    <div slot="actions" class="flex flex-wrap gap-4">
-      <Button variant="primary" href={t['store.appstore']}>
-        {t['hero.cta.appstore']}
-      </Button>
-      <Button variant="secondary" href={t['store.googleplay']}>
-        {t['hero.cta.googleplay']}
-      </Button>
-    </div>
+    <StoreButtons slot="actions" locale={locale} class="flex flex-wrap gap-4 justify-center" />
   </CallToAction>
 </PageLayout>

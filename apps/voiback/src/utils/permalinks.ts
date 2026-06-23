@@ -56,6 +56,16 @@ export const getPermalink = (slug = '', type = 'page'): string => {
 
 export const getHomePermalink = (): string => getPermalink('/');
 
+// 產生帶語系前綴的連結，並保留 hash（例如 '/#features' -> '/voiback/zh-TW#features'）
+export const getLocalePermalink = (slug = '', locale = ''): string => {
+  if (slug.startsWith('https://') || slug.startsWith('http://') || slug.startsWith('#')) {
+    return slug;
+  }
+  const [path, hash] = slug.split('#');
+  const permalink = createPath(BASE_PATHNAME, locale, path);
+  return hash ? `${permalink}#${hash}` : permalink;
+};
+
 export const getAsset = (path: string): string =>
   '/' +
   [BASE_PATHNAME, path]

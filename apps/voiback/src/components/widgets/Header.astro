@@ -3,7 +3,7 @@ import Logo from '~/components/Logo.astro';
 import LanguageSwitcher from '~/components/LanguageSwitcher.astro';
 import ToggleMenu from '~/components/common/ToggleMenu.astro';
 
-import { getHomePermalink, trimSlash } from '~/utils/permalinks';
+import { trimSlash } from '~/utils/permalinks';
 import type { CallToAction } from '~/types';
 
 interface MenuLink {
@@ -66,16 +66,16 @@ const isActive = (href: string): boolean => {
     <Logo locale={locale} />
 
     <nav
-      class="items-center w-full md:w-auto hidden md:flex mx-5 text-default overflow-y-auto overflow-x-hidden md:overflow-visible"
+      class="items-center w-full md:w-auto hidden md:flex md:mx-5 text-default overflow-y-auto overflow-x-hidden md:overflow-visible"
       aria-label="Main navigation"
     >
-      <ul class="flex flex-row self-center w-auto text-[0.9375rem] tracking-[0.01rem] font-medium gap-1">
+      <ul class="flex flex-col md:flex-row md:self-center w-full md:w-auto text-lg md:text-[0.9375rem] tracking-[0.01rem] font-medium gap-1 items-center justify-center pt-8 md:pt-0">
         {
           links.map(({ text, href }) => (
-            <li>
+            <li class="w-full text-center md:w-auto">
               <a
                 class:list={[
-                  'hover:text-primary transition-colors duration-150 px-3 py-2 flex items-center whitespace-nowrap rounded-lg',
+                  'hover:text-primary transition-colors duration-150 px-4 py-3 md:py-2 flex items-center justify-center whitespace-nowrap rounded-lg',
                   { 'aw-link-active': isActive(href) },
                 ]}
                 href={href}

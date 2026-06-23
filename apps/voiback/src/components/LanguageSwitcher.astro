@@ -57,3 +57,22 @@ const pathAfterLocale = baseIndex >= 0 ? pathParts.slice(baseIndex + 1).join('/'
     ))}
   </div>
 </details>
+
+<script is:inline>
+  (function () {
+    if (window.__voibackLangSwitcher) return;
+    window.__voibackLangSwitcher = true;
+    const closeAll = (except) => {
+      document.querySelectorAll('details[open]').forEach((d) => {
+        if (d !== except) d.removeAttribute('open');
+      });
+    };
+    document.addEventListener('click', (e) => {
+      const open = document.querySelector('details[open]');
+      if (open && !open.contains(e.target)) closeAll();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeAll();
+    });
+  })();
+</script>

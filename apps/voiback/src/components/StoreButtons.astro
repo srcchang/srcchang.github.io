@@ -1,0 +1,44 @@
+---
+import Button from '~/components/ui/Button.astro';
+import { getUI, type Locale } from '~/i18n/ui';
+
+export interface Props {
+  locale?: Locale;
+  class?: string;
+}
+
+const { locale = 'zh-TW', class: className = 'flex flex-wrap gap-4' } = Astro.props;
+const t = getUI(locale);
+
+const stores = [
+  { href: t['store.appstore'], label: t['hero.cta.appstore'], variant: 'primary' as const },
+  { href: t['store.googleplay'], label: t['hero.cta.googleplay'], variant: 'secondary' as const },
+];
+
+// 商店連結尚未提供（佔位 '#' 或空字串）時，以禁用的「即將推出」狀態呈現，避免死連結。
+const isPlaceholder = (href: string) => !href || href === '#';
+---
+
+<div class={className}>
+  {
+    stores.map(({ href, label, variant }) =>
+      isPlaceholder(href) ? (
+        <span
+          class:list={[
+            variant === 'primary' ? 'btn-primary' : 'btn-secondary',
+            'opacity-60 cursor-not-allowed pointer-events-none',
+          ]}
+          role="button"
+          aria-disabled="true"
+          title={t['cta.coming']}
+        >
+          {label} · {t['cta.coming']}
+        </span>
+      ) : (
+        <Button variant={variant} href={href}>
+          {label}
+        </Button>
+      )
+    )
+  }
+</div>

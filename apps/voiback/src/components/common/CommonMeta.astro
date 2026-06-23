@@ -1,8 +1,34 @@
 ---
 import { getAsset } from '~/utils/permalinks';
+import { SITE } from 'astrowind:config';
+
+const locales = ['zh-TW', 'zh-CN', 'en', 'ja', 'ko'];
+
+// 從當前路徑推導出「去語系」的頁面路徑，為每個語系產生對應的 hreflang 連結。
+const base = (SITE.base || '/').replace(/\/$/, ''); // '/voiback'
+const origin = (SITE.site || '').replace(/\/$/, '');
+const pathname = Astro.url.pathname;
+const rest = pathname.startsWith(base) ? pathname.slice(base.length) : pathname;
+const segs = rest.split('/').filter(Boolean);
+const hasLocale = locales.includes(segs[0]);
+if (hasLocale) segs.shift();
+const pagePath = segs.join('/');
+
+const hrefFor = (loc: string) => `${origin}${base}/${loc}${pagePath ? '/' + pagePath : ''}`;
 ---
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <link rel="sitemap" href={getAsset('/sitemap-index.xml')} />
+
+{
+  hasLocale && (
+    <>
+      {locales.map((loc) => (
+        <link rel="alternate" hreflang={loc} href={hrefFor(loc)} />
+      ))}
+      <link rel="alternate" hreflang="x-default" href={hrefFor('zh-TW')} />
+    </>
+  )
+}
