@@ -1,0 +1,47 @@
+---
+export const getStaticPaths = () => {
+  const locales = ['zh-TW', 'zh-CN', 'en', 'ja', 'ko'] as const;
+  return locales.map((locale) => ({ params: { locale } }));
+};
+
+import PageLayout from '~/layouts/PageLayout.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+
+import { getUI, type Locale } from '~/i18n/ui';
+
+const locale = (Astro.currentLocale || 'zh-TW') as Locale;
+const t = getUI(locale);
+
+const metadata = {
+  title: t['faq.page.title'],
+};
+---
+
+<PageLayout metadata={metadata}>
+  <FAQs
+    title={t['faq.page.title']}
+    columns={1}
+    items={[
+      {
+        title: t['faq.q1.title'],
+        description: t['faq.q1.desc'],
+      },
+      {
+        title: t['faq.q2.title'],
+        description: t['faq.q2.desc'],
+      },
+      {
+        title: t['faq.q3.title'],
+        description: t['faq.q3.desc'],
+      },
+      {
+        title: t['faq.q4.title'],
+        description: t['faq.q4.desc'],
+      },
+      {
+        title: t['faq.q5.title'],
+        description: t['faq.q5.desc'],
+      },
+    ]}
+  />
+</PageLayout>

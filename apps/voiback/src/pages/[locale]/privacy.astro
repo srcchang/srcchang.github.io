@@ -1,0 +1,36 @@
+---
+export const getStaticPaths = () => {
+  const locales = ['zh-TW', 'zh-CN', 'en', 'ja', 'ko'] as const;
+  return locales.map((locale) => ({ params: { locale } }));
+};
+
+import PageLayout from '~/layouts/PageLayout.astro';
+
+import { getUI, type Locale } from '~/i18n/ui';
+import { getPrivacyContent } from '~/i18n/content/privacy';
+
+const locale = (Astro.currentLocale || 'zh-TW') as Locale;
+const t = getUI(locale);
+const sections = getPrivacyContent(locale);
+
+const metadata = {
+  title: t['privacy.title'],
+};
+---
+
+<PageLayout metadata={metadata}>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 py-12 md:py-20">
+    <h1 class="text-3xl md:text-4xl font-bold font-heading mb-2">{t['privacy.title']}</h1>
+    <p class="text-muted text-sm mb-10">2026</p>
+    <div class="space-y-8">
+      {
+        sections.map((section) => (
+          <section>
+            <h2 class="text-xl font-bold font-heading mb-2">{section.heading}</h2>
+            <p class="text-default leading-relaxed">{section.body}</p>
+          </section>
+        ))
+      }
+    </div>
+  </div>
+</PageLayout>

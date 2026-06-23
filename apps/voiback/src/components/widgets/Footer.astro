@@ -1,0 +1,52 @@
+---
+import Logo from '~/components/Logo.astro';
+import LanguageSwitcher from '~/components/LanguageSwitcher.astro';
+import { SITE } from 'astrowind:config';
+import { getHomePermalink } from '~/utils/permalinks';
+
+interface Link {
+  text?: string;
+  href?: string;
+  ariaLabel?: string;
+}
+
+export interface Props {
+  links: Array<{ title?: string; links: Array<Link> }>;
+  secondaryLinks: Array<Link>;
+  socialLinks: Array<Link>;
+  footNote?: string;
+}
+
+const { secondaryLinks = [], footNote = '' } = Astro.props;
+const locale = Astro.currentLocale || 'zh-TW';
+---
+
+<footer class="relative border-t border-gray-800 not-prose">
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 dark:text-slate-300">
+    <div class="flex flex-col md:flex-row items-center justify-between py-8 gap-4">
+      <Logo locale={locale} />
+
+      <div class="flex items-center gap-4 text-sm text-muted">
+        {
+          secondaryLinks.map(({ text, href }, index) => (
+            <>
+              {index !== 0 && <span class="text-gray-600">·</span>}
+              <a
+                class="text-muted hover:text-primary transition-colors duration-150"
+                href={href}
+              >
+                {text}
+              </a>
+            </>
+          ))
+        }
+      </div>
+
+      <LanguageSwitcher locale={locale} />
+    </div>
+
+    <div class="py-4 border-t border-gray-800 text-center text-xs text-muted">
+      {footNote}
+    </div>
+  </div>
+</footer>

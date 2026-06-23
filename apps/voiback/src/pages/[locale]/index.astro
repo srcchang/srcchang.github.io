@@ -1,0 +1,148 @@
+---
+export const getStaticPaths = () => {
+  const locales = ['zh-TW', 'zh-CN', 'en', 'ja', 'ko'] as const;
+  return locales.map((locale) => ({ params: { locale } }));
+};
+
+import PageLayout from '~/layouts/PageLayout.astro';
+
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import Button from '~/components/ui/Button.astro';
+
+import { getUI, type Locale } from '~/i18n/ui';
+
+const locale = (Astro.currentLocale || 'zh-TW') as Locale;
+const t = getUI(locale);
+const currentPath = Astro.url.pathname;
+const homeHref = currentPath.includes('/voiback/') ? '/voiback/' : '/';
+
+const metadata = {
+  title: 'VOIBACK',
+};
+---
+
+<PageLayout metadata={metadata}>
+  <Fragment slot="announcement"></Fragment>
+
+  <!-- Hero ******************* -->
+  <Hero2
+    tagline={t['hero.tagline']}
+  >
+    <Fragment slot="title">
+      <Fragment set:html={t['hero.title']} />
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      {t['hero.subtitle']}
+    </Fragment>
+
+    <Fragment slot="image">
+      <img src="/voiback/hero-placeholder.svg" alt="VOIBACK App" class="mx-auto rounded-md w-full" />
+    </Fragment>
+    <div slot="actions" class="flex flex-wrap gap-4">
+      <Button variant="primary" href={t['store.appstore']}>
+        {t['hero.cta.appstore']}
+      </Button>
+      <Button variant="secondary" href={t['store.googleplay']}>
+        {t['hero.cta.googleplay']}
+      </Button>
+    </div>
+  </Hero2>
+
+  <!-- How It Works ************ -->
+  <Steps
+    title={t['how.title']}
+    tagline=""
+    isReversed={false}
+    items={[
+      {
+        title: t['how.step1.title'],
+        description: t['how.step1.desc'],
+        icon: 'tabler:microphone',
+      },
+      {
+        title: t['how.step2.title'],
+        description: t['how.step2.desc'],
+        icon: 'tabler:player-play',
+      },
+      {
+        title: t['how.step3.title'],
+        description: t['how.step3.desc'],
+        icon: 'tabler:stars',
+      },
+    ]}
+  />
+
+  <!-- Features **************** -->
+  <Features3
+    id="features"
+    title={t['features.title']}
+    columns={2}
+    items={[
+      {
+        title: t['features.sentences.title'],
+        description: t['features.sentences.desc'],
+        icon: 'tabler:books',
+      },
+      {
+        title: t['features.multiplayer.title'],
+        description: t['features.multiplayer.desc'],
+        icon: 'tabler:users',
+      },
+      {
+        title: t['features.waveform.title'],
+        description: t['features.waveform.desc'],
+        icon: 'tabler:wave-sine',
+      },
+      {
+        title: t['features.share.title'],
+        description: t['features.share.desc'],
+        icon: 'tabler:share',
+      },
+    ]}
+  />
+
+  <!-- FAQ Preview ************* -->
+  <FAQs
+    title={t['faq.title']}
+    columns={1}
+    items={[
+      {
+        title: t['faq.q1.title'],
+        description: t['faq.q1.desc'],
+      },
+      {
+        title: t['faq.q2.title'],
+        description: t['faq.q2.desc'],
+      },
+      {
+        title: t['faq.q3.title'],
+        description: t['faq.q3.desc'],
+      },
+      {
+        title: t['faq.q4.title'],
+        description: t['faq.q4.desc'],
+      },
+    ]}
+  />
+
+  <!-- CTA ********************* -->
+  <CallToAction
+    title={t['cta.title']}
+    subtitle={t['cta.subtitle']}
+  >
+    <div slot="actions" class="flex flex-wrap gap-4">
+      <Button variant="primary" href={t['store.appstore']}>
+        {t['hero.cta.appstore']}
+      </Button>
+      <Button variant="secondary" href={t['store.googleplay']}>
+        {t['hero.cta.googleplay']}
+      </Button>
+    </div>
+  </CallToAction>
+</PageLayout>

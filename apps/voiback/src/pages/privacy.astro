@@ -1,0 +1,23 @@
+---
+// 非語系前綴轉址頁：供 App 內嵌 WebView 以 /privacy?embed=true&lang=xx 進入，
+// 前端讀 ?lang= 轉址到對應語系的 /{lang}/privacy（保留 embed）。
+---
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex" />
+  <title>Privacy Policy</title>
+  <script is:inline>
+    (function () {
+      var p = new URLSearchParams(location.search);
+      var supported = ['zh-TW', 'zh-CN', 'en', 'ja', 'ko'];
+      var lang = p.get('lang');
+      if (supported.indexOf(lang) === -1) lang = 'zh-TW';
+      var embed = p.get('embed') === 'true' ? '?embed=true' : '';
+      location.replace('/voiback/' + lang + '/privacy' + embed);
+    })();
+  </script>
+</head>
+<body></body>
+</html>

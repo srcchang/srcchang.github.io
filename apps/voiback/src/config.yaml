@@ -1,0 +1,37 @@
+site:
+  name: VOIBACK
+  site: 'https://srcchang.github.io'
+  base: '/voiback'
+  trailingSlash: false
+
+metadata:
+  title:
+    default: VOIBACK
+    template: '%s — VOIBACK'
+  description: "倒著說，誰最像？錄下你說的話，App 把聲音倒放——你能模仿那段反轉音嗎？"
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: VOIBACK
+    images:
+      - url: '/voiback/og-default.svg'
+        width: 1200
+        height: 628
+    type: website
+
+i18n:
+  language: zh-TW
+  textDirection: ltr
+
+apps:
+  blog:
+    isEnabled: false
+
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null
+
+ui:
+  theme: 'dark:only'

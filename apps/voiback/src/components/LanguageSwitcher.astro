@@ -1,0 +1,59 @@
+---
+export interface Props {
+  locale: string;
+  class?: string;
+}
+
+const { locale } = Astro.props;
+
+const languages: Record<string, string> = {
+  'zh-TW': '繁',
+  'zh-CN': '简',
+  'en': 'EN',
+  'ja': '日',
+  'ko': '한',
+};
+
+const fullNames: Record<string, string> = {
+  'zh-TW': '繁體中文',
+  'zh-CN': '简体中文',
+  'en': 'English',
+  'ja': '日本語',
+  'ko': '한국어',
+};
+
+// Build the current base path minus locale
+const pathParts = Astro.url.pathname.split('/').filter(Boolean);
+// Remove locale prefix (e.g., "zh-TW") from the path to get canonical path
+const baseIndex = pathParts.findIndex(p => languages[p]);
+const pathAfterLocale = baseIndex >= 0 ? pathParts.slice(baseIndex + 1).join('/') : pathParts.slice(1).join('/');
+---
+
+<details class="relative">
+  <summary class="flex items-center gap-1 px-2 py-1 text-sm text-muted hover:text-primary transition-colors duration-150 cursor-pointer list-none marker:hidden" aria-label="Switch language">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+      <path d="M3.6 9h16.8" />
+      <path d="M3.6 15h16.8" />
+      <path d="M11.5 3a17 17 0 0 0 0 18" />
+      <path d="M12.5 3a17 17 0 0 1 0 18" />
+    </svg>
+    <span class="hidden sm:inline">{fullNames[locale] || locale}</span>
+    <span class="sm:hidden">{languages[locale] || locale}</span>
+  </summary>
+  <div class="absolute right-0 mt-1 w-40 bg-[#1A1A2E] border border-gray-700 rounded-lg shadow-xl z-50">
+    {Object.entries(languages).map(([code, label]) => (
+      <a
+        href={`/voiback/${code}/${pathAfterLocale}`}
+        class:list={[
+          'block px-4 py-2 text-sm hover:bg-gray-700/50 first:rounded-t-lg last:rounded-b-lg transition-colors',
+          code === locale ? 'text-primary font-medium' : 'text-default',
+        ]}
+      >
+        <span class="inline-block w-6">{label}</span>
+        <span>{fullNames[code]}</span>
+      </a>
+    ))}
+  </div>
+</details>
