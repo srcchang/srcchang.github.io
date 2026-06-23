@@ -19,9 +19,8 @@ export const ui = {
     'hero.subtitle': '錄下你說的話，App 把聲音倒放——你能模仿那段反轉音嗎？把模仿的聲音再反轉回來，和原音對照，看誰模仿得最像！',
     'hero.cta.appstore': 'App Store',
     'hero.cta.googleplay': 'Google Play',
-    // TODO: App 上架後替換為真實商店連結；目前為 '#'，StoreButtons 會自動顯示為「即將推出」禁用狀態。
-    'store.appstore': '#',
-    'store.googleplay': '#',
+    'store.appstore': 'https://apps.apple.com/app/id6783258716',
+    'store.googleplay': 'https://play.google.com/store/apps/details?id=com.src.app.voiback',
     'how.title': '怎麼玩',
     'how.step1.title': '選句錄音',
     'how.step1.desc': '從句子庫挑選一句話，或自己輸入任意句子，錄下你的原音。',
