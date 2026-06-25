@@ -1,0 +1,27 @@
+---
+import CarSvg from '../assets/svg/car-silhouette.svg?raw';
+import MotoSvg from '../assets/svg/moto-silhouette.svg?raw';
+
+interface Props {
+  vehicle: 'car' | 'moto';
+  position: string;
+  size: string;
+}
+
+const { vehicle, position, size } = Astro.props;
+const svgContent = vehicle === 'car' ? CarSvg : MotoSvg;
+const colorClass = vehicle === 'car' ? 'text-car' : 'text-moto';
+---
+
+<div
+  class:list={[
+    'pointer-events-none absolute opacity-[0.25] dark:opacity-[0.30]',
+    colorClass,
+    position,
+    size,
+  ]}
+  style="filter: blur(8px);"
+  aria-hidden="true"
+>
+  <Fragment set:html={svgContent} />
+</div>

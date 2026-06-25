@@ -16,6 +16,7 @@ const apps = [
   { name: 'hub', dest: '' }, // 作品集首頁，服務於根網域
   { name: 'salary_thief', dest: 'salary_thief' }, // base: /salary_thief
   { name: 'voiback', dest: 'voiback' }, // base: /voiback
+  { name: 'drive_pass', dest: 'drive_pass' }, // base: /drive_pass
 ];
 
 function run(cmd) {

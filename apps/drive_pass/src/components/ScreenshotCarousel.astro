@@ -1,0 +1,48 @@
+---
+import PhoneMockup from './PhoneMockup.astro';
+import { getTranslations, t } from '../i18n/translations';
+import type { Locale } from '../i18n/config';
+
+interface Props {
+  variant: 'car' | 'moto';
+  locale: string;
+}
+
+const { variant, locale } = Astro.props;
+const tr = getTranslations(locale as Locale);
+
+const isCar = variant === 'car';
+const accentText = isCar ? 'text-car' : 'text-moto';
+const pageKey = isCar ? 'carPage' : 'motoPage';
+
+// Get screen labels from feature titles in translations
+const translations = tr as Record<string, any>;
+const features: { title: string }[] = translations[pageKey]?.features ?? [];
+const screens = features.map((f) => f.title);
+---
+
+<div class="relative" data-reveal>
+  <div
+    class="scrollbar-hide flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 pb-4 sm:justify-center sm:gap-8"
+    role="region"
+    aria-label={t(tr, 'common.screenshotAria')}
+    tabindex="0"
+  >
+    {screens.map((label) => (
+      <div class="flex shrink-0 snap-center flex-col items-center gap-2">
+        <PhoneMockup variant={variant} locale={locale} />
+        <span class:list={['text-xs font-medium', accentText]}>{label}</span>
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+</style>

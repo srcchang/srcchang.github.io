@@ -1,0 +1,113 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from './Nav.astro';
+import Footer from './Footer.astro';
+import { getTranslations, t } from '../i18n/translations';
+import type { Locale } from '../i18n/config';
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const tr = getTranslations(locale as Locale);
+
+const title = t(tr, 'aboutPage.title');
+const currentPath = '/about';
+const translations = tr as Record<string, any>;
+const highlights: { title: string; description: string }[] = translations.aboutPage?.highlights ?? [];
+---
+<BaseLayout
+  title={`${title} — Drive Pass`}
+  description={t(tr, 'aboutPage.mission')}
+  locale={locale}
+  currentPath={currentPath}
+>
+  <div data-embed-hide><Nav locale={locale} currentPath={currentPath} /></div>
+
+  <article class="bg-bg-surface px-4 pb-16 pt-12 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl">
+      {/* App 資訊卡：僅在 App 內嵌（?embed=true&app=car|moto）時由下方 script 顯示 */}
+      <div id="app-info-card" class="mb-8 hidden flex-col items-center text-center" data-version-label={t(tr, 'aboutPage.version')}>
+        <div data-app-variant="car" class="hidden flex-col items-center text-center">
+          <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-car/10">
+            <span class="text-3xl text-car">🚗</span>
+          </div>
+          <p class="mt-3 text-xl font-bold text-car">{t(tr, 'aboutPage.carName')}</p>
+        </div>
+        <div data-app-variant="moto" class="hidden flex-col items-center text-center">
+          <div class="flex h-16 w-16 items-center justify-center rounded-2xl bg-moto/10">
+            <span class="text-3xl text-moto">🏍️</span>
+          </div>
+          <p class="mt-3 text-xl font-bold text-moto">{t(tr, 'aboutPage.motoName')}</p>
+        </div>
+        <p data-app-version class="mt-1 hidden text-sm text-text-tertiary"></p>
+      </div>
+      <h1 class="text-3xl font-bold text-text-primary sm:text-4xl">{title}</h1>
+      <p class="mt-4 leading-relaxed text-text-secondary">{t(tr, 'aboutPage.mission')}</p>
+
+      <section class="mt-12">
+        <h2 class="text-lg font-semibold text-text-primary">{t(tr, 'aboutPage.productsTitle')}</h2>
+        <div class="mt-4 space-y-4">
+          <div class="rounded-xl border border-border-subtle bg-bg-muted p-4">
+            <div class="flex items-center gap-2">
+              <span class="h-3 w-3 rounded-full bg-car"></span>
+              <span class="font-medium text-text-primary">{t(tr, 'aboutPage.carName')}</span>
+            </div>
+            <p class="mt-1 text-sm text-text-secondary">{t(tr, 'aboutPage.carDescription')}</p>
+          </div>
+          <div class="rounded-xl border border-border-subtle bg-bg-muted p-4">
+            <div class="flex items-center gap-2">
+              <span class="h-3 w-3 rounded-full bg-moto"></span>
+              <span class="font-medium text-text-primary">{t(tr, 'aboutPage.motoName')}</span>
+            </div>
+            <p class="mt-1 text-sm text-text-secondary">{t(tr, 'aboutPage.motoDescription')}</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-12">
+        <h2 class="text-lg font-semibold text-text-primary">{t(tr, 'aboutPage.whyTitle')}</h2>
+        <div class="mt-4 grid gap-4 sm:grid-cols-2">
+          {highlights.map((item) => (
+            <div class="rounded-xl border border-border-subtle bg-bg-muted p-4">
+              <p class="font-medium text-text-primary">{item.title}</p>
+              <p class="mt-1 text-sm text-text-secondary">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="mt-12">
+        <h2 class="text-lg font-semibold text-text-primary">{t(tr, 'aboutPage.contactTitle')}</h2>
+        <p class="mt-2 text-text-secondary">
+          <a href="mailto:srcchang@gmail.com" class="text-car underline hover:opacity-80">srcchang@gmail.com</a>
+        </p>
+      </section>
+    </div>
+  </article>
+
+  <div data-embed-hide><Footer locale={locale} /></div>
+</BaseLayout>
+
+<script>
+  // App 內嵌時依 ?app=car|moto 顯示對應品牌卡，並填入 ?version=
+  const params = new URLSearchParams(location.search);
+  const app = params.get('app');
+  if (params.get('embed') === 'true' && (app === 'car' || app === 'moto')) {
+    const card = document.getElementById('app-info-card');
+    const variant = card?.querySelector(`[data-app-variant="${app}"]`);
+    if (card && variant) {
+      card.classList.remove('hidden');
+      card.classList.add('flex');
+      variant.classList.remove('hidden');
+      variant.classList.add('flex');
+      const version = params.get('version');
+      const versionEl = card.querySelector<HTMLElement>('[data-app-version]');
+      if (version && versionEl) {
+        versionEl.textContent = `${card.dataset.versionLabel ?? ''} ${version}`.trim();
+        versionEl.classList.remove('hidden');
+      }
+    }
+  }
+</script>

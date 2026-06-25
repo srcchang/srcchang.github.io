@@ -1,0 +1,84 @@
+---
+import { getTranslations, t } from '../i18n/translations';
+import type { Locale } from '../i18n/config';
+import Icon from './Icon.astro';
+import { Image } from 'astro:assets';
+import CarIcon from '../assets/app-icon-car.png';
+import MotoIcon from '../assets/app-icon-moto.png';
+
+interface Props {
+  variant: 'car' | 'moto';
+  locale: string;
+}
+
+const { variant, locale } = Astro.props;
+const tr = getTranslations(locale as Locale);
+
+const isCar = variant === 'car';
+const prefix = `products.${variant}`;
+
+const name = t(tr, `${prefix}.name`);
+const description = t(tr, `${prefix}.description`);
+const examSpec = t(tr, `${prefix}.examSpec`);
+const categories = t(tr, `${prefix}.categories`);
+const learnMore = t(tr, `${prefix}.learnMore`);
+
+// Access tags array from translations directly
+const translations = tr as Record<string, any>;
+const tags: string[] = translations.products?.[variant]?.tags ?? [];
+
+const cardBorder = isCar ? 'border-orange-200 dark:border-orange-900' : 'border-purple-200 dark:border-purple-900';
+const iconGradient = isCar
+  ? 'from-car to-car-light'
+  : 'from-moto to-moto-light';
+const tagBg = isCar
+  ? 'bg-orange-50 text-orange-700 dark:bg-orange-950 dark:text-orange-300'
+  : 'bg-purple-50 text-purple-700 dark:bg-purple-950 dark:text-purple-300';
+const linkColor = isCar ? 'text-car hover:text-car-deep' : 'text-moto hover:text-moto-deep';
+const href = `/${locale}/${variant}`;
+---
+
+<article
+  class={`flex flex-col rounded-2xl border bg-bg-surface p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${cardBorder}`}
+>
+  <!-- App icon -->
+  <div class="mb-4 h-14 w-14 overflow-hidden rounded-2xl shadow-sm" aria-hidden="true">
+    <Image src={isCar ? CarIcon : MotoIcon} alt="" width={160} height={160} class="h-full w-full object-cover" />
+  </div>
+
+  <!-- Name -->
+  <h3 class="text-xl font-bold text-text-primary">{name}</h3>
+
+  <!-- Stats -->
+  <ul class="mt-3 space-y-1.5 text-sm text-text-secondary">
+    <li class="flex items-center gap-2">
+      <Icon name="book-open" size="16" class="shrink-0 text-text-tertiary" />
+      {description}
+    </li>
+    <li class="flex items-center gap-2">
+      <Icon name="file-text" size="16" class="shrink-0 text-text-tertiary" />
+      {examSpec}
+    </li>
+    <li class="flex items-center gap-2">
+      <Icon name="target" size="16" class="shrink-0 text-text-tertiary" />
+      {categories}
+    </li>
+  </ul>
+
+  <!-- Feature tags -->
+  <div class="mt-4 flex flex-wrap gap-2">
+    {tags.map((tag) => (
+      <span class={`rounded-full px-3 py-1 text-xs font-medium ${tagBg}`}>
+        {tag}
+      </span>
+    ))}
+  </div>
+
+  <!-- Learn more link — mt-auto pushes it to the card bottom -->
+  <a
+    href={href}
+    class={`mt-auto pt-5 text-sm font-semibold transition-colors ${linkColor}`}
+  >
+    {learnMore}
+  </a>
+</article>

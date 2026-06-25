@@ -1,0 +1,454 @@
+{
+  "nav": {
+    "car": "Versi Mobil",
+    "moto": "Versi Motor",
+    "examInfo": "Info Ujian",
+    "download": "Unduh App"
+  },
+  "hero": {
+    "badge": "App Persiapan Ujian Tertulis SIM Taiwan",
+    "title1": "Lulus Sekali Ujian",
+    "title2": "Raih SIM dengan Mudah",
+    "subtitle": "Algoritma Ulang Cerdas · Prediksi Kelulusan Akurat · Dukungan 5 Bahasa Lengkap",
+    "downloadCar": "Unduh Versi Mobil",
+    "downloadMoto": "Unduh Versi Motor"
+  },
+  "trust": {
+    "questions": "Soal Pilihan",
+    "questionsCount": "2,500+",
+    "languages": "Dukungan Bahasa",
+    "languagesCount": "5",
+    "achievements": "Lencana Prestasi",
+    "achievementsCount": "14",
+    "platforms": "Dua Platform",
+    "platformsLabel": "iOS + Android"
+  },
+  "products": {
+    "sectionTitle": "Pilih Teman Belajarmu",
+    "car": {
+      "name": "Bank Soal Mobil",
+      "description": "Bank soal lengkap 1.484 soal",
+      "examSpec": "Simulasi ujian 40 soal / 30 menit",
+      "categories": "4 kategori utama · Lulus 85 poin",
+      "learnMore": "Pelajari lebih lanjut →",
+      "tags": [
+        "Peraturan Lalu Lintas",
+        "Rambu Lalu Lintas",
+        "Ulang SM-2",
+        "Sistem Prestasi"
+      ]
+    },
+    "moto": {
+      "name": "Bank Soal Motor",
+      "description": "Bank soal lengkap 1.050+ soal",
+      "examSpec": "Simulasi ujian 50 soal / 40 menit",
+      "categories": "5 kategori utama · Lulus 85 poin",
+      "learnMore": "Pelajari lebih lanjut →",
+      "tags": [
+        "Peraturan Motor",
+        "Soal Situasi",
+        "Video Persepsi Bahaya",
+        "Ulang SM-2"
+      ]
+    }
+  },
+  "features": {
+    "sectionTitle": "Mengapa Memilih Drive Pass?",
+    "sectionSubtitle": "Persiapan ujian paling efisien dengan metode ilmiah",
+    "items": [
+      {
+        "icon": "brain",
+        "title": "Ulang Cerdas SM-2",
+        "description": "Berbasis algoritma pengulangan berspasi SuperMemo, secara otomatis mengatur waktu ulang yang optimal. Soal yang salah akan muncul lebih sering, soal yang benar intervalnya semakin panjang, sehingga kamu bisa fokus di mana yang paling dibutuhkan."
+      },
+      {
+        "icon": "bar-chart",
+        "title": "Prediksi Kelulusan",
+        "description": "Menggabungkan nilai simulasi ujian, tingkat ketepatan latihan, dan cakupan bank soal untuk menghitung prediksi kelulusanmu secara real-time. Tidak perlu menebak-nebak kesiapanmu, angka yang akan memberi jawabannya."
+      },
+      {
+        "icon": "target",
+        "title": "Tantangan Harian & Sprint Pra-Ujian",
+        "description": "10 soal setiap hari untuk menjaga ritme belajar, aktifkan mode sprint sebelum ujian, mesin rekomendasi tiga lapis otomatis memilih soal yang paling perlu kamu perkuat."
+      },
+      {
+        "icon": "file-text",
+        "title": "Simulasi Ujian",
+        "description": "Mereplikasi 100% spesifikasi ujian nyata, timer otomatis mengumpulkan jawaban, tinjauan soal per soal. Simulasi lengkap agar kamu tidak gugup saat ujian sebenarnya."
+      },
+      {
+        "icon": "rotate-ccw",
+        "title": "Buku Soal Salah",
+        "description": "Secara otomatis mencatat soal yang salah dijawab, bisa difilter, diurutkan, dan dikerjakan ulang secara massal. Dikombinasikan dengan algoritma SM-2 untuk mengatasi kelemahan secara tepat sasaran."
+      },
+      {
+        "icon": "trophy",
+        "title": "Sistem Prestasi",
+        "description": "14 lencana prestasi untuk memotivasi semangat belajar. Jumlah soal latihan, jawaban benar beruntun, nilai tinggi simulasi ujian, hari aktif berturut-turut — semua kemajuanmu tercatat lengkap."
+      }
+    ]
+  },
+  "faq": {
+    "sectionTitle": "Pertanyaan Umum",
+    "items": [
+      {
+        "question": "Apakah App ini gratis?",
+        "answer": "Fitur dasar sepenuhnya gratis! Termasuk bank soal lengkap, simulasi ujian, buku soal salah, dan fitur inti lainnya. Di masa mendatang akan ada paket berbayar premium yang menyediakan konten tambahan."
+      },
+      {
+        "question": "Bahasa apa saja yang didukung?",
+        "answer": "Saat ini mendukung 5 bahasa: 繁體中文, English, Tiếng Việt, ไทย, dan Bahasa Indonesia. Soal dan antarmuka semuanya diterjemahkan secara lengkap."
+      },
+      {
+        "question": "Apakah bank soal sama dengan ujian sesungguhnya?",
+        "answer": "Ya! Bank soal bersumber dari bank soal resmi yang dipublikasikan oleh Direktorat Jenderal Perhubungan Darat Taiwan, diperbarui secara berkala untuk memastikan kesesuaian dengan soal ujian terbaru."
+      },
+      {
+        "question": "Apakah perlu koneksi internet untuk menggunakannya?",
+        "answer": "Setelah diunduh dan dipasang, semua bank soal dan fitur dapat digunakan secara offline tanpa memerlukan koneksi internet."
+      }
+    ]
+  },
+  "brand": {
+    "title": "Tentang Drive Pass",
+    "description": "Kami percaya bahwa setiap orang berhak memiliki teman belajar yang cerdas. Drive Pass menggabungkan algoritma pengulangan berspasi yang ilmiah dengan pengalaman penggunaan yang intuitif, sehingga persiapan ujian tertulis SIM tidak lagi menjadi hafalan yang menyiksa, melainkan perjalanan belajar yang sistematis.",
+    "cta": "Sudah siap?"
+  },
+  "footer": {
+    "tagline": "App Persiapan Ujian Tertulis SIM Taiwan\nBelajar Cerdas, Lulus Sekali Ujian",
+    "products": "Produk",
+    "legal": "Hukum",
+    "contact": "Kontak",
+    "about": "Tentang Kami",
+    "faq": "FAQ",
+    "privacy": "Kebijakan Privasi",
+    "terms": "Syarat Layanan",
+    "email": "srcchang@gmail.com",
+    "copyright": "© 2026 Project SRC. All rights reserved."
+  },
+  "carPage": {
+    "title": "Bank Soal Mobil",
+    "subtitle": "Solusi Persiapan Ujian Tertulis SIM Mobil Taiwan Lengkap",
+    "crossPromo": "Tersedia juga versi motor →",
+    "examComparison": {
+      "title": "Persis Sama dengan Ujian Nyata",
+      "realExam": "Ujian Tertulis Nyata",
+      "appExam": "Simulasi Drive Pass",
+      "questionCount": "40 soal",
+      "timeLimit": "30 menit",
+      "passingScore": "85 poin",
+      "scoring": "2,5 poin per soal"
+    },
+    "exclusiveFeature": {
+      "title": "Peta Sekolah Mengemudi",
+      "description": "Terintegrasi dengan Google Maps, menampilkan sekolah mengemudi terdekat berdasarkan lokasi GPS kamu, mendukung filter jenis kendaraan dan tingkat penilaian."
+    },
+    "features": [
+      {
+        "icon": "book-open",
+        "title": "Latihan Berdasarkan Kategori",
+        "description": "4 kategori utama latihan berurutan, pelacakan kemajuan, lanjut dari titik berhenti"
+      },
+      {
+        "icon": "file-text",
+        "title": "Simulasi Ujian",
+        "description": "40 soal / 30 menit, timer otomatis mengumpulkan, tinjauan soal per soal"
+      },
+      {
+        "icon": "rotate-ccw",
+        "title": "Buku Soal Salah",
+        "description": "Otomatis mencatat soal yang salah, kerjakan ulang massal, pelacakan jumlah kesalahan"
+      },
+      {
+        "icon": "brain",
+        "title": "Ulang SM-2",
+        "description": "Algoritma pengulangan berspasi, mengatur waktu ulang optimal secara cerdas"
+      },
+      {
+        "icon": "target",
+        "title": "Tantangan Harian",
+        "description": "10 soal per hari, 20% ulang + 80% soal baru"
+      },
+      {
+        "icon": "map-pin",
+        "title": "Peta Sekolah Mengemudi",
+        "description": "Lokasi GPS, urutan jarak, filter jenis kendaraan dan penilaian"
+      }
+    ]
+  },
+  "motoPage": {
+    "title": "Bank Soal Motor",
+    "subtitle": "Solusi Persiapan Ujian Tertulis SIM Motor Taiwan Lengkap",
+    "crossPromo": "Tersedia juga versi mobil →",
+    "examComparison": {
+      "title": "Persis Sama dengan Ujian Nyata",
+      "realExam": "Ujian Tertulis Nyata",
+      "appExam": "Simulasi Drive Pass",
+      "questionCount": "50 soal",
+      "timeLimit": "40 menit",
+      "passingScore": "85 poin",
+      "scoring": "2 poin per soal"
+    },
+    "exclusiveFeature": {
+      "title": "Soal Video Persepsi Bahaya",
+      "description": "Menjawab soal setelah menonton video situasi berkendara nyata, melatih kemampuan persepsi bahaya. Simulasi lengkap tipe soal terbaru ujian motor."
+    },
+    "features": [
+      {
+        "icon": "book-open",
+        "title": "Latihan Berdasarkan Kategori",
+        "description": "5 kategori utama latihan berurutan, termasuk soal situasional"
+      },
+      {
+        "icon": "file-text",
+        "title": "Simulasi Ujian",
+        "description": "50 soal / 40 menit, timer otomatis mengumpulkan, tinjauan soal per soal"
+      },
+      {
+        "icon": "rotate-ccw",
+        "title": "Buku Soal Salah",
+        "description": "Otomatis mencatat soal yang salah, kerjakan ulang massal, pelacakan jumlah kesalahan"
+      },
+      {
+        "icon": "brain",
+        "title": "Ulang SM-2",
+        "description": "Algoritma pengulangan berspasi, mengatur waktu ulang optimal secara cerdas"
+      },
+      {
+        "icon": "target",
+        "title": "Tantangan Harian",
+        "description": "10 soal per hari, 20% ulang + 80% soal baru"
+      },
+      {
+        "icon": "video",
+        "title": "Video Persepsi Bahaya",
+        "description": "Soal video situasi nyata, melatih kemampuan persepsi bahaya saat berkendara"
+      }
+    ]
+  },
+  "examInfo": {
+    "pageTitle": "Referensi Cepat Info Ujian",
+    "pageSubtitle": "Semua yang perlu kamu ketahui tentang ujian tertulis SIM Taiwan",
+    "carSection": {
+      "title": "Ujian Tertulis SIM Mobil",
+      "questionCount": "40 soal",
+      "timeLimit": "30 menit",
+      "passingScore": "85 poin (nilai penuh 100)",
+      "scoring": "2,5 poin per soal",
+      "types": "Pilihan ganda + Benar/Salah"
+    },
+    "motoSection": {
+      "title": "Ujian Tertulis SIM Motor",
+      "questionCount": "50 soal",
+      "timeLimit": "40 menit",
+      "passingScore": "85 poin (nilai penuh 100)",
+      "scoring": "2 poin per soal",
+      "types": "Pilihan ganda + Benar/Salah + Soal situasi + Soal video persepsi bahaya"
+    },
+    "checklist": {
+      "title": "Daftar Persiapan Ujian",
+      "items": [
+        "KTP/Kartu identitas asli",
+        "3 lembar foto ukuran 1 inci",
+        "Surat keterangan kesehatan (berlaku dalam 1 tahun)",
+        "Biaya pendaftaran",
+        "SIM yang ada (jika sudah memiliki)"
+      ]
+    },
+    "cta": "Persiapkan dengan Drive Pass, lulus sekali ujian",
+    "carCta": "Persiapkan ujian SIM mobil dengan Drive Pass →",
+    "motoCta": "Persiapkan ujian SIM motor dengan Drive Pass →"
+  },
+  "common": {
+    "downloadCar": "Unduh Versi Mobil",
+    "downloadMoto": "Unduh Versi Motor",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "exclusiveFeature": "Fitur Eksklusif",
+    "screenshotAria": "Tangkapan layar App",
+    "phoneMock": {
+      "carLabel": "Bank Soal Mobil",
+      "motoLabel": "Bank Soal Motor",
+      "passRate": "Prediksi Kelulusan"
+    },
+    "a11y": {
+      "menuOpen": "Buka menu",
+      "home": "Beranda Drive Pass",
+      "languageSelect": "Pilih bahasa"
+    },
+    "examLabels": {
+      "questionCount": "Jumlah Soal",
+      "timeLimit": "Waktu",
+      "passingScore": "Nilai Lulus",
+      "scoring": "Cara Penilaian",
+      "types": "Tipe Soal",
+      "category": "Item"
+    }
+  },
+  "legal": {
+    "privacy": {
+      "title": "Kebijakan Privasi",
+      "lastUpdated": "Terakhir Diperbarui: Maret 2026",
+      "sections": [
+        {
+          "heading": "Pengumpulan Data",
+          "content": "Drive Pass tidak mengumpulkan informasi identitas pribadi apa pun, termasuk nama, alamat email, atau nomor telepon. Semua kemajuan belajar dan pengaturan hanya disimpan secara lokal di perangkat Anda dan tidak pernah diunggah ke server mana pun."
+        },
+        {
+          "heading": "Layanan Analitik",
+          "content": "Kami menggunakan layanan Google Firebase untuk meningkatkan pengalaman produk. Firebase Analytics mengumpulkan statistik penggunaan aplikasi yang anonim seperti frekuensi penggunaan fitur dan tampilan layar — data ini tidak dapat mengidentifikasi pengguna individu. Firebase Crashlytics secara otomatis mengumpulkan laporan crash ketika aplikasi mengalami kesalahan, termasuk model perangkat, versi OS, dan informasi tumpukan error, untuk membantu kami memperbaiki masalah dan meningkatkan stabilitas."
+        },
+        {
+          "heading": "Iklan",
+          "content": "Aplikasi ini menggunakan Google AdMob untuk menampilkan iklan. AdMob mungkin mengumpulkan pengidentifikasi iklan Anda (IDFA di iOS atau GAID di Android) untuk menampilkan iklan yang relevan. Di perangkat iOS, kami akan meminta persetujuan Anda melalui kerangka App Tracking Transparency (ATT) sebelum pelacakan apa pun dilakukan. Anda dapat menonaktifkan iklan yang dipersonalisasi kapan saja di pengaturan privasi perangkat Anda. Setelah membeli opsi penghapusan iklan, tidak ada modul iklan yang akan dimuat."
+        },
+        {
+          "heading": "Pembelian Dalam Aplikasi",
+          "content": "Drive Pass menawarkan pembelian dalam aplikasi satu kali untuk menghapus iklan. Semua pembayaran diproses melalui Apple App Store atau Google Play Store — kami tidak mengumpulkan, memproses, atau menyimpan informasi pembayaran atau data kartu kredit apa pun. Catatan pembelian terkait dengan Apple ID atau akun Google Anda dan dapat dipulihkan menggunakan fitur \"Pulihkan Pembelian\" di dalam aplikasi."
+        },
+        {
+          "heading": "Informasi Lokasi",
+          "content": "Fitur \"Peta Sekolah Mengemudi\" di Drive Pass Versi Mobil mengakses lokasi GPS perangkat Anda hanya setelah Anda memberikan izin secara eksplisit, semata-mata untuk menghitung jarak ke sekolah mengemudi terdekat. Data lokasi tidak pernah disimpan, diunggah, atau dibagikan kepada pihak ketiga mana pun. Anda dapat mencabut izin lokasi kapan saja di pengaturan perangkat. Drive Pass Versi Motor tidak menggunakan fitur lokasi."
+        },
+        {
+          "heading": "Penyimpanan Data",
+          "content": "Semua data bank soal, kemajuan belajar, dan catatan simulasi ujian disimpan di perangkat Anda. Menghapus instalasi aplikasi akan menghapus semua data lokal."
+        },
+        {
+          "heading": "Hak Pengguna",
+          "content": "Anda dapat menghapus semua data lokal kapan saja dengan menghapus instalasi aplikasi. Anda juga dapat mereset pengidentifikasi iklan atau menonaktifkan pelacakan iklan yang dipersonalisasi di pengaturan privasi perangkat untuk membatasi pengumpulan data oleh layanan pihak ketiga."
+        },
+        {
+          "heading": "Privasi Anak",
+          "content": "Drive Pass tidak dirancang untuk anak-anak di bawah usia 13 tahun. Peraturan Taiwan menetapkan usia minimum 16 tahun untuk SIM motor dan 18 tahun untuk SIM mobil. Kami tidak secara sengaja mengumpulkan informasi apa pun dari anak-anak di bawah usia 13 tahun."
+        },
+        {
+          "heading": "Perubahan Kebijakan",
+          "content": "Kami mungkin memperbarui kebijakan privasi ini dari waktu ke waktu. Perubahan signifikan akan dikomunikasikan melalui notifikasi dalam aplikasi. Penggunaan aplikasi secara berkelanjutan berarti Anda menyetujui kebijakan privasi yang telah diperbarui."
+        },
+        {
+          "heading": "Hubungi Kami",
+          "content": "Jika Anda memiliki pertanyaan terkait privasi, silakan hubungi srcchang@gmail.com."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Syarat Layanan",
+      "lastUpdated": "Terakhir Diperbarui: Maret 2026",
+      "sections": [
+        {
+          "heading": "Deskripsi Layanan",
+          "content": "Drive Pass adalah aplikasi persiapan ujian tertulis SIM Taiwan yang tersedia dalam dua aplikasi terpisah: Versi Mobil dan Versi Motor. Fitur-fitur meliputi latihan bank soal, simulasi ujian, buku soal salah, ulangan berspasi SM-2, tantangan harian, dan lainnya. Konten bank soal bersumber dari bank soal resmi yang dipublikasikan oleh Direktorat Jenderal Perhubungan Darat, Kementerian Perhubungan Taiwan (MOTC)."
+        },
+        {
+          "heading": "Kelayakan",
+          "content": "Anda harus berusia minimal 13 tahun untuk menggunakan Drive Pass. Pengguna di bawah usia 18 tahun sebaiknya menggunakan aplikasi ini dengan persetujuan dan pengawasan orang tua atau wali yang sah."
+        },
+        {
+          "heading": "Pedoman Penggunaan",
+          "content": "Anda setuju untuk menggunakan aplikasi ini semata-mata untuk tujuan belajar pribadi. Dilarang menyalin, mendistribusikan, atau menggunakan konten bank soal dalam aplikasi ini untuk keperluan komersial."
+        },
+        {
+          "heading": "Pembelian & Pengembalian Dana",
+          "content": "Drive Pass menawarkan item pembelian dalam aplikasi satu kali (penghapusan iklan). Ini adalah fitur permanen, bukan langganan, dan tidak akan diperbarui secara otomatis. Semua pembayaran diproses melalui Apple App Store atau Google Play Store. Untuk pengembalian dana, ikuti kebijakan pengembalian dana Apple atau Google masing-masing. Setelah mengganti perangkat, gunakan fitur \"Pulihkan Pembelian\" untuk memulihkan item yang telah dibeli menggunakan Apple ID atau akun Google yang sama."
+        },
+        {
+          "heading": "Penafian",
+          "content": "Bank soal yang disediakan oleh aplikasi ini hanya untuk referensi latihan dan tidak dijamin identik dengan soal ujian yang sebenarnya. Bank soal mungkin mengalami keterlambatan akibat pembaruan oleh Direktorat Jenderal Perhubungan Darat, MOTC. Hasil ujian ditentukan oleh Direktorat Jenderal Perhubungan Darat — aplikasi ini tidak bertanggung jawab atas hasil ujian. Kami tidak menjamin ketersediaan aplikasi yang tidak terputus, yang mungkin tidak tersedia sementara waktu karena pemeliharaan, pembaruan, atau alasan lainnya."
+        },
+        {
+          "heading": "Batasan Tanggung Jawab",
+          "content": "Sejauh yang diizinkan oleh hukum, Drive Pass dan para pengembangnya tidak bertanggung jawab atas kerugian tidak langsung, insidental, khusus, punitif, atau konsekuensial yang timbul dari penggunaan atau ketidakmampuan menggunakan aplikasi ini, termasuk namun tidak terbatas pada kehilangan data, kehilangan keuntungan, atau kegagalan lulus ujian."
+        },
+        {
+          "heading": "Hak Kekayaan Intelektual",
+          "content": "Merek, desain, kode, dan konten asli Drive Pass dilindungi oleh undang-undang hak cipta. Hak cipta konten bank soal dimiliki oleh Direktorat Jenderal Perhubungan Darat, MOTC."
+        },
+        {
+          "heading": "Layanan Pihak Ketiga",
+          "content": "Aplikasi ini mengandalkan platform Apple App Store dan Google Play Store untuk pengoperasian dan distribusi. Dengan menggunakan aplikasi ini, Anda juga tunduk pada syarat layanan platform masing-masing. Penggunaan layanan pihak ketiga (termasuk Firebase dan AdMob) diatur oleh syarat dan kebijakan privasi mereka masing-masing."
+        },
+        {
+          "heading": "Hukum yang Berlaku & Yurisdiksi",
+          "content": "Penafsiran dan penerapan syarat-syarat ini, serta sengketa apa pun yang timbul dari atau terkait dengan syarat-syarat ini, diatur oleh hukum Republik Tiongkok (Taiwan), dengan Pengadilan Distrik Taipei, Taiwan sebagai pengadilan tingkat pertama."
+        },
+        {
+          "heading": "Perubahan Ketentuan",
+          "content": "Kami berhak mengubah syarat layanan ini kapan saja. Perubahan signifikan akan dikomunikasikan melalui notifikasi dalam aplikasi. Penggunaan layanan secara berkelanjutan berarti Anda menyetujui ketentuan yang telah diubah."
+        }
+      ]
+    }
+  },
+  "aboutPage": {
+    "title": "Tentang Drive Pass",
+    "mission": "Kami percaya setiap orang berhak memiliki teman belajar yang cerdas. Drive Pass menggabungkan metode pengulangan berspasi SM-2 dengan antarmuka yang intuitif, mengubah persiapan ujian dari sekadar hafalan yang melelahkan menjadi proses belajar yang terstruktur. Apapun bahasa Anda, kami hadir untuk membantu Anda lulus ujian tertulis SIM Taiwan.",
+    "productsTitle": "Produk Kami",
+    "carName": "Drive Pass Mobil",
+    "carDescription": "Persiapan lengkap untuk ujian tertulis SIM mobil Taiwan. Simulasi 40 soal, latihan per kategori, buku soal salah, ulang SM-2, tantangan harian, dan peta sekolah mengemudi.",
+    "motoName": "Drive Pass Motor",
+    "motoDescription": "Persiapan lengkap untuk ujian tertulis SIM motor Taiwan. Simulasi 50 soal, latihan per kategori, buku soal salah, ulang SM-2, tantangan harian, dan video persepsi bahaya.",
+    "whyTitle": "Mengapa Drive Pass",
+    "highlights": [
+      {
+        "title": "Bank Soal Resmi Lengkap",
+        "description": "Soal bersumber dari bank soal resmi Direktorat Jenderal Perhubungan Darat, diperbarui secara berkala agar sesuai dengan materi ujian terbaru."
+      },
+      {
+        "title": "Metode Belajar Ilmiah",
+        "description": "Algoritma pengulangan berspasi SM-2 secara cerdas menjadwalkan waktu ulang terbaik berdasarkan performa Anda."
+      },
+      {
+        "title": "Dukungan Lima Bahasa",
+        "description": "繁體中文, English, Tiếng Việt, ไทย, Bahasa Indonesia — soal dan antarmuka diterjemahkan sepenuhnya."
+      },
+      {
+        "title": "Sepenuhnya Offline",
+        "description": "Semua fitur tersedia offline setelah dipasang. Berlatih kapan saja, di mana saja — saat perjalanan atau menunggu."
+      }
+    ],
+    "contactTitle": "Hubungi Kami",
+    "version": "Versi"
+  },
+  "faqPage": {
+    "title": "Pertanyaan yang Sering Ditanyakan",
+    "items": [
+      {
+        "question": "Apakah aplikasi ini gratis?",
+        "answer": "Fitur utama sepenuhnya gratis, termasuk bank soal lengkap, simulasi ujian, buku soal salah, dan fitur inti lainnya. Tersedia pembelian satu kali untuk menghapus iklan bagi yang ingin pengalaman tanpa gangguan."
+      },
+      {
+        "question": "Bahasa apa saja yang didukung?",
+        "answer": "Drive Pass mendukung 5 bahasa: 繁體中文, English, Tiếng Việt, ภาษาไทย, dan Bahasa Indonesia. Soal maupun antarmuka aplikasi semuanya diterjemahkan secara lengkap."
+      },
+      {
+        "question": "Apakah soal di aplikasi sama dengan ujian sesungguhnya?",
+        "answer": "Ya. Bank soal bersumber langsung dari bank soal resmi yang dipublikasikan oleh Direktorat Jenderal Perhubungan Darat Taiwan, dan diperbarui secara berkala agar selalu sesuai dengan soal ujian terbaru."
+      },
+      {
+        "question": "Apakah perlu koneksi internet untuk menggunakannya?",
+        "answer": "Tidak perlu. Setelah aplikasi diunduh dan dipasang, seluruh bank soal dan fitur dapat digunakan secara offline tanpa memerlukan koneksi internet sama sekali."
+      },
+      {
+        "question": "Apa perbedaan versi Mobil dan Motor?",
+        "answer": "Drive Pass Mobil dirancang untuk ujian SIM mobil (40 soal, 30 menit, nilai lulus 85) dan dilengkapi fitur peta sekolah mengemudi. Drive Pass Motor dirancang untuk ujian SIM motor (50 soal, 40 menit, nilai lulus 85) dan dilengkapi fitur soal video persepsi bahaya yang khas untuk ujian motor Taiwan."
+      },
+      {
+        "question": "Bagaimana cara menghapus iklan?",
+        "answer": "Di dalam aplikasi, buka menu Pengaturan lalu pilih opsi \"Hapus Iklan\". Cukup satu kali pembayaran untuk menghapus iklan secara permanen — tidak ada biaya langganan. Pembelian dapat dipulihkan di perangkat baru menggunakan Apple ID atau akun Google yang sama."
+      },
+      {
+        "question": "Apakah data saya hilang jika ganti ponsel baru?",
+        "answer": "Data belajar tersimpan secara lokal di perangkat Anda. Saat ini belum ada fitur sinkronisasi cloud, sehingga memindah ke ponsel baru berarti memulai dari awal. Namun, pembelian dalam aplikasi (penghapus iklan) dapat dipulihkan melalui fitur \"Pulihkan Pembelian\" menggunakan akun yang sama."
+      },
+      {
+        "question": "Bagaimana cara melaporkan masalah atau memberikan masukan?",
+        "answer": "Kami sangat menghargai masukan Anda! Silakan kirim email ke srcchang@gmail.com. Kami akan merespons setiap laporan dan berusaha terus meningkatkan aplikasi."
+      }
+    ]
+  },
+  "notFound": {
+    "title": "Halaman Tidak Ditemukan",
+    "description": "Halaman yang Anda cari tidak ada atau telah dihapus",
+    "backHome": "Kembali ke Beranda"
+  }
+}

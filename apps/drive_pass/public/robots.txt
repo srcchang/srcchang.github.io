@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+
+# TODO: App 上架後改為 Allow: /，並取消下方 Sitemap 註解
+# Sitemap: https://drivepass.srcchang-a3e.workers.dev/sitemap-index.xml

@@ -1,0 +1,454 @@
+{
+  "nav": {
+    "car": "汽車版",
+    "moto": "機車版",
+    "examInfo": "考試資訊",
+    "download": "下載 App"
+  },
+  "hero": {
+    "badge": "台灣駕照筆試備考 App",
+    "title1": "一次考過",
+    "title2": "駕照輕鬆到手",
+    "subtitle": "智慧複習演算法 · 精準通過率預測 · 五語言完整支援",
+    "downloadCar": "汽車版下載",
+    "downloadMoto": "機車版下載"
+  },
+  "trust": {
+    "questions": "精選題目",
+    "questionsCount": "2,500+",
+    "languages": "語言支援",
+    "languagesCount": "5",
+    "achievements": "成就獎章",
+    "achievementsCount": "14",
+    "platforms": "雙平台",
+    "platformsLabel": "iOS + Android"
+  },
+  "products": {
+    "sectionTitle": "選擇你的備考夥伴",
+    "car": {
+      "name": "汽車題庫",
+      "description": "1,484 題完整題庫",
+      "examSpec": "模擬考 40 題 / 30 分鐘",
+      "categories": "4 大分類 · 及格 85 分",
+      "learnMore": "了解更多 →",
+      "tags": [
+        "交通法規",
+        "交通標誌",
+        "SM-2 複習",
+        "成就系統"
+      ]
+    },
+    "moto": {
+      "name": "機車題庫",
+      "description": "1,050+ 題完整題庫",
+      "examSpec": "模擬考 50 題 / 40 分鐘",
+      "categories": "5 大分類 · 及格 85 分",
+      "learnMore": "了解更多 →",
+      "tags": [
+        "機車法規",
+        "情境題",
+        "危險感知影片",
+        "SM-2 複習"
+      ]
+    }
+  },
+  "features": {
+    "sectionTitle": "為什麼選擇駕照通？",
+    "sectionSubtitle": "用科學的方法，幫你最高效地備考",
+    "items": [
+      {
+        "icon": "brain",
+        "title": "SM-2 智慧複習",
+        "description": "基於 SuperMemo 間隔重複演算法，自動安排最佳複習時機。答錯的題目會更頻繁出現，答對的題目間隔逐漸拉長，讓你把時間花在刀口上。"
+      },
+      {
+        "icon": "bar-chart",
+        "title": "通過率預測",
+        "description": "綜合模擬考成績、練習正確率、題庫覆蓋率，加權計算你的即時通過率。不再猜測自己準備得夠不夠，數字告訴你。"
+      },
+      {
+        "icon": "target",
+        "title": "每日挑戰 & 考前衝刺",
+        "description": "每天 10 題保持手感，考前啟動衝刺模式，三層瀑布推薦引擎自動挑選你最需要加強的題目。"
+      },
+      {
+        "icon": "file-text",
+        "title": "模擬考",
+        "description": "100% 還原真實考試規格，計時自動交卷，逐題檢討。完整模擬讓你上考場不緊張。"
+      },
+      {
+        "icon": "rotate-ccw",
+        "title": "錯題本",
+        "description": "自動收錄答錯題目，篩選排序、批量重做。搭配 SM-2 演算法，精準攻克弱點。"
+      },
+      {
+        "icon": "trophy",
+        "title": "成就系統",
+        "description": "14 個成就獎章激勵學習動力。練習題數、連續答對、模擬考高分、連續活動天數，全方位記錄你的成長。"
+      }
+    ]
+  },
+  "faq": {
+    "sectionTitle": "常見問題",
+    "items": [
+      {
+        "question": "App 是免費的嗎？",
+        "answer": "基本功能完全免費！包含完整題庫、模擬考、錯題本等核心功能。未來會推出進階付費方案，提供更多增值內容。"
+      },
+      {
+        "question": "支援哪些語言？",
+        "answer": "目前支援繁體中文、English、Tiếng Việt、ไทย、Bahasa Indonesia 五種語言，題目與介面都有完整翻譯。"
+      },
+      {
+        "question": "題庫內容跟實際考試一樣嗎？",
+        "answer": "是的！題庫來源為交通部公路局公開題庫，定期更新確保與最新考題一致。"
+      },
+      {
+        "question": "需要網路才能使用嗎？",
+        "answer": "下載安裝後，所有題庫和功能都可以離線使用，不需要網路連線。"
+      }
+    ]
+  },
+  "brand": {
+    "title": "關於駕照通",
+    "description": "我們相信，每個人都值得擁有一個聰明的備考夥伴。駕照通結合科學的間隔重複演算法與直覺化的使用體驗，讓準備駕照筆試不再是痛苦的背誦，而是有系統的學習旅程。",
+    "cta": "準備好了嗎？"
+  },
+  "footer": {
+    "tagline": "台灣駕照筆試備考 App\n智慧學習，一次考過",
+    "products": "產品",
+    "legal": "法律",
+    "contact": "聯絡",
+    "privacy": "隱私政策",
+    "terms": "服務條款",
+    "email": "srcchang@gmail.com",
+    "copyright": "© 2026 Project SRC. All rights reserved.",
+    "about": "關於我們",
+    "faq": "常見問題"
+  },
+  "carPage": {
+    "title": "汽車題庫",
+    "subtitle": "台灣汽車駕照筆試完整備考方案",
+    "crossPromo": "也有機車版 →",
+    "examComparison": {
+      "title": "跟真實考試一模一樣",
+      "realExam": "真實筆試",
+      "appExam": "駕照通模擬考",
+      "questionCount": "40 題",
+      "timeLimit": "30 分鐘",
+      "passingScore": "85 分",
+      "scoring": "每題 2.5 分"
+    },
+    "exclusiveFeature": {
+      "title": "駕訓班地圖",
+      "description": "整合 Google Maps，根據你的 GPS 位置顯示附近駕訓班，支援車種與評鑑等級篩選。"
+    },
+    "features": [
+      {
+        "icon": "book-open",
+        "title": "分類練習",
+        "description": "4 大分類依序練習，進度追蹤，斷點續做"
+      },
+      {
+        "icon": "file-text",
+        "title": "模擬考",
+        "description": "40 題 / 30 分鐘，計時自動交卷，逐題檢討"
+      },
+      {
+        "icon": "rotate-ccw",
+        "title": "錯題本",
+        "description": "自動收錄答錯題目，批量重做，答錯次數追蹤"
+      },
+      {
+        "icon": "brain",
+        "title": "SM-2 複習",
+        "description": "間隔重複演算法，智慧安排最佳複習時機"
+      },
+      {
+        "icon": "target",
+        "title": "每日挑戰",
+        "description": "每天 10 題，20% 複習 + 80% 新題"
+      },
+      {
+        "icon": "map-pin",
+        "title": "駕訓班地圖",
+        "description": "GPS 定位，距離排序，車種與評鑑篩選"
+      }
+    ]
+  },
+  "motoPage": {
+    "title": "機車題庫",
+    "subtitle": "台灣機車駕照筆試完整備考方案",
+    "crossPromo": "也有汽車版 →",
+    "examComparison": {
+      "title": "跟真實考試一模一樣",
+      "realExam": "真實筆試",
+      "appExam": "駕照通模擬考",
+      "questionCount": "50 題",
+      "timeLimit": "40 分鐘",
+      "passingScore": "85 分",
+      "scoring": "每題 2 分"
+    },
+    "exclusiveFeature": {
+      "title": "危險感知影片題",
+      "description": "觀看真實行車情境影片後作答，訓練危險感知能力。完整模擬機車考試最新題型。"
+    },
+    "features": [
+      {
+        "icon": "book-open",
+        "title": "分類練習",
+        "description": "5 大分類依序練習，含情境式題目"
+      },
+      {
+        "icon": "file-text",
+        "title": "模擬考",
+        "description": "50 題 / 40 分鐘，計時自動交卷，逐題檢討"
+      },
+      {
+        "icon": "rotate-ccw",
+        "title": "錯題本",
+        "description": "自動收錄答錯題目，批量重做，答錯次數追蹤"
+      },
+      {
+        "icon": "brain",
+        "title": "SM-2 複習",
+        "description": "間隔重複演算法，智慧安排最佳複習時機"
+      },
+      {
+        "icon": "target",
+        "title": "每日挑戰",
+        "description": "每天 10 題，20% 複習 + 80% 新題"
+      },
+      {
+        "icon": "video",
+        "title": "危險感知影片",
+        "description": "真實情境影片題，訓練行車危險感知能力"
+      }
+    ]
+  },
+  "examInfo": {
+    "pageTitle": "考試資訊速查",
+    "pageSubtitle": "台灣駕照筆試你需要知道的一切",
+    "carSection": {
+      "title": "汽車筆試",
+      "questionCount": "40 題",
+      "timeLimit": "30 分鐘",
+      "passingScore": "85 分（滿分 100 分）",
+      "scoring": "每題 2.5 分",
+      "types": "選擇題 + 是非題"
+    },
+    "motoSection": {
+      "title": "機車筆試",
+      "questionCount": "50 題",
+      "timeLimit": "40 分鐘",
+      "passingScore": "85 分（滿分 100 分）",
+      "scoring": "每題 2 分",
+      "types": "選擇題 + 是非題 + 情境題 + 危險感知影片題"
+    },
+    "checklist": {
+      "title": "考試準備清單",
+      "items": [
+        "身分證正本",
+        "一吋照片 3 張",
+        "體檢表（1 年內有效）",
+        "報名費",
+        "原有駕照（如有）"
+      ]
+    },
+    "cta": "用駕照通準備，一次考過",
+    "carCta": "用駕照通準備汽車筆試 →",
+    "motoCta": "用駕照通準備機車筆試 →"
+  },
+  "common": {
+    "downloadCar": "下載汽車版",
+    "downloadMoto": "下載機車版",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "exclusiveFeature": "獨家功能",
+    "screenshotAria": "App 截圖",
+    "phoneMock": {
+      "carLabel": "汽車題庫",
+      "motoLabel": "機車題庫",
+      "passRate": "通過率預測"
+    },
+    "a11y": {
+      "menuOpen": "開啟選單",
+      "home": "駕照通首頁",
+      "languageSelect": "選擇語言"
+    },
+    "examLabels": {
+      "questionCount": "題數",
+      "timeLimit": "時間",
+      "passingScore": "及格分數",
+      "scoring": "計分方式",
+      "types": "題型",
+      "category": "項目"
+    }
+  },
+  "legal": {
+    "privacy": {
+      "title": "隱私政策",
+      "lastUpdated": "最後更新：2026 年 3 月",
+      "sections": [
+        {
+          "heading": "資料收集",
+          "content": "駕照通不會收集任何個人身分資訊，包括姓名、電子郵件地址或電話號碼。所有學習進度與設定資料僅儲存於您的裝置本機，不會上傳至任何伺服器。"
+        },
+        {
+          "heading": "分析服務",
+          "content": "我們使用 Google Firebase 服務來改善產品體驗。Firebase Analytics 收集匿名的應用程式使用統計，例如功能使用頻率與畫面瀏覽次數，這些數據無法識別個別使用者。Firebase Crashlytics 在應用程式發生異常時自動收集崩潰報告，包含裝置型號、作業系統版本與錯誤堆疊資訊，用於修復問題並提升穩定性。"
+        },
+        {
+          "heading": "廣告",
+          "content": "本應用程式使用 Google AdMob 顯示廣告。AdMob 可能會收集您的廣告識別碼（iOS 的 IDFA 或 Android 的 GAID）以投放相關廣告。在 iOS 裝置上，我們會透過「App 追蹤透明度」（ATT）框架徵求您的同意後才進行追蹤。您可以隨時在裝置的隱私設定中關閉個人化廣告。購買去廣告方案後，將不再載入任何廣告模組。"
+        },
+        {
+          "heading": "應用內購買",
+          "content": "駕照通提供一次性的應用內購買（去廣告）。所有付款均透過 Apple App Store 或 Google Play Store 處理，我們不會收集、處理或儲存任何付款資訊或信用卡資料。購買紀錄綁定於您的 Apple ID 或 Google 帳號，可透過應用程式內的「恢復購買」功能還原。"
+        },
+        {
+          "heading": "位置資訊",
+          "content": "汽車駕照通的「駕訓班地圖」功能會在您明確授權後存取裝置的 GPS 位置，僅用於計算您與附近駕訓班的距離。位置資料不會被儲存、上傳或分享給任何第三方。您可以隨時在裝置設定中撤銷位置權限。機車駕照通不使用位置功能。"
+        },
+        {
+          "heading": "資料儲存",
+          "content": "所有題庫資料、學習進度、模擬考記錄均儲存於您的裝置上。解除安裝應用程式將會刪除所有本機資料。"
+        },
+        {
+          "heading": "使用者權利",
+          "content": "您可以隨時透過解除安裝應用程式來刪除所有本機資料。您也可以在裝置的隱私設定中重置廣告識別碼或關閉個人化廣告追蹤，以限制第三方服務的資料收集。"
+        },
+        {
+          "heading": "兒童隱私",
+          "content": "駕照通並非針對 13 歲以下兒童設計。台灣法規規定考取機車駕照的最低年齡為 16 歲，汽車駕照為 18 歲。我們不會故意收集 13 歲以下兒童的任何資訊。"
+        },
+        {
+          "heading": "政策變更",
+          "content": "我們可能會不定期更新本隱私政策。重大變更將透過應用程式內通知告知您。繼續使用本應用程式即表示您同意更新後的隱私政策。"
+        },
+        {
+          "heading": "聯絡我們",
+          "content": "如有任何隱私相關問題，請聯繫 srcchang@gmail.com。"
+        }
+      ]
+    },
+    "terms": {
+      "title": "服務條款",
+      "lastUpdated": "最後更新：2026 年 3 月",
+      "sections": [
+        {
+          "heading": "服務說明",
+          "content": "駕照通是一款台灣駕照筆試備考應用程式，提供汽車版與機車版兩個獨立 App。功能包含題庫練習、模擬考試、錯題本、SM-2 智慧複習、每日挑戰等。題庫內容來源為交通部公路局公開題庫。"
+        },
+        {
+          "heading": "使用資格",
+          "content": "您必須年滿 13 歲才能使用駕照通。未滿 18 歲的使用者應在家長或法定監護人的同意與監督下使用本應用程式。"
+        },
+        {
+          "heading": "使用規範",
+          "content": "您同意僅將本應用程式用於個人學習目的。禁止複製、散布或商業性使用本應用程式中的題庫內容。"
+        },
+        {
+          "heading": "應用內購買與退款",
+          "content": "駕照通提供一次性的應用內購買項目（去廣告），此為永久性功能，非訂閱制，不會自動續費。所有付款透過 Apple App Store 或 Google Play Store 處理。退款請依照 Apple 或 Google 的退款政策辦理。更換裝置後，您可透過應用程式內的「恢復購買」功能，使用相同的 Apple ID 或 Google 帳號還原已購買的項目。"
+        },
+        {
+          "heading": "免責聲明",
+          "content": "本應用程式提供之題庫僅供練習參考，不保證與實際考試題目完全一致。題庫可能因交通部公路局更新而有時間差異。考試結果由交通部公路局決定，本應用程式不對考試結果負責。我們不保證應用程式將持續不中斷地提供服務，可能因維護、更新或其他原因暫時無法使用。"
+        },
+        {
+          "heading": "責任限制",
+          "content": "在法律允許的最大範圍內，駕照通及其開發者不對任何因使用或無法使用本應用程式而產生的間接、附帶、特殊、懲罰性或衍生性損害負責，包括但不限於資料遺失、利潤損失或考試未通過。"
+        },
+        {
+          "heading": "智慧財產權",
+          "content": "駕照通的品牌、設計、程式碼及原創內容受著作權法保護。題庫內容之著作權歸交通部公路局所有。"
+        },
+        {
+          "heading": "第三方服務",
+          "content": "本應用程式依賴 Apple App Store 和 Google Play Store 平台運作與散布。使用本應用程式時，您同時受到相應平台服務條款的約束。第三方服務（包括 Firebase、AdMob）的使用受其各自條款與隱私政策規範。"
+        },
+        {
+          "heading": "準據法與管轄",
+          "content": "本服務條款之解釋與適用，以及因本條款所生或與本條款相關之一切爭議，均以中華民國法律為準據法，並以台灣台北地方法院為第一審管轄法院。"
+        },
+        {
+          "heading": "條款修改",
+          "content": "我們保留隨時修改服務條款的權利。重大變更時將透過應用程式內通知。繼續使用本服務即表示您同意修改後的條款。"
+        }
+      ]
+    }
+  },
+  "aboutPage": {
+    "title": "關於駕照通",
+    "mission": "我們相信，每個人都值得擁有一個聰明的備考夥伴。駕照通結合科學的 SM-2 間隔重複演算法與直覺化的使用體驗，讓準備駕照筆試不再是痛苦的背誦，而是有系統的學習旅程。無論你的母語是什麼，我們都想幫助你順利通過台灣的駕照筆試。",
+    "productsTitle": "我們的產品",
+    "carName": "汽車駕照通",
+    "carDescription": "台灣汽車駕照筆試完整備考方案。40 題模擬考、分類練習、錯題本、SM-2 智慧複習、每日挑戰，以及駕訓班地圖功能。",
+    "motoName": "機車駕照通",
+    "motoDescription": "台灣機車駕照筆試完整備考方案。50 題模擬考、分類練習、錯題本、SM-2 智慧複習、每日挑戰，以及獨家的危險感知影片題。",
+    "whyTitle": "為什麼選擇駕照通",
+    "highlights": [
+      {
+        "title": "完整官方題庫",
+        "description": "題庫來自交通部公路局公開題庫，定期更新確保與最新考題一致。"
+      },
+      {
+        "title": "科學複習方法",
+        "description": "SM-2 間隔重複演算法，根據你的答題表現智慧安排最佳複習時機。"
+      },
+      {
+        "title": "五種語言支援",
+        "description": "繁體中文、English、Tiếng Việt、ไทย、Bahasa Indonesia，題目與介面完整翻譯。"
+      },
+      {
+        "title": "完全離線可用",
+        "description": "下載安裝後所有功能離線可用，通勤、等車隨時隨地練習。"
+      }
+    ],
+    "contactTitle": "聯絡我們",
+    "version": "版本"
+  },
+  "faqPage": {
+    "title": "常見問題",
+    "items": [
+      {
+        "question": "App 是免費的嗎？",
+        "answer": "核心功能完全免費！包含完整題庫、模擬考、錯題本、SM-2 智慧複習、每日挑戰等。可透過應用內購買一次性去除廣告。"
+      },
+      {
+        "question": "支援哪些語言？",
+        "answer": "目前支援繁體中文、English、Tiếng Việt、ไทย、Bahasa Indonesia 五種語言，題目與介面都有完整翻譯。"
+      },
+      {
+        "question": "題庫內容跟實際考試一樣嗎？",
+        "answer": "是的！題庫來源為交通部公路局公開題庫，定期更新確保與最新考題一致。"
+      },
+      {
+        "question": "需要網路才能使用嗎？",
+        "answer": "下載安裝後，所有題庫和功能都可以離線使用，不需要網路連線。"
+      },
+      {
+        "question": "汽車版和機車版有什麼差別？",
+        "answer": "汽車版為 40 題模擬考（每題 2.5 分、30 分鐘），並提供駕訓班地圖功能。機車版為 50 題模擬考（每題 2 分、40 分鐘），並包含台灣機車考試獨有的危險感知影片題。兩版及格分數皆為 85 分。"
+      },
+      {
+        "question": "如何去除廣告？",
+        "answer": "您可以在應用程式內透過一次性購買來永久去除廣告。這不是訂閱制，不會自動續費。購買後廣告將完全消失。"
+      },
+      {
+        "question": "換手機後資料會不見嗎？",
+        "answer": "學習進度儲存在裝置本機，換機後需要重新開始。但如果您購買過去廣告方案，可以在新手機上透過「恢復購買」功能使用相同的 Apple ID 或 Google 帳號還原。"
+      },
+      {
+        "question": "如何回報問題或提供建議？",
+        "answer": "歡迎寄信到 srcchang@gmail.com，我們會盡快回覆您。"
+      }
+    ]
+  },
+  "notFound": {
+    "title": "找不到頁面",
+    "description": "您要找的頁面不存在或已被移除",
+    "backHome": "回到首頁"
+  }
+}

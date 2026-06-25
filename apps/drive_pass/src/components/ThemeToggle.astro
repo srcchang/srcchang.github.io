@@ -1,0 +1,48 @@
+---
+// ThemeToggle.astro — Sun/moon toggle button
+// Initial visibility is set by the inline script in BaseLayout (dark class on <html>)
+// The theme-toggle.ts script syncs the icon state on load
+---
+
+<button
+  data-theme-toggle
+  aria-label="Switch to dark mode"
+  class="rounded-full p-2 transition-colors hover:bg-bg-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-car"
+>
+  <!-- Sun icon: visible when dark mode is active (click to go light) -->
+  <svg
+    class="icon-sun h-5 w-5 text-text-primary"
+    style="display: none;"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    <circle cx="12" cy="12" r="4" />
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+  </svg>
+
+  <!-- Moon icon: visible when light mode is active (click to go dark) -->
+  <svg
+    class="icon-moon h-5 w-5 text-text-primary"
+    style="display: block;"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+  </svg>
+</button>
+
+<script>
+  import '../scripts/theme-toggle';
+</script>

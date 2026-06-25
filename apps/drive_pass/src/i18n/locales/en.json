@@ -1,0 +1,454 @@
+{
+  "nav": {
+    "car": "Car Edition",
+    "moto": "Motorcycle Edition",
+    "examInfo": "Exam Info",
+    "download": "Download App"
+  },
+  "hero": {
+    "badge": "Taiwan Driver's License Written Test Prep App",
+    "title1": "Pass on Your First Try",
+    "title2": "Get Your Driver's License with Ease",
+    "subtitle": "Smart Review Algorithm · Accurate Pass Rate Prediction · Full Support in 5 Languages",
+    "downloadCar": "Download Car Edition",
+    "downloadMoto": "Download Motorcycle Edition"
+  },
+  "trust": {
+    "questions": "Curated Questions",
+    "questionsCount": "2,500+",
+    "languages": "Languages Supported",
+    "languagesCount": "5",
+    "achievements": "Achievement Badges",
+    "achievementsCount": "14",
+    "platforms": "Dual Platform",
+    "platformsLabel": "iOS + Android"
+  },
+  "products": {
+    "sectionTitle": "Choose Your Study Partner",
+    "car": {
+      "name": "Car Question Bank",
+      "description": "Complete bank of 1,484 questions",
+      "examSpec": "Mock exam: 40 questions / 30 minutes",
+      "categories": "4 categories · Passing score: 85",
+      "learnMore": "Learn more →",
+      "tags": [
+        "Traffic Regulations",
+        "Traffic Signs",
+        "SM-2 Review",
+        "Achievement System"
+      ]
+    },
+    "moto": {
+      "name": "Motorcycle Question Bank",
+      "description": "Complete bank of 1,050+ questions",
+      "examSpec": "Mock exam: 50 questions / 40 minutes",
+      "categories": "5 categories · Passing score: 85",
+      "learnMore": "Learn more →",
+      "tags": [
+        "Motorcycle Regulations",
+        "Situational Questions",
+        "Hazard Perception Videos",
+        "SM-2 Review"
+      ]
+    }
+  },
+  "features": {
+    "sectionTitle": "Why Choose Drive Pass?",
+    "sectionSubtitle": "A scientific approach to help you study as efficiently as possible",
+    "items": [
+      {
+        "icon": "brain",
+        "title": "SM-2 Smart Review",
+        "description": "Based on the SuperMemo spaced repetition algorithm, the app automatically schedules the optimal time to review each question. Questions you get wrong appear more frequently, while questions you get right are spaced further apart — so you spend your time where it matters most."
+      },
+      {
+        "icon": "bar-chart",
+        "title": "Pass Rate Prediction",
+        "description": "Your real-time pass rate is calculated by combining your mock exam scores, practice accuracy, and question bank coverage. No more guessing whether you're ready — the numbers tell you."
+      },
+      {
+        "icon": "target",
+        "title": "Daily Challenge & Pre-Exam Sprint",
+        "description": "10 questions every day to keep you sharp. Activate Sprint Mode before your exam, and a three-tier recommendation engine automatically selects the questions you need most."
+      },
+      {
+        "icon": "file-text",
+        "title": "Mock Exam",
+        "description": "100% faithful to the real exam format — timed, auto-submitted, with per-question review afterward. A full simulation so you walk in confident on exam day."
+      },
+      {
+        "icon": "rotate-ccw",
+        "title": "Wrong Answer Notebook",
+        "description": "Automatically saves every question you answer incorrectly. Filter, sort, and redo them in bulk. Paired with the SM-2 algorithm to precisely target your weak spots."
+      },
+      {
+        "icon": "trophy",
+        "title": "Achievement System",
+        "description": "14 achievement badges to keep you motivated. Track your growth across questions practiced, consecutive correct answers, high mock exam scores, and daily streaks."
+      }
+    ]
+  },
+  "faq": {
+    "sectionTitle": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "Is the app free?",
+        "answer": "Core features are completely free! This includes the full question bank, mock exams, and the wrong answer notebook. A premium plan with additional content will be available in the future."
+      },
+      {
+        "question": "Which languages are supported?",
+        "answer": "The app currently supports five languages: 繁體中文, English, Tiếng Việt, ไทย, and Bahasa Indonesia. Both the questions and the interface are fully translated."
+      },
+      {
+        "question": "Are the questions the same as the actual exam?",
+        "answer": "Yes! The question bank is sourced from the official Directorate General of Highways (MOTC) question pool and is updated regularly to stay aligned with the latest exam content."
+      },
+      {
+        "question": "Does it require an internet connection?",
+        "answer": "After installation, all questions and features are available offline — no internet connection required."
+      }
+    ]
+  },
+  "brand": {
+    "title": "About Drive Pass",
+    "description": "We believe everyone deserves a smart study companion. Drive Pass combines the science of spaced repetition with an intuitive user experience, turning driver's license test prep from painful memorization into a structured learning journey.",
+    "cta": "Ready to get started?"
+  },
+  "footer": {
+    "tagline": "Taiwan Driver's License Written Test Prep App\nStudy Smart, Pass First Time",
+    "products": "Products",
+    "legal": "Legal",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "email": "srcchang@gmail.com",
+    "copyright": "© 2026 Project SRC. All rights reserved.",
+    "about": "About",
+    "faq": "FAQ"
+  },
+  "carPage": {
+    "title": "Car Question Bank",
+    "subtitle": "Complete Prep for Taiwan's Car Driver's License Written Test",
+    "crossPromo": "Also available: Motorcycle Edition →",
+    "examComparison": {
+      "title": "Identical to the Real Exam",
+      "realExam": "Real Written Test",
+      "appExam": "Drive Pass Mock Exam",
+      "questionCount": "40 questions",
+      "timeLimit": "30 minutes",
+      "passingScore": "85 points",
+      "scoring": "2.5 points per question"
+    },
+    "exclusiveFeature": {
+      "title": "Driving School Map",
+      "description": "Integrated with Google Maps to show nearby driving schools based on your GPS location, with filtering by vehicle type and rating."
+    },
+    "features": [
+      {
+        "icon": "book-open",
+        "title": "Category Practice",
+        "description": "Practice across 4 categories in order, with progress tracking and the ability to resume where you left off"
+      },
+      {
+        "icon": "file-text",
+        "title": "Mock Exam",
+        "description": "40 questions / 30 minutes, timed auto-submission with per-question review"
+      },
+      {
+        "icon": "rotate-ccw",
+        "title": "Wrong Answer Notebook",
+        "description": "Automatically saves incorrect answers for bulk redo, with error count tracking"
+      },
+      {
+        "icon": "brain",
+        "title": "SM-2 Review",
+        "description": "Spaced repetition algorithm schedules the optimal review time intelligently"
+      },
+      {
+        "icon": "target",
+        "title": "Daily Challenge",
+        "description": "10 questions per day — 20% review + 80% new questions"
+      },
+      {
+        "icon": "map-pin",
+        "title": "Driving School Map",
+        "description": "GPS-based location, sorted by distance, with vehicle type and rating filters"
+      }
+    ]
+  },
+  "motoPage": {
+    "title": "Motorcycle Question Bank",
+    "subtitle": "Complete Prep for Taiwan's Motorcycle Driver's License Written Test",
+    "crossPromo": "Also available: Car Edition →",
+    "examComparison": {
+      "title": "Identical to the Real Exam",
+      "realExam": "Real Written Test",
+      "appExam": "Drive Pass Mock Exam",
+      "questionCount": "50 questions",
+      "timeLimit": "40 minutes",
+      "passingScore": "85 points",
+      "scoring": "2 points per question"
+    },
+    "exclusiveFeature": {
+      "title": "Hazard Perception Video Questions",
+      "description": "Watch real driving scenario videos and answer questions to train your hazard perception skills. Fully simulates the latest question format in the motorcycle exam."
+    },
+    "features": [
+      {
+        "icon": "book-open",
+        "title": "Category Practice",
+        "description": "Practice across 5 categories in order, including situational questions"
+      },
+      {
+        "icon": "file-text",
+        "title": "Mock Exam",
+        "description": "50 questions / 40 minutes, timed auto-submission with per-question review"
+      },
+      {
+        "icon": "rotate-ccw",
+        "title": "Wrong Answer Notebook",
+        "description": "Automatically saves incorrect answers for bulk redo, with error count tracking"
+      },
+      {
+        "icon": "brain",
+        "title": "SM-2 Review",
+        "description": "Spaced repetition algorithm schedules the optimal review time intelligently"
+      },
+      {
+        "icon": "target",
+        "title": "Daily Challenge",
+        "description": "10 questions per day — 20% review + 80% new questions"
+      },
+      {
+        "icon": "video",
+        "title": "Hazard Perception Videos",
+        "description": "Real scenario video questions to train your driving hazard awareness"
+      }
+    ]
+  },
+  "examInfo": {
+    "pageTitle": "Exam Info at a Glance",
+    "pageSubtitle": "Everything you need to know about Taiwan's driver's license written test",
+    "carSection": {
+      "title": "Car Written Test",
+      "questionCount": "40 questions",
+      "timeLimit": "30 minutes",
+      "passingScore": "85 points (out of 100)",
+      "scoring": "2.5 points per question",
+      "types": "Multiple choice + True/False"
+    },
+    "motoSection": {
+      "title": "Motorcycle Written Test",
+      "questionCount": "50 questions",
+      "timeLimit": "40 minutes",
+      "passingScore": "85 points (out of 100)",
+      "scoring": "2 points per question",
+      "types": "Multiple choice + True/False + Situational + Hazard Perception Video"
+    },
+    "checklist": {
+      "title": "Exam Day Checklist",
+      "items": [
+        "Original National ID card",
+        "3 passport-size photos (1 inch)",
+        "Physical examination form (valid within 1 year)",
+        "Registration fee",
+        "Existing driver's license (if applicable)"
+      ]
+    },
+    "cta": "Prepare with Drive Pass — Pass on Your First Try",
+    "carCta": "Prepare for the Car Written Test with Drive Pass →",
+    "motoCta": "Prepare for the Motorcycle Written Test with Drive Pass →"
+  },
+  "common": {
+    "downloadCar": "Download Car Edition",
+    "downloadMoto": "Download Motorcycle Edition",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "exclusiveFeature": "Exclusive Feature",
+    "screenshotAria": "App Screenshot",
+    "phoneMock": {
+      "carLabel": "Car Bank",
+      "motoLabel": "Moto Bank",
+      "passRate": "Pass Rate Prediction"
+    },
+    "a11y": {
+      "menuOpen": "Open menu",
+      "home": "Drive Pass home",
+      "languageSelect": "Select language"
+    },
+    "examLabels": {
+      "questionCount": "Questions",
+      "timeLimit": "Time Limit",
+      "passingScore": "Passing Score",
+      "scoring": "Scoring",
+      "types": "Question Types",
+      "category": "Item"
+    }
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last Updated: March 2026",
+      "sections": [
+        {
+          "heading": "Data Collection",
+          "content": "Drive Pass does not collect any personally identifiable information, including names, email addresses, or phone numbers. All learning progress and settings are stored locally on your device and are never uploaded to any server."
+        },
+        {
+          "heading": "Analytics Services",
+          "content": "We use Google Firebase services to improve the product experience. Firebase Analytics collects anonymous app usage statistics such as feature usage frequency and screen views — this data cannot identify individual users. Firebase Crashlytics automatically collects crash reports when the app encounters errors, including device model, OS version, and error stack information, to help us fix issues and improve stability."
+        },
+        {
+          "heading": "Advertising",
+          "content": "This app uses Google AdMob to display ads. AdMob may collect your advertising identifier (IDFA on iOS or GAID on Android) to deliver relevant ads. On iOS devices, we will request your consent through the App Tracking Transparency (ATT) framework before any tracking occurs. You can disable personalized ads at any time in your device's privacy settings. After purchasing the ad-removal option, no advertising modules will be loaded."
+        },
+        {
+          "heading": "In-App Purchases",
+          "content": "Drive Pass offers a one-time in-app purchase to remove ads. All payments are processed through the Apple App Store or Google Play Store — we do not collect, process, or store any payment information or credit card data. Purchase records are tied to your Apple ID or Google account and can be restored using the \"Restore Purchases\" feature within the app."
+        },
+        {
+          "heading": "Location Information",
+          "content": "The \"Driving School Map\" feature in Drive Pass Car accesses your device's GPS location only after you explicitly grant permission, solely to calculate distances to nearby driving schools. Location data is never stored, uploaded, or shared with any third party. You can revoke location permission at any time in your device settings. Drive Pass Moto does not use location features."
+        },
+        {
+          "heading": "Data Storage",
+          "content": "All question bank data, learning progress, and mock exam records are stored on your device. Uninstalling the app will delete all local data."
+        },
+        {
+          "heading": "User Rights",
+          "content": "You can delete all local data at any time by uninstalling the app. You can also reset your advertising identifier or disable personalized ad tracking in your device's privacy settings to limit data collection by third-party services."
+        },
+        {
+          "heading": "Children's Privacy",
+          "content": "Drive Pass is not designed for children under 13 years of age. Taiwan regulations require a minimum age of 16 for motorcycle licenses and 18 for car licenses. We do not knowingly collect any information from children under 13."
+        },
+        {
+          "heading": "Policy Changes",
+          "content": "We may update this privacy policy from time to time. Significant changes will be communicated through in-app notifications. Continued use of the app constitutes your acceptance of the updated privacy policy."
+        },
+        {
+          "heading": "Contact Us",
+          "content": "If you have any privacy-related questions, please contact srcchang@gmail.com."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "lastUpdated": "Last Updated: March 2026",
+      "sections": [
+        {
+          "heading": "Service Description",
+          "content": "Drive Pass is a Taiwan driver's license written test preparation app available in two separate apps: Car Edition and Motorcycle Edition. Features include question bank practice, mock exams, wrong answer notebook, SM-2 spaced repetition review, daily challenges, and more. The question bank content is sourced from the official question pool published by the Directorate General of Highways, MOTC."
+        },
+        {
+          "heading": "Eligibility",
+          "content": "You must be at least 13 years old to use Drive Pass. Users under 18 should use this app with the consent and supervision of a parent or legal guardian."
+        },
+        {
+          "heading": "Usage Guidelines",
+          "content": "You agree to use this app solely for personal learning purposes. Copying, distributing, or commercially using the question bank content in this app is prohibited."
+        },
+        {
+          "heading": "In-App Purchases & Refunds",
+          "content": "Drive Pass offers a one-time in-app purchase item (ad removal). This is a permanent feature, not a subscription, and will not auto-renew. All payments are processed through the Apple App Store or Google Play Store. For refunds, please follow Apple's or Google's respective refund policies. After switching devices, you can use the \"Restore Purchases\" feature to restore purchased items using the same Apple ID or Google account."
+        },
+        {
+          "heading": "Disclaimer",
+          "content": "The question bank provided by this app is for practice reference only and is not guaranteed to be identical to actual exam questions. The question bank may have time delays due to updates by the Directorate General of Highways, MOTC. Exam results are determined by the Directorate General of Highways — this app is not responsible for exam outcomes. We do not guarantee uninterrupted availability of the app, which may be temporarily unavailable due to maintenance, updates, or other reasons."
+        },
+        {
+          "heading": "Limitation of Liability",
+          "content": "To the maximum extent permitted by law, Drive Pass and its developers shall not be liable for any indirect, incidental, special, punitive, or consequential damages arising from the use or inability to use this app, including but not limited to data loss, loss of profits, or failure to pass an exam."
+        },
+        {
+          "heading": "Intellectual Property",
+          "content": "The Drive Pass brand, design, code, and original content are protected by copyright law. The copyright of the question bank content belongs to the Directorate General of Highways, MOTC."
+        },
+        {
+          "heading": "Third-Party Services",
+          "content": "This app relies on the Apple App Store and Google Play Store platforms for operation and distribution. By using this app, you are also subject to the respective platform's terms of service. The use of third-party services (including Firebase and AdMob) is governed by their respective terms and privacy policies."
+        },
+        {
+          "heading": "Governing Law & Jurisdiction",
+          "content": "The interpretation and application of these terms, and any disputes arising from or related to these terms, shall be governed by the laws of the Republic of China (Taiwan), with the Taipei District Court of Taiwan as the court of first instance."
+        },
+        {
+          "heading": "Modification of Terms",
+          "content": "We reserve the right to modify these terms of service at any time. Significant changes will be communicated through in-app notifications. Continued use of this service constitutes your acceptance of the modified terms."
+        }
+      ]
+    }
+  },
+  "aboutPage": {
+    "title": "About Drive Pass",
+    "mission": "We believe everyone deserves a smart study companion. Drive Pass combines the science of SM-2 spaced repetition with an intuitive user experience, turning driver's license test prep from painful memorization into a structured learning journey. No matter what language you speak, we want to help you pass Taiwan's driver's license written test.",
+    "productsTitle": "Our Products",
+    "carName": "Drive Pass Car",
+    "carDescription": "Complete preparation for Taiwan's car driver's license written test. Features 40-question mock exams, categorized practice, wrong answer notebook, SM-2 smart review, daily challenges, and a driving school map.",
+    "motoName": "Drive Pass Moto",
+    "motoDescription": "Complete preparation for Taiwan's motorcycle driver's license written test. Features 50-question mock exams, categorized practice, wrong answer notebook, SM-2 smart review, daily challenges, and exclusive hazard perception video questions.",
+    "whyTitle": "Why Drive Pass",
+    "highlights": [
+      {
+        "title": "Complete Official Question Bank",
+        "description": "Questions sourced from the official Directorate General of Highways question pool, updated regularly to match the latest exam content."
+      },
+      {
+        "title": "Scientific Review Method",
+        "description": "SM-2 spaced repetition algorithm intelligently schedules optimal review times based on your performance."
+      },
+      {
+        "title": "Five Languages Supported",
+        "description": "繁體中文, English, Tiếng Việt, ไทย, Bahasa Indonesia — both questions and interface fully translated."
+      },
+      {
+        "title": "Fully Offline",
+        "description": "All features available offline after installation. Practice anytime, anywhere — on your commute or while waiting."
+      }
+    ],
+    "contactTitle": "Contact Us",
+    "version": "Version"
+  },
+  "faqPage": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "Is the app free?",
+        "answer": "Core features are completely free! This includes the full question bank, mock exams, wrong answer notebook, SM-2 smart review, and daily challenges. You can remove ads with a one-time in-app purchase."
+      },
+      {
+        "question": "Which languages are supported?",
+        "answer": "The app currently supports five languages: 繁體中文, English, Tiếng Việt, ไทย, and Bahasa Indonesia. Both the questions and the interface are fully translated."
+      },
+      {
+        "question": "Are the questions the same as the actual exam?",
+        "answer": "Yes! The question bank is sourced from the official Directorate General of Highways (MOTC) question pool and is updated regularly to stay aligned with the latest exam content."
+      },
+      {
+        "question": "Does it require an internet connection?",
+        "answer": "After installation, all questions and features are available offline — no internet connection required."
+      },
+      {
+        "question": "What's the difference between the Car and Motorcycle editions?",
+        "answer": "The Car edition has 40-question mock exams (2.5 points each, 30 minutes) and includes a driving school map feature. The Motorcycle edition has 50-question mock exams (2 points each, 40 minutes) and includes exclusive hazard perception video questions unique to Taiwan's motorcycle exam. Both require 85 points to pass."
+      },
+      {
+        "question": "How do I remove ads?",
+        "answer": "You can permanently remove ads through a one-time in-app purchase. This is not a subscription and will not auto-renew. After purchase, all ads will be completely removed."
+      },
+      {
+        "question": "Will I lose my data when switching phones?",
+        "answer": "Learning progress is stored locally on your device, so you'll need to start over on a new phone. However, if you've purchased the ad-removal option, you can restore it on your new device using the \"Restore Purchases\" feature with the same Apple ID or Google account."
+      },
+      {
+        "question": "How can I report issues or provide feedback?",
+        "answer": "Please email us at srcchang@gmail.com — we'll get back to you as soon as possible."
+      }
+    ]
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for does not exist or has been removed",
+    "backHome": "Back to Home"
+  }
+}

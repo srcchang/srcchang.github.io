@@ -1,0 +1,71 @@
+---
+import { getTranslations, t } from '../i18n/translations';
+import type { Locale } from '../i18n/config';
+import Icon from './Icon.astro';
+
+interface Props {
+  variant: 'car' | 'moto';
+  locale: string;
+}
+
+const { variant, locale } = Astro.props;
+const tr = getTranslations(locale as Locale);
+const prefix = `${variant === 'car' ? 'carPage' : 'motoPage'}.examComparison`;
+
+const title = t(tr, `${prefix}.title`);
+const realExam = t(tr, `${prefix}.realExam`);
+const appExam = t(tr, `${prefix}.appExam`);
+
+const rowKeys = ['questionCount', 'timeLimit', 'passingScore', 'scoring'] as const;
+
+const isCar = variant === 'car';
+const accentText = isCar ? 'text-car' : 'text-moto';
+const accentBg = isCar
+  ? 'bg-orange-50 dark:bg-orange-950/30'
+  : 'bg-purple-50 dark:bg-purple-950/30';
+const accentBorder = isCar
+  ? 'border-orange-200 dark:border-orange-800'
+  : 'border-purple-200 dark:border-purple-800';
+---
+
+<div class="mx-auto max-w-2xl" data-reveal>
+  <h2 class="mb-6 text-center text-xl font-bold text-text-primary sm:text-2xl">
+    {title}
+  </h2>
+
+  <div class:list={['overflow-hidden rounded-2xl border', accentBorder]}>
+    <table class="w-full text-sm">
+      <thead>
+        <tr class={accentBg}>
+          <th class="px-4 py-3 text-left font-medium text-text-secondary" scope="col">
+            <span class="sr-only">{t(tr, 'common.examLabels.category')}</span>
+          </th>
+          <th class="px-4 py-3 text-center font-semibold text-text-primary" scope="col">
+            {realExam}
+          </th>
+          <th class:list={['px-4 py-3 text-center font-semibold', accentText]} scope="col">
+            {appExam}
+          </th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-border-subtle">
+        {rowKeys.map((key) => {
+          const label = t(tr, `common.examLabels.${key}`);
+          const value = t(tr, `${prefix}.${key}`);
+          return (
+            <tr class="bg-bg-surface">
+              <td class="px-4 py-3 font-medium text-text-secondary">{label}</td>
+              <td class="px-4 py-3 text-center text-text-primary">{value}</td>
+              <td class:list={['px-4 py-3 text-center font-semibold', accentText]}>
+                <span class="inline-flex items-center gap-1">
+                  {value}
+                  <Icon name="check" size="14" class={accentText} />
+                </span>
+              </td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  </div>
+</div>

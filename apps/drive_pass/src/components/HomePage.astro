@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from './Nav.astro';
+import Hero from './Hero.astro';
+import TrustIndicators from './TrustIndicators.astro';
+import ProductCard from './ProductCard.astro';
+import FeatureSection from './FeatureSection.astro';
+import FAQ from './FAQ.astro';
+import BrandCTA from './BrandCTA.astro';
+import Footer from './Footer.astro';
+import { getTranslations, t } from '../i18n/translations';
+import type { Locale } from '../i18n/config';
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const tr = getTranslations(locale as Locale);
+
+const featureItems: { icon: string; title: string; description: string }[] =
+  (tr as Record<string, any>).features?.items ?? [];
+---
+<BaseLayout
+  title={`${t(tr, 'hero.badge')} — Drive Pass`}
+  description={t(tr, 'hero.subtitle')}
+  locale={locale}
+  currentPath="/"
+>
+  <Nav locale={locale} currentPath="/" />
+  <Hero locale={locale} />
+  <TrustIndicators locale={locale} />
+
+  <!-- Products Section -->
+  <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+    <h2 class="mb-10 text-center text-2xl font-bold text-text-primary sm:text-3xl">
+      {t(tr, 'products.sectionTitle')}
+    </h2>
+    <div class="flex flex-col gap-6 sm:flex-row">
+      <div class="flex-1" data-reveal>
+        <ProductCard variant="car" locale={locale} />
+      </div>
+      <div class="flex-1" data-reveal data-reveal-delay={150}>
+        <ProductCard variant="moto" locale={locale} />
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="border-t border-border-subtle bg-bg-surface px-4 py-16 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-4xl">
+      <div class="mb-12 text-center">
+        <h2 class="text-2xl font-bold text-text-primary sm:text-3xl">
+          {t(tr, 'features.sectionTitle')}
+        </h2>
+        <p class="mt-3 text-text-secondary">
+          {t(tr, 'features.sectionSubtitle')}
+        </p>
+      </div>
+      <div class="space-y-14">
+        {featureItems.map((item, i) => (
+          <FeatureSection
+            icon={item.icon}
+            title={item.title}
+            description={item.description}
+            reversed={i % 2 !== 0}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <FAQ locale={locale} />
+  <BrandCTA locale={locale} />
+  <Footer locale={locale} />
+</BaseLayout>

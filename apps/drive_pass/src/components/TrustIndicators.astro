@@ -1,0 +1,53 @@
+---
+import { getTranslations, t } from '../i18n/translations';
+import type { Locale } from '../i18n/config';
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const tr = getTranslations(locale as Locale);
+
+// TODO: 行銷數字（題目 2500+、成就 14 等，來自各語系 JSON 的 trust.*）為 placeholder，上線前確認可宣稱
+const stats = [
+  {
+    target: t(tr, 'trust.questionsCount'),
+    label: t(tr, 'trust.questions'),
+  },
+  {
+    target: t(tr, 'trust.languagesCount'),
+    label: t(tr, 'trust.languages'),
+  },
+  {
+    target: t(tr, 'trust.achievementsCount'),
+    label: t(tr, 'trust.achievements'),
+  },
+  {
+    target: t(tr, 'trust.platformsLabel'),
+    label: t(tr, 'trust.platforms'),
+  },
+];
+---
+
+<section class="border-y border-border-subtle bg-bg-surface">
+  <div class="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 gap-y-8 md:grid-cols-4 md:divide-x md:divide-border-subtle md:gap-y-0">
+      {stats.map((stat) => (
+        <div class="flex flex-col items-center text-center">
+          <span
+            class="bg-gradient-to-r from-car to-moto bg-clip-text text-3xl font-bold text-transparent sm:text-4xl"
+            data-target={stat.target}
+          >
+            {stat.target}
+          </span>
+          <span class="mt-1.5 text-sm text-text-secondary">{stat.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  import '../scripts/counter';
+</script>

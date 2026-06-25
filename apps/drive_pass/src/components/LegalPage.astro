@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from './Nav.astro';
+import Footer from './Footer.astro';
+import { getTranslations, t } from '../i18n/translations';
+import type { Locale } from '../i18n/config';
+import { linkifyEmail } from '../utils/text';
+
+interface Props {
+  type: 'privacy' | 'terms';
+  locale: string;
+}
+
+const { type, locale } = Astro.props;
+const tr = getTranslations(locale as Locale);
+
+const title = t(tr, `legal.${type}.title`);
+const lastUpdated = t(tr, `legal.${type}.lastUpdated`);
+const translations = tr as Record<string, any>;
+const sections: { heading: string; content: string }[] = translations.legal?.[type]?.sections ?? [];
+const currentPath = `/${type}`;
+---
+<BaseLayout
+  title={`${title} — Drive Pass`}
+  description={title}
+  locale={locale}
+  currentPath={currentPath}
+>
+  <div data-embed-hide><Nav locale={locale} currentPath={currentPath} /></div>
+
+  <article class="bg-bg-surface px-4 pb-16 pt-12 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl">
+      <h1 class="text-3xl font-bold text-text-primary sm:text-4xl">{title}</h1>
+      <p class="mt-2 text-sm text-text-tertiary">{lastUpdated}</p>
+
+      <div class="mt-10 space-y-8">
+        {sections.map((section) => (
+          <section>
+            <h2 class="text-lg font-semibold text-text-primary">{section.heading}</h2>
+            <p class="mt-2 leading-relaxed text-text-secondary" set:html={linkifyEmail(section.content)}></p>
+          </section>
+        ))}
+      </div>
+    </div>
+  </article>
+
+  <div data-embed-hide><Footer locale={locale} /></div>
+</BaseLayout>

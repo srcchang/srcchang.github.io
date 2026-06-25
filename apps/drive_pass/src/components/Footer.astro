@@ -1,0 +1,108 @@
+---
+import { getTranslations, t } from '../i18n/translations';
+import type { Locale } from '../i18n/config';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const tr = getTranslations(locale as Locale);
+---
+
+<footer class="dark bg-[#09090B] text-[#F5F5F5]">
+  <div class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+    <!-- Four-column grid -->
+    <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
+      <!-- Column 1: Brand -->
+      <div>
+        <div class="mb-3 flex items-center gap-2">
+          <span class="text-xl font-bold">駕照通</span>
+          <span class="text-sm text-[#A1A1AA]">Drive Pass</span>
+        </div>
+        <p class="whitespace-pre-line text-sm text-[#A1A1AA]">
+          {t(tr, 'footer.tagline')}
+        </p>
+      </div>
+
+      <!-- Column 2: Products -->
+      <div>
+        <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider text-[#71717A]">
+          {t(tr, 'footer.products')}
+        </h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href={`/${locale}/car`} class="text-[#A1A1AA] transition-colors hover:text-[#F5F5F5]">
+              {t(tr, 'nav.car')}
+            </a>
+          </li>
+          <li>
+            <a href={`/${locale}/moto`} class="text-[#A1A1AA] transition-colors hover:text-[#F5F5F5]">
+              {t(tr, 'nav.moto')}
+            </a>
+          </li>
+          <li>
+            <a href={`/${locale}/exam-info`} class="text-[#A1A1AA] transition-colors hover:text-[#F5F5F5]">
+              {t(tr, 'nav.examInfo')}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Legal -->
+      <div>
+        <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider text-[#71717A]">
+          {t(tr, 'footer.legal')}
+        </h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href={`/${locale}/privacy`} class="text-[#A1A1AA] transition-colors hover:text-[#F5F5F5]">
+              {t(tr, 'footer.privacy')}
+            </a>
+          </li>
+          <li>
+            <a href={`/${locale}/terms`} class="text-[#A1A1AA] transition-colors hover:text-[#F5F5F5]">
+              {t(tr, 'footer.terms')}
+            </a>
+          </li>
+          <li>
+            <a href={`/${locale}/about`} class="text-[#A1A1AA] transition-colors hover:text-[#F5F5F5]">
+              {t(tr, 'footer.about')}
+            </a>
+          </li>
+          <li>
+            <a href={`/${locale}/faq`} class="text-[#A1A1AA] transition-colors hover:text-[#F5F5F5]">
+              {t(tr, 'footer.faq')}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Contact -->
+      <div>
+        <h3 class="mb-4 text-sm font-semibold uppercase tracking-wider text-[#71717A]">
+          {t(tr, 'footer.contact')}
+        </h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a
+              href={`mailto:${t(tr, 'footer.email')}`}
+              class="text-[#A1A1AA] transition-colors hover:text-[#F5F5F5]"
+            >
+              {t(tr, 'footer.email')}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="mt-8 flex flex-col gap-3 border-t border-[#27272A] pt-6 sm:flex-row sm:items-center sm:justify-between">
+      <p class="text-sm text-[#71717A]">
+        {t(tr, 'footer.copyright')}
+      </p>
+      <LanguageSwitcher locale={locale} />
+    </div>
+  </div>
+</footer>

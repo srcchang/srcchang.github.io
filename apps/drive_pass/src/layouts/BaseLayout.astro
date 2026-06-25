@@ -1,0 +1,92 @@
+---
+import '../styles/global.css';
+import { locales, defaultLocale, htmlLang, ogLocale } from '../i18n/config';
+import type { Locale } from '../i18n/config';
+
+interface Props {
+  title: string;
+  description: string;
+  locale: string;
+  currentPath: string; // path without locale prefix, e.g. "/" or "/car"
+}
+
+const { title, description, locale, currentPath } = Astro.props;
+// 單一網域來源 = astro.config.mjs 的 site
+const canonicalBase = Astro.site?.href.replace(/\/$/, '') ?? '';
+const pathSuffix = currentPath === '/' ? '' : currentPath;
+const canonicalUrl = `${canonicalBase}/${locale}${pathSuffix}`;
+const pageLang = htmlLang[locale as Locale] ?? locale;
+---
+
+<!DOCTYPE html>
+<html lang={pageLang} class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Inline script: runs before CSS to prevent FOUC; handles dark mode + App 內嵌參數 -->
+    <script is:inline>
+      (function () {
+        var params = new URLSearchParams(location.search);
+        var themeParam = params.get('theme');
+        var dark;
+        if (themeParam === 'dark' || themeParam === 'light') {
+          // App 內嵌時以傳入的 theme 為準，不寫入 localStorage
+          dark = themeParam === 'dark';
+        } else {
+          var stored = localStorage.getItem('theme');
+          dark = stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        }
+        if (dark) document.documentElement.classList.add('dark');
+        // App 內嵌模式：?embed=true 時加 embed class，供 CSS 隱藏 nav/footer
+        if (params.get('embed') === 'true') document.documentElement.classList.add('embed');
+      })();
+    </script>
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Canonical -->
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- hreflang for all locales -->
+    {locales.map((loc) => (
+      <link
+        rel="alternate"
+        hreflang={loc}
+        href={`${canonicalBase}/${loc}${pathSuffix}`}
+      />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={`${canonicalBase}/${defaultLocale}${pathSuffix}`} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:locale" content={ogLocale[locale as Locale] ?? locale} />
+    <meta property="og:image" content={`${canonicalBase}/og-default.png`} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- App -->
+    <!-- TODO: App 上架後填入實際 App Store ID（目前 TBD，Smart App Banner 尚未生效） -->
+    <meta name="apple-itunes-app" content="app-id=TBD" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Fonts loaded via @fontsource CSS imports in global.css -->
+
+    <!-- Cloudflare Web Analytics -->
+    <!-- TODO: 取得實際 token 後取消註解（token=TBD 會發出無效請求，故先停用） -->
+    <!-- <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "REPLACE_WITH_REAL_TOKEN"}'></script> -->
+  </head>
+  <body class="bg-bg-primary text-text-primary font-sans">
+    <slot />
+    <script>
+      import '../scripts/scroll-reveal';
+    </script>
+  </body>
+</html>

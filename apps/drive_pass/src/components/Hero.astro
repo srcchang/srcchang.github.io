@@ -1,0 +1,101 @@
+---
+import { getTranslations, t } from '../i18n/translations';
+import type { Locale } from '../i18n/config';
+import PhoneMockup from './PhoneMockup.astro';
+import VehicleGlow from './VehicleGlow.astro';
+import Icon from './Icon.astro';
+
+interface Props {
+  locale: string;
+}
+
+const { locale } = Astro.props;
+const tr = getTranslations(locale as Locale);
+---
+
+<section
+  id="hero"
+  class="relative flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center overflow-hidden px-4 py-16 sm:px-6 lg:px-8"
+>
+  <!-- Vehicle glow decorations -->
+  <VehicleGlow
+    vehicle="car"
+    position="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4"
+    size="w-[480px]"
+  />
+  <VehicleGlow
+    vehicle="moto"
+    position="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4"
+    size="w-[420px]"
+  />
+
+  <!-- Content -->
+  <div class="relative z-10 flex flex-col items-center text-center">
+
+    <!-- Badge pill -->
+    <div class="mb-6 inline-flex items-center rounded-full border border-border-subtle bg-bg-surface px-4 py-1.5 text-sm font-medium text-text-secondary shadow-sm">
+      {t(tr, 'hero.badge')}
+    </div>
+
+    <!-- Main title -->
+    <h1 class="text-[clamp(2.5rem,8vw,5rem)] font-bold leading-tight tracking-tight text-text-primary">
+      {t(tr, 'hero.title1')}
+    </h1>
+
+    <!-- Gradient title -->
+    <h2 class="mt-1 bg-gradient-to-r from-car to-moto bg-clip-text text-[clamp(2.5rem,8vw,5rem)] font-bold leading-tight tracking-tight text-transparent">
+      {t(tr, 'hero.title2')}
+    </h2>
+
+    <!-- Subtitle -->
+    <p class="mt-6 max-w-md text-[clamp(0.9rem,2.5vw,1.125rem)] text-text-secondary">
+      {t(tr, 'hero.subtitle')}
+    </p>
+
+    <!-- Phone mockups -->
+    <div class="mt-12 flex items-end justify-center gap-6 sm:gap-10">
+      <div
+        class="phone-float"
+        style="--rotate: -3deg;"
+      >
+        <PhoneMockup variant="car" locale={locale} />
+      </div>
+      <div
+        class="phone-float"
+        style="--rotate: 3deg; animation-delay: 0.5s;"
+      >
+        <PhoneMockup variant="moto" locale={locale} />
+      </div>
+    </div>
+
+    <!-- Download CTA buttons -->
+    <!-- TODO: App 上架後把 #download 換成實際 store 連結（目前無此錨點，為 placeholder） -->
+    <div class="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:gap-4">
+      <a
+        href="#download"
+        class="inline-flex items-center gap-2 rounded-xl bg-car px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-car-deep hover:shadow-lg active:scale-95"
+      >
+        <Icon name="car" size="18" />
+        {t(tr, 'hero.downloadCar')}
+      </a>
+      <a
+        href="#download"
+        class="inline-flex items-center gap-2 rounded-xl bg-moto px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-moto-deep hover:shadow-lg active:scale-95"
+      >
+        <Icon name="motorcycle" size="18" />
+        {t(tr, 'hero.downloadMoto')}
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(var(--rotate, 0deg)); }
+    50%       { transform: translateY(-10px) rotate(var(--rotate, 0deg)); }
+  }
+
+  .phone-float {
+    animation: float 4s ease-in-out infinite;
+  }
+</style>

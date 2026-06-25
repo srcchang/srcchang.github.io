@@ -14,6 +14,7 @@
     "dev:hub": "npm run dev -w apps/hub",
     "dev:salary": "npm run dev -w apps/salary_thief",
     "dev:voiback": "npm run dev -w apps/voiback",
+    "dev:drive_pass": "npm run dev -w apps/drive_pass",
     "preview": "npx -y serve dist"
   },
   "dependencies": {

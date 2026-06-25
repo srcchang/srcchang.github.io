@@ -1,0 +1,96 @@
+---
+interface Props {
+  variant: 'car' | 'moto';
+  locale: string;
+}
+
+import Icon from './Icon.astro';
+import { Image } from 'astro:assets';
+import CarIcon from '../assets/app-icon-car.png';
+import MotoIcon from '../assets/app-icon-moto.png';
+import { getTranslations, t } from '../i18n/translations';
+import type { Locale } from '../i18n/config';
+
+const { variant, locale } = Astro.props;
+const tr = getTranslations(locale as Locale);
+
+const isCar = variant === 'car';
+
+const borderClass = isCar ? 'border-car-light' : 'border-moto-light';
+const shadowColor = isCar
+  ? 'rgba(249,115,22,0.18)'
+  : 'rgba(139,92,246,0.18)';
+const accentBg = isCar ? 'bg-car' : 'bg-moto';
+const accentText = isCar ? 'text-car' : 'text-moto';
+const label = isCar ? t(tr, 'common.phoneMock.carLabel') : t(tr, 'common.phoneMock.motoLabel');
+// TODO: 通過率數字為 placeholder，上線前確認真實數據或改為示意說明
+const passRateNum = isCar ? 87 : 92;
+const iconName = isCar ? 'car' : 'motorcycle';
+
+const circumference = 2 * Math.PI * 26;
+const dashOffset = circumference * (1 - passRateNum / 100);
+
+const shadowStyle = `box-shadow: 0 24px 60px ${shadowColor}, 0 4px 12px rgba(0,0,0,0.08);`;
+---
+
+<div
+  class:list={[
+    'relative flex w-[160px] sm:w-[180px] flex-col rounded-[2rem] border-2 bg-bg-surface overflow-hidden',
+    borderClass,
+  ]}
+  style={`${shadowStyle} aspect-ratio: 9/19.5;`}
+>
+  <!-- Notch / Dynamic island -->
+  <div class="flex justify-center pt-3 pb-1 shrink-0">
+    <div class="h-[10px] w-[56px] rounded-full bg-text-primary opacity-80"></div>
+  </div>
+
+  <!-- Screen content -->
+  <div class="flex flex-1 flex-col items-center justify-center gap-3 px-4 pb-6">
+    <!-- App icon -->
+    <div class="h-14 w-14 overflow-hidden rounded-2xl shadow-sm" aria-hidden="true">
+      <Image src={isCar ? CarIcon : MotoIcon} alt="" width={160} height={160} class="h-full w-full object-cover" />
+    </div>
+
+    <!-- App label -->
+    <p class:list={['text-xs font-semibold text-center', accentText]}>
+      {label}
+    </p>
+
+    <!-- Pass rate circle -->
+    <div class="relative flex h-16 w-16 items-center justify-center">
+      <!-- Background track -->
+      <svg class="absolute inset-0 h-full w-full -rotate-90" viewBox="0 0 64 64">
+        <circle
+          cx="32"
+          cy="32"
+          r="26"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="5"
+          class="text-border-subtle opacity-40"
+        />
+        <circle
+          cx="32"
+          cy="32"
+          r="26"
+          fill="none"
+          stroke-width="5"
+          stroke-linecap="round"
+          stroke-dasharray={circumference}
+          stroke-dashoffset={dashOffset}
+          class:list={['transition-all', accentText]}
+          stroke="currentColor"
+        />
+      </svg>
+      <span class:list={['relative text-sm font-bold', accentText]}>{passRateNum}%</span>
+    </div>
+
+    <p class="text-[10px] text-text-tertiary text-center leading-tight">{t(tr, 'common.phoneMock.passRate')}</p>
+  </div>
+
+  <!-- Bottom home indicator bar -->
+  <div class="flex justify-center pb-2 shrink-0">
+    <div class="h-1 w-10 rounded-full bg-text-tertiary opacity-40"></div>
+  </div>
+</div>

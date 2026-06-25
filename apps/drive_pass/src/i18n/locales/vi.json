@@ -1,0 +1,454 @@
+{
+  "nav": {
+    "car": "Phiên bản ô tô",
+    "moto": "Phiên bản xe máy",
+    "examInfo": "Thông tin kỳ thi",
+    "download": "Tải App"
+  },
+  "hero": {
+    "badge": "App ôn thi bằng lái xe lý thuyết Đài Loan",
+    "title1": "Thi một lần là đậu",
+    "title2": "Lấy bằng lái dễ dàng",
+    "subtitle": "Thuật toán ôn tập thông minh · Dự đoán tỷ lệ đậu chính xác · Hỗ trợ 5 ngôn ngữ",
+    "downloadCar": "Tải phiên bản ô tô",
+    "downloadMoto": "Tải phiên bản xe máy"
+  },
+  "trust": {
+    "questions": "Câu hỏi chọn lọc",
+    "questionsCount": "2,500+",
+    "languages": "Ngôn ngữ hỗ trợ",
+    "languagesCount": "5",
+    "achievements": "Huy hiệu thành tích",
+    "achievementsCount": "14",
+    "platforms": "Đa nền tảng",
+    "platformsLabel": "iOS + Android"
+  },
+  "products": {
+    "sectionTitle": "Chọn người đồng hành ôn thi của bạn",
+    "car": {
+      "name": "Ngân hàng câu hỏi ô tô",
+      "description": "Bộ đề đầy đủ 1.484 câu hỏi",
+      "examSpec": "Thi thử 40 câu / 30 phút",
+      "categories": "4 danh mục lớn · Đậu 85 điểm",
+      "learnMore": "Tìm hiểu thêm →",
+      "tags": [
+        "Luật giao thông",
+        "Biển báo giao thông",
+        "Ôn tập SM-2",
+        "Hệ thống thành tích"
+      ]
+    },
+    "moto": {
+      "name": "Ngân hàng câu hỏi xe máy",
+      "description": "Bộ đề đầy đủ 1.050+ câu hỏi",
+      "examSpec": "Thi thử 50 câu / 40 phút",
+      "categories": "5 danh mục lớn · Đậu 85 điểm",
+      "learnMore": "Tìm hiểu thêm →",
+      "tags": [
+        "Luật xe máy",
+        "Câu hỏi tình huống",
+        "Video nhận thức nguy hiểm",
+        "Ôn tập SM-2"
+      ]
+    }
+  },
+  "features": {
+    "sectionTitle": "Tại sao chọn Drive Pass?",
+    "sectionSubtitle": "Phương pháp khoa học giúp bạn ôn thi hiệu quả nhất",
+    "items": [
+      {
+        "icon": "brain",
+        "title": "Ôn tập thông minh SM-2",
+        "description": "Dựa trên thuật toán lặp lại theo khoảng cách SuperMemo, tự động sắp xếp thời điểm ôn tập tối ưu. Những câu sai sẽ xuất hiện thường xuyên hơn, những câu đúng sẽ được giãn dần, giúp bạn tập trung vào điểm yếu."
+      },
+      {
+        "icon": "bar-chart",
+        "title": "Dự đoán tỷ lệ đậu",
+        "description": "Tổng hợp điểm thi thử, tỷ lệ trả lời đúng khi luyện tập và độ phủ ngân hàng câu hỏi, tính toán tỷ lệ đậu theo thời gian thực. Không còn phải đoán mình đã ôn đủ chưa — con số sẽ cho bạn biết."
+      },
+      {
+        "icon": "target",
+        "title": "Thử thách hằng ngày & Nước rút trước thi",
+        "description": "10 câu mỗi ngày để duy trì phong độ, bật chế độ nước rút trước kỳ thi, hệ thống đề xuất ba tầng tự động chọn những câu bạn cần củng cố nhất."
+      },
+      {
+        "icon": "file-text",
+        "title": "Thi thử",
+        "description": "Tái hiện 100% quy cách thi thật, tự động nộp bài khi hết giờ, xem lại từng câu. Thi thử đầy đủ giúp bạn tự tin khi vào phòng thi."
+      },
+      {
+        "icon": "rotate-ccw",
+        "title": "Sổ câu sai",
+        "description": "Tự động lưu các câu trả lời sai, lọc, sắp xếp và làm lại hàng loạt. Kết hợp thuật toán SM-2, tập trung khắc phục điểm yếu chính xác."
+      },
+      {
+        "icon": "trophy",
+        "title": "Hệ thống thành tích",
+        "description": "14 huy hiệu thành tích kích thích động lực học tập. Số câu đã luyện, chuỗi trả lời đúng, điểm cao thi thử, số ngày hoạt động liên tiếp — ghi lại sự tiến bộ toàn diện của bạn."
+      }
+    ]
+  },
+  "faq": {
+    "sectionTitle": "Câu hỏi thường gặp",
+    "items": [
+      {
+        "question": "App có miễn phí không?",
+        "answer": "Các tính năng cơ bản hoàn toàn miễn phí! Bao gồm bộ đề đầy đủ, thi thử, sổ câu sai và các tính năng cốt lõi khác. Trong tương lai sẽ ra mắt gói trả phí nâng cao với nhiều nội dung gia tăng hơn."
+      },
+      {
+        "question": "Hỗ trợ những ngôn ngữ nào?",
+        "answer": "Hiện tại hỗ trợ 5 ngôn ngữ: 繁體中文, English, Tiếng Việt, ไทย, Bahasa Indonesia — câu hỏi và giao diện đều được dịch đầy đủ."
+      },
+      {
+        "question": "Nội dung ngân hàng câu hỏi có giống kỳ thi thật không?",
+        "answer": "Có! Ngân hàng câu hỏi được lấy từ bộ đề công khai của Cục Đường bộ Bộ Giao thông Đài Loan, cập nhật định kỳ để đảm bảo phù hợp với đề thi mới nhất."
+      },
+      {
+        "question": "Có cần kết nối mạng để sử dụng không?",
+        "answer": "Sau khi tải và cài đặt, toàn bộ ngân hàng câu hỏi và các tính năng đều có thể sử dụng ngoại tuyến, không cần kết nối mạng."
+      }
+    ]
+  },
+  "brand": {
+    "title": "Về Drive Pass",
+    "description": "Chúng tôi tin rằng mỗi người đều xứng đáng có một người đồng hành ôn thi thông minh. Drive Pass kết hợp thuật toán lặp lại theo khoảng cách khoa học với trải nghiệm sử dụng trực quan, biến việc ôn thi lý thuyết bằng lái xe từ học thuộc lòng đơn thuần thành một hành trình học tập có hệ thống.",
+    "cta": "Bạn đã sẵn sàng chưa?"
+  },
+  "footer": {
+    "tagline": "App ôn thi bằng lái xe lý thuyết Đài Loan\nHọc thông minh, đậu ngay lần đầu",
+    "about": "Giới thiệu",
+    "faq": "Câu hỏi thường gặp",
+    "products": "Sản phẩm",
+    "legal": "Pháp lý",
+    "contact": "Liên hệ",
+    "privacy": "Chính sách bảo mật",
+    "terms": "Điều khoản dịch vụ",
+    "email": "srcchang@gmail.com",
+    "copyright": "© 2026 Project SRC. All rights reserved."
+  },
+  "carPage": {
+    "title": "Ngân hàng câu hỏi ô tô",
+    "subtitle": "Giải pháp ôn thi lý thuyết bằng lái ô tô Đài Loan toàn diện",
+    "crossPromo": "Cũng có phiên bản xe máy →",
+    "examComparison": {
+      "title": "Giống hệt kỳ thi thật",
+      "realExam": "Thi lý thuyết thật",
+      "appExam": "Thi thử Drive Pass",
+      "questionCount": "40 câu",
+      "timeLimit": "30 phút",
+      "passingScore": "85 điểm",
+      "scoring": "Mỗi câu 2,5 điểm"
+    },
+    "exclusiveFeature": {
+      "title": "Bản đồ trường dạy lái xe",
+      "description": "Tích hợp Google Maps, hiển thị các trường dạy lái xe gần bạn dựa theo vị trí GPS, hỗ trợ lọc theo loại xe và hạng đánh giá."
+    },
+    "features": [
+      {
+        "icon": "book-open",
+        "title": "Luyện tập theo danh mục",
+        "description": "4 danh mục lớn luyện tập tuần tự, theo dõi tiến độ, tiếp tục từ chỗ đã dừng"
+      },
+      {
+        "icon": "file-text",
+        "title": "Thi thử",
+        "description": "40 câu / 30 phút, tự động nộp bài khi hết giờ, xem lại từng câu"
+      },
+      {
+        "icon": "rotate-ccw",
+        "title": "Sổ câu sai",
+        "description": "Tự động lưu câu sai, làm lại hàng loạt, theo dõi số lần sai"
+      },
+      {
+        "icon": "brain",
+        "title": "Ôn tập SM-2",
+        "description": "Thuật toán lặp lại theo khoảng cách, thông minh sắp xếp thời điểm ôn tập tối ưu"
+      },
+      {
+        "icon": "target",
+        "title": "Thử thách hằng ngày",
+        "description": "10 câu mỗi ngày, 20% ôn tập + 80% câu mới"
+      },
+      {
+        "icon": "map-pin",
+        "title": "Bản đồ trường dạy lái xe",
+        "description": "Định vị GPS, sắp xếp theo khoảng cách, lọc theo loại xe và hạng đánh giá"
+      }
+    ]
+  },
+  "motoPage": {
+    "title": "Ngân hàng câu hỏi xe máy",
+    "subtitle": "Giải pháp ôn thi lý thuyết bằng lái xe máy Đài Loan toàn diện",
+    "crossPromo": "Cũng có phiên bản ô tô →",
+    "examComparison": {
+      "title": "Giống hệt kỳ thi thật",
+      "realExam": "Thi lý thuyết thật",
+      "appExam": "Thi thử Drive Pass",
+      "questionCount": "50 câu",
+      "timeLimit": "40 phút",
+      "passingScore": "85 điểm",
+      "scoring": "Mỗi câu 2 điểm"
+    },
+    "exclusiveFeature": {
+      "title": "Câu hỏi video nhận thức nguy hiểm",
+      "description": "Xem video tình huống lái xe thực tế rồi trả lời câu hỏi, rèn luyện khả năng nhận thức nguy hiểm. Mô phỏng đầy đủ dạng câu hỏi mới nhất trong kỳ thi xe máy."
+    },
+    "features": [
+      {
+        "icon": "book-open",
+        "title": "Luyện tập theo danh mục",
+        "description": "5 danh mục lớn luyện tập tuần tự, bao gồm câu hỏi tình huống"
+      },
+      {
+        "icon": "file-text",
+        "title": "Thi thử",
+        "description": "50 câu / 40 phút, tự động nộp bài khi hết giờ, xem lại từng câu"
+      },
+      {
+        "icon": "rotate-ccw",
+        "title": "Sổ câu sai",
+        "description": "Tự động lưu câu sai, làm lại hàng loạt, theo dõi số lần sai"
+      },
+      {
+        "icon": "brain",
+        "title": "Ôn tập SM-2",
+        "description": "Thuật toán lặp lại theo khoảng cách, thông minh sắp xếp thời điểm ôn tập tối ưu"
+      },
+      {
+        "icon": "target",
+        "title": "Thử thách hằng ngày",
+        "description": "10 câu mỗi ngày, 20% ôn tập + 80% câu mới"
+      },
+      {
+        "icon": "video",
+        "title": "Video nhận thức nguy hiểm",
+        "description": "Câu hỏi video tình huống thực tế, rèn luyện khả năng nhận thức nguy hiểm khi lái xe"
+      }
+    ]
+  },
+  "examInfo": {
+    "pageTitle": "Tra cứu thông tin kỳ thi",
+    "pageSubtitle": "Tất cả những gì bạn cần biết về thi lý thuyết bằng lái xe Đài Loan",
+    "carSection": {
+      "title": "Thi lý thuyết ô tô",
+      "questionCount": "40 câu",
+      "timeLimit": "30 phút",
+      "passingScore": "85 điểm (tổng 100 điểm)",
+      "scoring": "Mỗi câu 2,5 điểm",
+      "types": "Câu hỏi lựa chọn + Đúng/Sai"
+    },
+    "motoSection": {
+      "title": "Thi lý thuyết xe máy",
+      "questionCount": "50 câu",
+      "timeLimit": "40 phút",
+      "passingScore": "85 điểm (tổng 100 điểm)",
+      "scoring": "Mỗi câu 2 điểm",
+      "types": "Câu hỏi lựa chọn + Đúng/Sai + Tình huống + Video nhận thức nguy hiểm"
+    },
+    "checklist": {
+      "title": "Danh sách chuẩn bị thi",
+      "items": [
+        "Chứng minh nhân dân / Hộ chiếu bản gốc",
+        "3 ảnh cỡ 1 inch",
+        "Giấy khám sức khỏe (có hiệu lực trong vòng 1 năm)",
+        "Lệ phí đăng ký",
+        "Bằng lái hiện có (nếu có)"
+      ]
+    },
+    "cta": "Dùng Drive Pass để ôn thi, đậu ngay lần đầu",
+    "carCta": "Dùng Drive Pass ôn thi lý thuyết ô tô →",
+    "motoCta": "Dùng Drive Pass ôn thi lý thuyết xe máy →"
+  },
+  "common": {
+    "downloadCar": "Tải phiên bản ô tô",
+    "downloadMoto": "Tải phiên bản xe máy",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "exclusiveFeature": "Tính năng độc quyền",
+    "screenshotAria": "Ảnh chụp màn hình App",
+    "phoneMock": {
+      "carLabel": "Đề ô tô",
+      "motoLabel": "Đề xe máy",
+      "passRate": "Dự đoán tỷ lệ đỗ"
+    },
+    "a11y": {
+      "menuOpen": "Mở menu",
+      "home": "Trang chủ Drive Pass",
+      "languageSelect": "Chọn ngôn ngữ"
+    },
+    "examLabels": {
+      "questionCount": "Số câu hỏi",
+      "timeLimit": "Thời gian",
+      "passingScore": "Điểm đậu",
+      "scoring": "Cách tính điểm",
+      "types": "Dạng câu hỏi",
+      "category": "Hạng mục"
+    }
+  },
+  "legal": {
+    "privacy": {
+      "title": "Chính sách bảo mật",
+      "lastUpdated": "Cập nhật lần cuối: Tháng 3 năm 2026",
+      "sections": [
+        {
+          "heading": "Thu thập dữ liệu",
+          "content": "Drive Pass không thu thập bất kỳ thông tin nhận dạng cá nhân nào như họ tên, địa chỉ email hay số điện thoại. Toàn bộ tiến độ học tập, cài đặt và dữ liệu sử dụng đều được lưu trữ cục bộ ngay trên thiết bị của bạn và không bao giờ được truyền lên máy chủ."
+        },
+        {
+          "heading": "Dịch vụ phân tích",
+          "content": "Chúng tôi sử dụng Firebase Analytics để thu thập số liệu thống kê sử dụng ứng dụng ẩn danh nhằm cải thiện trải nghiệm sản phẩm. Firebase Crashlytics được dùng để ghi nhận báo cáo sự cố, có thể bao gồm thông tin về dòng thiết bị và phiên bản hệ điều hành. Các dữ liệu này không thể xác định danh tính người dùng cá nhân."
+        },
+        {
+          "heading": "Quảng cáo",
+          "content": "Ứng dụng sử dụng Google AdMob để hiển thị quảng cáo. AdMob có thể thu thập Mã nhận dạng quảng cáo (IDFA trên iOS, GAID trên Android) để cung cấp quảng cáo phù hợp. Trên iOS, chúng tôi yêu cầu quyền theo dõi thông qua khung ATT (App Tracking Transparency) trước khi thu thập IDFA. Bạn có thể tắt quảng cáo được cá nhân hóa trong phần cài đặt thiết bị. Sau khi mua hàng trong ứng dụng, quảng cáo sẽ bị tắt hoàn toàn."
+        },
+        {
+          "heading": "Mua hàng trong ứng dụng",
+          "content": "Drive Pass cung cấp tùy chọn mua một lần để xóa quảng cáo. Giao dịch thanh toán được xử lý an toàn qua Apple App Store hoặc Google Play — chúng tôi không lưu trữ bất kỳ thông tin thanh toán nào. Bạn có thể khôi phục giao dịch mua trước đó bằng cách đăng nhập vào cùng Apple ID hoặc tài khoản Google."
+        },
+        {
+          "heading": "Thông tin vị trí",
+          "content": "Phiên bản ô tô của Drive Pass có tính năng Bản đồ trường dạy lái xe, sử dụng GPS để xác định khoảng cách đến các trường gần bạn sau khi được cấp quyền. Dữ liệu vị trí chỉ dùng để tính toán khoảng cách và không bao giờ được lưu trữ hay chia sẻ. Phiên bản xe máy không sử dụng dữ liệu vị trí."
+        },
+        {
+          "heading": "Lưu trữ dữ liệu",
+          "content": "Tất cả dữ liệu ngân hàng câu hỏi, tiến độ học tập và kết quả thi thử đều được lưu trữ trên thiết bị của bạn. Gỡ cài đặt ứng dụng sẽ xóa vĩnh viễn toàn bộ dữ liệu cục bộ."
+        },
+        {
+          "heading": "Quyền của người dùng",
+          "content": "Vì chúng tôi không thu thập dữ liệu cá nhân trên máy chủ, bạn có thể xóa hoàn toàn tất cả dữ liệu bằng cách gỡ cài đặt ứng dụng. Để đặt lại mã nhận dạng quảng cáo, hãy vào phần cài đặt quyền riêng tư trên thiết bị của bạn."
+        },
+        {
+          "heading": "Quyền riêng tư của trẻ em",
+          "content": "Drive Pass không dành cho trẻ em dưới 13 tuổi. Theo quy định của Đài Loan, độ tuổi tối thiểu để thi bằng lái xe máy là 16 và bằng lái ô tô là 18. Chúng tôi không cố ý thu thập dữ liệu từ trẻ em dưới 13 tuổi."
+        },
+        {
+          "heading": "Thay đổi chính sách",
+          "content": "Chúng tôi có thể cập nhật chính sách bảo mật này theo thời gian. Những thay đổi quan trọng sẽ được thông báo qua ứng dụng. Việc tiếp tục sử dụng ứng dụng sau khi thông báo đồng nghĩa với việc bạn chấp nhận chính sách đã được cập nhật."
+        },
+        {
+          "heading": "Liên hệ",
+          "content": "Nếu bạn có bất kỳ câu hỏi nào liên quan đến chính sách bảo mật hoặc quyền riêng tư của mình, vui lòng liên hệ chúng tôi tại srcchang@gmail.com."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Điều khoản dịch vụ",
+      "lastUpdated": "Cập nhật lần cuối: Tháng 3 năm 2026",
+      "sections": [
+        {
+          "heading": "Mô tả dịch vụ",
+          "content": "Drive Pass là ứng dụng ôn thi lý thuyết bằng lái xe Đài Loan, cung cấp hai phiên bản riêng biệt: phiên bản ô tô và phiên bản xe máy. Ứng dụng bao gồm các tính năng như luyện tập theo danh mục, thi thử, thuật toán ôn tập SM-2, thử thách hằng ngày, sổ câu sai và dự đoán tỷ lệ đậu. Nội dung ngân hàng câu hỏi được lấy từ bộ đề công khai của Cục Đường bộ, Bộ Giao thông Vận tải Đài Loan (MOTC)."
+        },
+        {
+          "heading": "Điều kiện sử dụng",
+          "content": "Bạn phải từ 13 tuổi trở lên để sử dụng Drive Pass. Người dùng dưới 18 tuổi cần có sự đồng ý của cha mẹ hoặc người giám hộ hợp pháp. Bằng cách sử dụng ứng dụng, bạn xác nhận rằng bạn đáp ứng các yêu cầu về độ tuổi này."
+        },
+        {
+          "heading": "Quy định sử dụng",
+          "content": "Drive Pass chỉ được phép sử dụng cho mục đích học tập cá nhân. Nghiêm cấm sao chép, phân phối, bán lại hoặc sử dụng nội dung ngân hàng câu hỏi vào bất kỳ mục đích thương mại nào dưới mọi hình thức."
+        },
+        {
+          "heading": "Mua hàng trong ứng dụng & Hoàn tiền",
+          "content": "Drive Pass cung cấp tùy chọn mua một lần để xóa quảng cáo vĩnh viễn — đây không phải đăng ký định kỳ và không tự động gia hạn. Giao dịch được xử lý qua Apple App Store hoặc Google Play theo chính sách hoàn tiền của từng nền tảng. Nếu bạn cài đặt lại ứng dụng hoặc đổi thiết bị, bạn có thể khôi phục giao dịch mua bằng cách đăng nhập vào cùng Apple ID hoặc tài khoản Google."
+        },
+        {
+          "heading": "Tuyên bố miễn trừ trách nhiệm",
+          "content": "Drive Pass chỉ là công cụ luyện tập và không đảm bảo nội dung hoàn toàn trùng khớp với đề thi thực tế. Ngân hàng câu hỏi có thể có độ trễ thời gian so với các cập nhật chính thức từ MOTC. Chúng tôi không chịu trách nhiệm về kết quả thi thực tế của bạn và không đảm bảo tính khả dụng liên tục của ứng dụng."
+        },
+        {
+          "heading": "Giới hạn trách nhiệm pháp lý",
+          "content": "Trong phạm vi tối đa được pháp luật cho phép, Drive Pass không chịu trách nhiệm về bất kỳ thiệt hại gián tiếp, ngẫu nhiên, đặc biệt, trừng phạt hay hậu quả nào phát sinh từ việc sử dụng hoặc không thể sử dụng ứng dụng, bao gồm nhưng không giới hạn ở việc trượt kỳ thi hoặc mất dữ liệu."
+        },
+        {
+          "heading": "Sở hữu trí tuệ",
+          "content": "Thương hiệu, thiết kế, mã nguồn và nội dung gốc của Drive Pass được bảo hộ bởi luật bản quyền. Bản quyền nội dung ngân hàng câu hỏi thuộc về Cục Đường bộ, Bộ Giao thông Vận tải Đài Loan (MOTC). Người dùng không được phép sao chép hoặc phân phối bất kỳ phần nào của ứng dụng mà không có sự cho phép bằng văn bản."
+        },
+        {
+          "heading": "Dịch vụ bên thứ ba",
+          "content": "Drive Pass hoạt động trên nền tảng Apple App Store và Google Play, đồng thời tuân thủ điều khoản dịch vụ của từng nền tảng. Ứng dụng tích hợp Firebase (Google) để phân tích và báo cáo sự cố, cùng với Google AdMob để hiển thị quảng cáo — mỗi dịch vụ có điều khoản và chính sách quyền riêng tư riêng."
+        },
+        {
+          "heading": "Luật áp dụng & Thẩm quyền xét xử",
+          "content": "Các điều khoản dịch vụ này được điều chỉnh và giải thích theo pháp luật Cộng hòa Trung Hoa (Đài Loan). Mọi tranh chấp phát sinh từ hoặc liên quan đến các điều khoản này sẽ thuộc thẩm quyền xét xử độc quyền của Tòa án quận Đài Bắc."
+        },
+        {
+          "heading": "Thay đổi điều khoản",
+          "content": "Chúng tôi bảo lưu quyền sửa đổi các điều khoản dịch vụ này bất cứ lúc nào. Những thay đổi quan trọng sẽ được thông báo qua ứng dụng. Việc tiếp tục sử dụng Drive Pass sau khi thông báo đồng nghĩa với việc bạn chấp nhận các điều khoản đã được cập nhật."
+        }
+      ]
+    }
+  },
+  "aboutPage": {
+    "title": "Về Drive Pass",
+    "mission": "Chúng tôi tin rằng mỗi người đều xứng đáng có một người đồng hành ôn thi thông minh. Drive Pass kết hợp thuật toán lặp lại theo khoảng cách SM-2 với giao diện trực quan, biến việc ôn thi lý thuyết bằng lái từ học thuộc lòng đơn điệu thành một hành trình học tập có hệ thống. Dù bạn sử dụng ngôn ngữ nào, chúng tôi đều giúp bạn vượt qua kỳ thi lý thuyết bằng lái xe tại Đài Loan.",
+    "productsTitle": "Sản phẩm của chúng tôi",
+    "carName": "Drive Pass Ô tô",
+    "carDescription": "Giải pháp ôn thi lý thuyết bằng lái ô tô Đài Loan toàn diện. Thi thử 40 câu, luyện tập theo danh mục, sổ câu sai, ôn tập SM-2, thử thách hằng ngày, bản đồ trường dạy lái xe.",
+    "motoName": "Drive Pass Xe máy",
+    "motoDescription": "Giải pháp ôn thi lý thuyết bằng lái xe máy Đài Loan toàn diện. Thi thử 50 câu, luyện tập theo danh mục, sổ câu sai, ôn tập SM-2, thử thách hằng ngày, video nhận thức nguy hiểm.",
+    "whyTitle": "Tại sao chọn Drive Pass",
+    "highlights": [
+      {
+        "title": "Ngân hàng câu hỏi chính thức",
+        "description": "Lấy từ bộ đề của Cục Đường bộ (MOTC), cập nhật định kỳ"
+      },
+      {
+        "title": "Ôn tập khoa học",
+        "description": "Thuật toán SM-2 sắp xếp thời điểm ôn tập tối ưu"
+      },
+      {
+        "title": "5 ngôn ngữ",
+        "description": "繁體中文, English, Tiếng Việt, ไทย, Bahasa Indonesia được dịch đầy đủ"
+      },
+      {
+        "title": "Hoàn toàn ngoại tuyến",
+        "description": "Tất cả tính năng đều dùng được sau khi cài đặt, không cần mạng"
+      }
+    ],
+    "contactTitle": "Liên hệ",
+    "version": "Phiên bản"
+  },
+  "faqPage": {
+    "sectionTitle": "Câu hỏi thường gặp",
+    "items": [
+      {
+        "question": "App có miễn phí không?",
+        "answer": "Các tính năng cốt lõi hoàn toàn miễn phí, bao gồm toàn bộ ngân hàng câu hỏi, thi thử và sổ câu sai. Bạn có thể mua một lần trong ứng dụng để xóa quảng cáo vĩnh viễn."
+      },
+      {
+        "question": "App hỗ trợ những ngôn ngữ nào?",
+        "answer": "Drive Pass hỗ trợ 5 ngôn ngữ: 繁體中文, English, Tiếng Việt, ไทย và Bahasa Indonesia. Cả câu hỏi lẫn giao diện đều được dịch đầy đủ sang tất cả các ngôn ngữ này."
+      },
+      {
+        "question": "Nội dung có giống đề thi thật không?",
+        "answer": "Có. Ngân hàng câu hỏi được lấy từ bộ đề công khai của Cục Đường bộ, Bộ Giao thông Vận tải Đài Loan (MOTC) và được cập nhật định kỳ để đảm bảo phù hợp với đề thi mới nhất."
+      },
+      {
+        "question": "Có cần kết nối mạng không?",
+        "answer": "Không. Sau khi tải và cài đặt, toàn bộ ngân hàng câu hỏi và tất cả tính năng đều hoạt động hoàn toàn ngoại tuyến, không cần kết nối internet."
+      },
+      {
+        "question": "Phiên bản ô tô và xe máy khác nhau như thế nào?",
+        "answer": "Phiên bản ô tô có 1.484 câu hỏi với bài thi thử 40 câu và tích hợp bản đồ trường dạy lái xe. Phiên bản xe máy có 1.050+ câu hỏi với bài thi thử 50 câu và bổ sung tính năng video nhận thức nguy hiểm — đây là dạng câu hỏi đặc trưng trong kỳ thi xe máy tại Đài Loan."
+      },
+      {
+        "question": "Làm thế nào để xóa quảng cáo?",
+        "answer": "Bạn có thể mua một lần trong ứng dụng để xóa quảng cáo vĩnh viễn. Đây không phải gói đăng ký định kỳ và sẽ không tự động gia hạn — chỉ cần trả một lần là dùng mãi mãi."
+      },
+      {
+        "question": "Chuyển sang điện thoại mới thì dữ liệu có bị mất không?",
+        "answer": "Tiến độ học tập được lưu trữ cục bộ trên thiết bị, vì vậy sẽ không tự động chuyển sang thiết bị mới. Tuy nhiên, nếu bạn đã mua trong ứng dụng, bạn có thể khôi phục lại bằng cách đăng nhập vào cùng Apple ID hoặc tài khoản Google."
+      },
+      {
+        "question": "Tôi gặp lỗi hoặc muốn phản hồi thì liên hệ ở đâu?",
+        "answer": "Vui lòng gửi email cho chúng tôi tại srcchang@gmail.com. Chúng tôi rất vui khi nhận được phản hồi và sẽ cố gắng phản hồi trong thời gian sớm nhất."
+      }
+    ]
+  },
+  "notFound": {
+    "title": "Không tìm thấy trang",
+    "description": "Trang bạn đang tìm không tồn tại hoặc đã bị xóa",
+    "backHome": "Quay về trang chủ"
+  }
+}
