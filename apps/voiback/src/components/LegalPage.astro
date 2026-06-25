@@ -1,0 +1,45 @@
+---
+import { LEGAL_LAST_UPDATED, type Locale } from '../i18n/config';
+import { getTranslations, t } from '../i18n/translations';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from './Nav.astro';
+import Footer from './Footer.astro';
+
+interface Props {
+  locale: Locale;
+  type: 'privacy' | 'terms';
+}
+
+const { locale, type } = Astro.props;
+const tr = getTranslations(locale);
+const content = t(tr, type) as { title: string; content: { heading: string; body: string }[] };
+const currentPath = `/${locale}/${type}`;
+---
+
+<BaseLayout
+  title={`${content.title} — ${t(tr, 'meta.brand')}`}
+  description={content.title}
+  locale={locale}
+  currentPath={currentPath}
+>
+  <Nav locale={locale} currentPath={currentPath} />
+
+  <div class="legal-shell pt-24 pb-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <h1 class="text-3xl md:text-4xl font-bold font-heading mb-2" data-reveal>{content.title}</h1>
+      <p class="text-muted text-sm mb-10" data-reveal>{t(tr, 'legal.updated')}: {LEGAL_LAST_UPDATED}</p>
+      <div class="space-y-8" data-reveal>
+        {
+          content.content.map((section) => (
+            <section>
+              <h2 class="text-xl font-bold font-heading mb-2">{section.heading}</h2>
+              <p class="text-muted leading-relaxed">{section.body}</p>
+            </section>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <Footer locale={locale} currentPath={currentPath} />
+</BaseLayout>

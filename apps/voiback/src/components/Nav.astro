@@ -1,0 +1,127 @@
+---
+import { localeLabels, localeShortLabels, locales, stripLocale, withBase, type Locale } from '../i18n/config';
+import { getTranslations, t } from '../i18n/translations';
+import Logo from './Logo.astro';
+
+interface Props {
+  locale: Locale;
+  currentPath: string;
+}
+
+const { locale, currentPath } = Astro.props;
+const tr = getTranslations(locale);
+const basePath = stripLocale(currentPath);
+---
+
+<nav
+  data-embed-hide
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-page/80 backdrop-blur-md border-b border-transparent [&.scrolled]:border-gray-500/20"
+>
+  <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+    <Logo locale={locale} />
+
+    <!-- Desktop nav -->
+    <div class="hidden md:flex items-center gap-6">
+      <a
+        href={withBase(`/${locale}/#features`)}
+        class="text-sm text-muted hover:text-primary transition-colors no-underline">{t(tr, 'nav.features')}</a
+      >
+      <a
+        href={withBase(`/${locale}/faq`)}
+        class="text-sm text-muted hover:text-primary transition-colors no-underline">{t(tr, 'nav.faq')}</a
+      >
+    </div>
+
+    <!-- Right actions -->
+    <div class="flex items-center gap-3">
+      <!-- Language Switcher -->
+      <div class="relative" data-lang-switcher>
+        <button
+          id="lang-toggle"
+          type="button"
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-controls="lang-menu"
+          aria-label="Switch language"
+          class="flex items-center gap-1 px-2 py-1 rounded-lg text-sm text-muted hover:text-primary transition-colors cursor-pointer"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-4 h-4"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+            <path d="M3.6 9h16.8"></path>
+            <path d="M3.6 15h16.8"></path>
+            <path d="M11.5 3a17 17 0 0 0 0 18"></path>
+            <path d="M12.5 3a17 17 0 0 1 0 18"></path>
+          </svg>
+          <span class="hidden sm:inline">{localeLabels[locale]}</span>
+          <span class="sm:hidden">{localeShortLabels[locale]}</span>
+        </button>
+        <div
+          id="lang-menu"
+          class="absolute right-0 top-full mt-1 py-1 w-40 rounded-xl bg-[#1A1A2E] border border-gray-700 shadow-xl opacity-0 invisible [&.open]:opacity-100 [&.open]:visible transition-all duration-200 z-50"
+        >
+          {
+            locales.map((l) => (
+              <a
+                href={withBase(`/${l}${basePath}`)}
+                lang={l}
+                aria-current={l === locale ? 'true' : undefined}
+                class:list={[
+                  'block px-4 py-2 text-sm no-underline transition-colors hover:bg-gray-700/50',
+                  l === locale ? 'text-primary font-medium' : 'text-default',
+                ]}
+              >
+                {localeLabels[l]}
+              </a>
+            ))
+          }
+        </div>
+      </div>
+
+      <!-- Hamburger -->
+      <button
+        id="hamburger"
+        class="md:hidden w-9 h-9 flex flex-col items-center justify-center gap-1 rounded-lg hover:bg-slate-800 transition-colors cursor-pointer"
+        aria-label="Menu"
+      >
+        <span
+          class="block w-5 h-0.5 bg-muted transition-all duration-200 [.open_&]:rotate-45 [.open_&]:translate-y-1.5"
+        ></span>
+        <span class="block w-5 h-0.5 bg-muted transition-all duration-200 [.open_&]:opacity-0"></span>
+        <span
+          class="block w-5 h-0.5 bg-muted transition-all duration-200 [.open_&]:-rotate-45 [.open_&]:-translate-y-1.5"
+        ></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div
+    id="mobile-menu"
+    class="md:hidden overflow-hidden max-h-0 transition-all duration-300 [&.open]:max-h-60 bg-[#1A1A2E] border-b border-gray-700"
+  >
+    <div class="px-4 py-3 flex flex-col gap-2">
+      <a
+        href={withBase(`/${locale}/#features`)}
+        class="px-3 py-2 rounded-lg text-sm text-muted hover:bg-slate-800 no-underline">{t(tr, 'nav.features')}</a
+      >
+      <a
+        href={withBase(`/${locale}/faq`)}
+        class="px-3 py-2 rounded-lg text-sm text-muted hover:bg-slate-800 no-underline">{t(tr, 'nav.faq')}</a
+      >
+    </div>
+  </div>
+</nav>
+
+<script>
+  import '../scripts/nav';
+</script>

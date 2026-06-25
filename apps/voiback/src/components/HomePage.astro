@@ -1,0 +1,46 @@
+---
+import { type Locale } from '../i18n/config';
+import { getTranslations, t } from '../i18n/translations';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from './Nav.astro';
+import Hero from './Hero.astro';
+import HowToPlay from './HowToPlay.astro';
+import Features from './Features.astro';
+import FAQ from './FAQ.astro';
+import BrandCTA from './BrandCTA.astro';
+import Footer from './Footer.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const tr = getTranslations(locale);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'VOIBACK',
+  operatingSystem: 'iOS, Android',
+  applicationCategory: 'GameApplication',
+  description: t(tr, 'meta.description'),
+  url: 'https://srcchang.github.io/voiback/',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+};
+---
+
+<BaseLayout
+  title={`${t(tr, 'meta.brand')} — ${t(tr, 'hero.tagline')}`}
+  description={t(tr, 'meta.description')}
+  locale={locale}
+  currentPath={`/${locale}/`}
+  jsonLd={jsonLd}
+>
+  <Nav locale={locale} currentPath={`/${locale}/`} />
+  <Hero locale={locale} />
+  <HowToPlay locale={locale} />
+  <Features locale={locale} />
+  <FAQ locale={locale} count={4} showMore />
+  <BrandCTA locale={locale} />
+  <Footer locale={locale} currentPath={`/${locale}/`} />
+</BaseLayout>

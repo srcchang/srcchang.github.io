@@ -1,0 +1,53 @@
+---
+import { type Locale } from '../i18n/config';
+import { getTranslations, t } from '../i18n/translations';
+import Icon from './Icon.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const tr = getTranslations(locale);
+
+const steps = [
+  { title: t(tr, 'how.step1.title'), desc: t(tr, 'how.step1.desc'), icon: 'microphone' },
+  { title: t(tr, 'how.step2.title'), desc: t(tr, 'how.step2.desc'), icon: 'player-play' },
+  { title: t(tr, 'how.step3.title'), desc: t(tr, 'how.step3.desc'), icon: 'stars' },
+];
+---
+
+<section class="relative scroll-mt-[72px]">
+  <div class="relative mx-auto max-w-5xl px-4 md:px-6 py-12 md:py-16 lg:py-20 text-default">
+    <div class="md:py-4 md:self-center w-full">
+      <div class="mb-8 md:mb-12 text-left">
+        <h2 class="font-bold leading-tight tracking-tighter font-heading text-3xl lg:text-4xl" data-reveal>
+          {t(tr, 'how.title')}
+        </h2>
+      </div>
+      <div>
+        {
+          steps.map((step, index) => (
+            <div class="flex" data-reveal data-reveal-delay={`${index * 100}`}>
+              <div class="flex flex-col items-center mr-4">
+                <div>
+                  <div class="flex items-center justify-center">
+                    <Icon
+                      name={step.icon}
+                      class="w-10 h-10 p-2 rounded-full border-2 text-primary border-primary"
+                    />
+                  </div>
+                </div>
+                {index !== steps.length - 1 && <div class="w-px h-full bg-slate-400/50" />}
+              </div>
+              <div class={`pt-1 ${index !== steps.length - 1 ? 'pb-8' : ''}`}>
+                <p class="text-xl font-bold">{step.title}</p>
+                <p class="text-muted mt-2">{step.desc}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

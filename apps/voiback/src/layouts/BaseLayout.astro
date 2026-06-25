@@ -1,0 +1,82 @@
+---
+import '../styles/global.css';
+import { locales, stripLocale, ogLocales, withBase, type Locale } from '../i18n/config';
+
+interface Props {
+  title: string;
+  description: string;
+  locale: string;
+  currentPath: string;
+  ogImage?: string;
+  noindex?: boolean;
+  jsonLd?: Record<string, any> | Record<string, any>[];
+}
+
+const { title, description, locale, currentPath, ogImage, noindex = false, jsonLd } = Astro.props;
+// 部署於 https://srcchang.github.io/voiback/；site 取自 astro.config 的 `site`。
+const site = Astro.site?.href.replace(/\/$/, '') ?? 'https://srcchang.github.io';
+const siteName = 'VOIBACK';
+const canonical = `${site}${withBase(currentPath)}`;
+const ogImg = ogImage || `${site}${withBase('/og-default.png')}`;
+const basePath = stripLocale(currentPath);
+---
+
+<!doctype html>
+<html lang={locale} class="dark scroll-smooth overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+    <link rel="canonical" href={canonical} />
+    <meta name="theme-color" content="#0A0B14" />
+    <script is:inline>
+      // App 內嵌模式：?embed=true 時隱藏 nav/footer（paint 前同步加 class，避免 FOUC）
+      if (new URLSearchParams(location.search).get('embed') === 'true') {
+        document.documentElement.classList.add('embed');
+      }
+    </script>
+    {
+      locales.map((l) => (
+        <link rel="alternate" hrefLang={l} href={`${site}${withBase(`/${l}${basePath}`)}`} />
+      ))
+    }
+    <link rel="alternate" hrefLang="x-default" href={`${site}${withBase('/zh-TW/')}`} />
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImg} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={title} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content={ogLocales[locale as Locale] ?? locale} />
+    {
+      locales
+        .filter((l) => l !== locale)
+        .map((l) => <meta property="og:locale:alternate" content={ogLocales[l]} />)
+    }
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImg} />
+
+    <meta name="apple-itunes-app" content="app-id=6783258716" />
+    <link rel="icon" type="image/svg+xml" href={withBase('/favicon.svg')} />
+
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+
+    <script>
+      import '../scripts/scroll-reveal';
+    </script>
+  </head>
+  <body class="bg-page text-default font-sans antialiased tracking-tight overflow-x-hidden">
+    <slot />
+  </body>
+</html>

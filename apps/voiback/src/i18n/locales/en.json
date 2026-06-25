@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "brand": "VOIBACK",
+    "description": "Talk backwards, win the party. Record your voice, hear it reversed — then try to mimic it. We flip your imitation back and compare it to the original!"
+  },
+  "nav": {
+    "features": "Features",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "tagline": "Voice Reversal Challenge",
+    "title": "Talk <span class=\"text-primary\">Backwards</span>,<br/>Win the Party",
+    "subtitle": "Record your voice, hear it reversed — then try to mimic it. We flip your imitation back and compare it to the original. The closer the match, the higher your score!",
+    "cta": {
+      "appstore": "App Store",
+      "googleplay": "Google Play"
+    }
+  },
+  "how": {
+    "title": "How It Works",
+    "step1": { "title": "Pick & Record", "desc": "Choose a phrase from the library or type your own, then record yourself saying it." },
+    "step2": { "title": "Hear It Reversed", "desc": "The app reverses your voice — it sounds totally different. Remember this sound!" },
+    "step3": { "title": "Mimic & Score", "desc": "Record your best imitation of the reversed sound. The app flips it back and compares it to the original. How close can you get?" }
+  },
+  "features": {
+    "title": "Core Features",
+    "sentences": { "title": "Rich Phrase Library", "desc": "Built-in categories including Funny, Tongue Twisters, Dialects, English, and Sound Effects — supporting 5 languages." },
+    "multiplayer": { "title": "Multiplayer Fun", "desc": "Pass-and-play mode for groups. Set the number of players and track everyone's scores to crown the mimic champion!" },
+    "waveform": { "title": "Waveform Comparison", "desc": "Side-by-side waveform overlay of original and reversed imitation. Overlapping areas blend to show similarity at a glance." },
+    "share": { "title": "Share the Laughter", "desc": "Export audio comparison clips of original vs. reversed imitation. Share on social media and challenge your friends!" }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "more": "View more questions",
+    "page": { "title": "Frequently Asked Questions" },
+    "q1": { "title": "What is VOIBACK?", "desc": "VOIBACK is a party voice challenge game. You record a phrase, the app reverses it, and you have to mimic that reversed sound — hilarious whether you succeed or fail!" },
+    "q2": { "title": "Do I need an internet connection?", "desc": "Nope! VOIBACK works completely offline. All audio processing happens locally on your device. No internet required." },
+    "q3": { "title": "What languages are supported?", "desc": "VOIBACK supports 5 languages from day one: 繁體中文, 简体中文, English, 日本語, 한국어. The interface and phrase library switch automatically." },
+    "q4": { "title": "Does it have ads?", "desc": "VOIBACK is free with banner ads and occasional interstitials. You can purchase a one-time IAP to remove ads permanently." },
+    "q5": { "title": "Is the scoring accurate?", "desc": "The score is designed for fun, not precision. We use envelope similarity + pitch contour analysis. A bit of randomness adds to the party vibe!" }
+  },
+  "cta": {
+    "title": "Try It Now!",
+    "subtitle": "Download VOIBACK and find out who's the mimic master at your next gathering.",
+    "coming": "Coming Soon"
+  },
+  "footer": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "legal": {
+    "updated": "Last updated"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "content": [
+      { "heading": "Information We Collect", "body": "VOIBACK does not collect, store, or transmit any personal information. All audio processing is performed locally on your device. We do not operate servers, maintain databases, or require user accounts." },
+      { "heading": "Microphone Access", "body": "VOIBACK requires microphone access solely for recording your voice during gameplay. All recordings are processed in real-time on your device and are never uploaded or stored externally. Temporary audio files are kept locally only for the duration of each game session and are discarded when you exit the app." },
+      { "heading": "Third-Party Services", "body": "VOIBACK integrates Google AdMob for advertising and Firebase Crashlytics for crash reporting. These services may collect anonymized usage data in accordance with their respective privacy policies. We do not share audio recordings or personal identifiers with these services." },
+      { "heading": "Children's Privacy", "body": "VOIBACK is rated 4+ on iOS and Everyone on Android. We do not knowingly collect any personal information from children. If you believe a child has provided personal data through our third-party services, please contact us and we will assist in removing it." },
+      { "heading": "Changes to This Policy", "body": "We may update this privacy policy from time to time. Changes will be posted on this page with an updated revision date. We encourage you to review this policy periodically." },
+      { "heading": "Contact", "body": "If you have any questions about this privacy policy, please contact us at voiback.app@gmail.com." }
+    ]
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "content": [
+      { "heading": "Acceptance of Terms", "body": "By downloading and using VOIBACK, you agree to these terms of service. If you do not agree, please do not use the app." },
+      { "heading": "License", "body": "VOIBACK is provided as a free-to-download app with optional in-app purchases. You are granted a non-transferable, non-exclusive license to use the app for personal, non-commercial purposes." },
+      { "heading": "In-App Purchases", "body": "VOIBACK offers a one-time in-app purchase to remove advertisements. All purchases are final and processed through the App Store or Google Play Store." },
+      { "heading": "User Conduct", "body": "You agree to use VOIBACK responsibly and not to misuse the app for any unlawful purpose." },
+      { "heading": "Intellectual Property", "body": "All content, branding, and code within VOIBACK are the intellectual property of the developer." },
+      { "heading": "Limitation of Liability", "body": "VOIBACK is provided \"as is\" without warranty of any kind. The developer shall not be liable for any damages arising from the use of this app." },
+      { "heading": "Changes", "body": "We reserve the right to modify these terms at any time. Continued use of the app after changes constitutes acceptance of the new terms." }
+    ]
+  }
+}

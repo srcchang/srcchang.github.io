@@ -1,0 +1,63 @@
+---
+import { withBase, type Locale } from '../i18n/config';
+import { getTranslations, t } from '../i18n/translations';
+import Icon from './Icon.astro';
+
+interface Props {
+  locale: Locale;
+  /** 顯示的問題數量（首頁預覽用 4，FAQ 頁用全部 5）。 */
+  count?: number;
+  /** 是否顯示「查看更多問題」連結（首頁預覽用）。 */
+  showMore?: boolean;
+}
+
+const { locale, count = 5, showMore = false } = Astro.props;
+const tr = getTranslations(locale);
+
+const allKeys = ['q1', 'q2', 'q3', 'q4', 'q5'];
+const items = allKeys
+  .slice(0, count)
+  .map((k) => ({ title: t(tr, `faq.${k}.title`), desc: t(tr, `faq.${k}.desc`) }));
+---
+
+<section class="relative scroll-mt-[72px]">
+  <div class="relative mx-auto max-w-7xl px-4 md:px-6 py-12 md:py-16 lg:py-20 text-default">
+    <div class="mb-8 md:mx-auto md:mb-12 text-center max-w-3xl">
+      <h2 class="font-bold leading-tight tracking-tighter font-heading text-3xl md:text-4xl" data-reveal>
+        {t(tr, 'faq.title')}
+      </h2>
+    </div>
+
+    <div class="grid mx-auto gap-y-8 md:gap-y-12 gap-8 max-w-4xl">
+      {
+        items.map((item) => (
+          <div data-reveal>
+            <div class="flex flex-row max-w-none">
+              <div class="flex justify-center">
+                <Icon name="chevron-right" class="flex-shrink-0 mt-1 w-6 h-6 text-primary mr-2" />
+              </div>
+              <div class="mt-0.5">
+                <h3 class="text-xl font-bold">{item.title}</h3>
+                <p class="mt-3 text-muted">{item.desc}</p>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    {
+      showMore && (
+        <div class="max-w-7xl mx-auto -mt-6 mb-4 text-center pt-8">
+          <a
+            href={withBase(`/${locale}/faq`)}
+            class="inline-flex items-center gap-1 cursor-pointer text-primary font-medium hover:underline transition-colors duration-150 no-underline"
+          >
+            {t(tr, 'faq.more')}
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      )
+    }
+  </div>
+</section>

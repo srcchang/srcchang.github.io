@@ -1,6 +1,6 @@
 ---
-import Button from '~/components/ui/Button.astro';
-import { getUI, type Locale } from '~/i18n/ui';
+import { type Locale } from '../i18n/config';
+import { getTranslations, t } from '../i18n/translations';
 
 export interface Props {
   locale?: Locale;
@@ -8,15 +8,15 @@ export interface Props {
 }
 
 const { locale = 'zh-TW', class: className = 'flex flex-wrap gap-4' } = Astro.props;
-const t = getUI(locale);
+const tr = getTranslations(locale);
 
 const stores = [
-  { href: t['store.appstore'], label: t['hero.cta.appstore'], variant: 'primary' as const },
-  { href: t['store.googleplay'], label: t['hero.cta.googleplay'], variant: 'secondary' as const },
+  { href: t(tr, 'store.appstore'), label: t(tr, 'hero.cta.appstore'), variant: 'primary' as const },
+  { href: t(tr, 'store.googleplay'), label: t(tr, 'hero.cta.googleplay'), variant: 'secondary' as const },
 ];
 
-// 商店連結尚未提供（佔位 '#' 或空字串）時，以禁用的「即將推出」狀態呈現，避免死連結。
-const isPlaceholder = (href: string) => !href || href === '#';
+// 商店連結尚未提供（佔位 '#'、空字串或 t() 回傳 key 本身）時，以禁用的「即將推出」狀態呈現，避免死連結。
+const isPlaceholder = (href: string) => !href || href === '#' || href.startsWith('store.');
 ---
 
 <div class={className}>
@@ -30,14 +30,19 @@ const isPlaceholder = (href: string) => !href || href === '#';
           ]}
           role="button"
           aria-disabled="true"
-          title={t['cta.coming']}
+          title={t(tr, 'cta.coming')}
         >
-          {label} · {t['cta.coming']}
+          {label} · {t(tr, 'cta.coming')}
         </span>
       ) : (
-        <Button variant={variant} href={href}>
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class={variant === 'primary' ? 'btn-primary' : 'btn-secondary'}
+        >
           {label}
-        </Button>
+        </a>
       )
     )
   }

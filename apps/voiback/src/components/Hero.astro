@@ -1,0 +1,58 @@
+---
+import { withBase, type Locale } from '../i18n/config';
+import { getTranslations, t } from '../i18n/translations';
+import StoreButtons from './StoreButtons.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const tr = getTranslations(locale);
+---
+
+<section class="relative">
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="pt-16 pointer-events-none"></div>
+    <div class="py-12 md:py-20 lg:flex lg:items-center lg:gap-8 lg:min-h-[80vh]">
+      <div class="basis-1/2 text-center lg:text-left pb-10 md:pb-16 mx-auto">
+        <p
+          class="text-base text-secondary font-bold tracking-wide uppercase"
+          data-reveal
+        >
+          {t(tr, 'hero.tagline')}
+        </p>
+        <h1
+          class="text-5xl md:text-6xl font-bold leading-tight tracking-tighter mb-4 font-heading"
+          data-reveal
+          data-reveal-delay="100"
+          set:html={t(tr, 'hero.title')}
+        />
+        <div class="max-w-3xl mx-auto lg:max-w-none">
+          <p class="text-xl text-muted mb-6" data-reveal data-reveal-delay="200">
+            {t(tr, 'hero.subtitle')}
+          </p>
+          <div
+            class="max-w-xs sm:max-w-md m-auto flex flex-col sm:flex-row sm:justify-center gap-4 lg:justify-start lg:m-0"
+            data-reveal
+            data-reveal-delay="300"
+          >
+            <StoreButtons locale={locale} class="flex flex-col sm:flex-row gap-4 w-full" />
+          </div>
+        </div>
+      </div>
+      <div class="basis-1/2">
+        <div class="relative m-auto max-w-md" data-reveal data-reveal-delay="200">
+          <img
+            src={withBase('/hero-placeholder.svg')}
+            alt="VOIBACK App"
+            width="600"
+            height="600"
+            class="mx-auto rounded-md w-full"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,17 +1,12 @@
-import path from 'path';
-import { fileURLToPath } from 'url';
-
 import { defineConfig } from 'astro/config';
 
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
-import icon from 'astro-icon';
 
-import astrowind from './vendor/integration';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
+// 部署於 GitHub Pages 子路徑：https://srcchang.github.io/voiback/
 export default defineConfig({
+  site: 'https://srcchang.github.io',
+  base: '/voiback',
   output: 'static',
 
   integrations: [
@@ -33,23 +28,12 @@ export default defineConfig({
         },
       },
     }),
-    icon({
-      include: {
-        tabler: ['*'],
-      },
-    }),
-    astrowind({
-      config: './src/config.yaml',
-    }),
   ],
 
   vite: {
     plugins: [tailwindcss()],
-    resolve: {
-      alias: {
-        '~': path.resolve(__dirname, './src'),
-      },
-    },
+    server: { allowedHosts: true },
+    preview: { allowedHosts: true },
   },
 
   i18n: {

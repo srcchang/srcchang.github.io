@@ -1,0 +1,47 @@
+---
+import { type Locale } from '../i18n/config';
+import { getTranslations, t } from '../i18n/translations';
+import Icon from './Icon.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const tr = getTranslations(locale);
+
+const items = [
+  { title: t(tr, 'features.sentences.title'), desc: t(tr, 'features.sentences.desc'), icon: 'books' },
+  { title: t(tr, 'features.multiplayer.title'), desc: t(tr, 'features.multiplayer.desc'), icon: 'users' },
+  { title: t(tr, 'features.waveform.title'), desc: t(tr, 'features.waveform.desc'), icon: 'wave-sine' },
+  { title: t(tr, 'features.share.title'), desc: t(tr, 'features.share.desc'), icon: 'share' },
+];
+---
+
+<section id="features" class="relative scroll-mt-[72px]">
+  <div class="relative mx-auto max-w-7xl px-4 md:px-6 py-12 md:py-16 lg:py-20 text-default">
+    <div class="mb-8 md:mx-auto md:mb-12 text-center max-w-3xl">
+      <h2 class="font-bold leading-tight tracking-tighter font-heading text-3xl md:text-4xl" data-reveal>
+        {t(tr, 'features.title')}
+      </h2>
+    </div>
+
+    <div class="grid mx-auto gap-8 md:gap-y-12 sm:grid-cols-2">
+      {
+        items.map((item, index) => (
+          <div data-reveal data-reveal-delay={`${(index % 2) * 100}`}>
+            <div class="flex flex-row max-w-full sm:max-w-md">
+              <div class="flex justify-center">
+                <Icon name={item.icon} class="flex-shrink-0 mt-1 mr-2 w-6 h-6 text-primary" />
+              </div>
+              <div class="mt-0.5">
+                <h3 class="text-lg font-semibold">{item.title}</h3>
+                <p class="mt-0.5 text-muted">{item.desc}</p>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

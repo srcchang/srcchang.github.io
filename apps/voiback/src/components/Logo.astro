@@ -1,16 +1,26 @@
 ---
-import { SITE } from 'astrowind:config';
+import { withBase, type Locale } from '../i18n/config';
 
-const { class: className = '', locale = 'zh-TW' } = Astro.props;
-const base = (SITE.base || '').replace(/\/$/, '');
+interface Props {
+  locale: Locale;
+  class?: string;
+}
+
+const { locale, class: className = '' } = Astro.props;
 ---
 
-<a href={`${base}/${locale}/`} class={`flex items-center gap-2 font-heading font-bold text-xl text-default no-underline ${className}`}>
+<a
+  href={withBase(`/${locale}/`)}
+  class={`flex items-center gap-2 font-heading font-bold text-xl text-default no-underline ${className}`}
+>
   <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M14 4C8.48 4 4 8.48 4 14C4 19.52 8.48 24 14 24C19.52 24 24 19.52 24 14C24 8.48 19.52 4 14 4Z" stroke="#00F5A0" stroke-width="1.5"/>
-    <path d="M10 10L18 18" stroke="#00F5A0" stroke-width="1.5" stroke-linecap="round"/>
-    <path d="M18 10L10 18" stroke="#00F5A0" stroke-width="1.5" stroke-linecap="round"/>
-    <path d="M17 14H11" stroke="#00F5A0" stroke-width="1.5" stroke-linecap="round"/>
+    <path
+      d="M14 4C8.48 4 4 8.48 4 14C4 19.52 8.48 24 14 24C19.52 24 24 19.52 24 14C24 8.48 19.52 4 14 4Z"
+      stroke="#00F5A0"
+      stroke-width="1.5"></path>
+    <path d="M10 10L18 18" stroke="#00F5A0" stroke-width="1.5" stroke-linecap="round"></path>
+    <path d="M18 10L10 18" stroke="#00F5A0" stroke-width="1.5" stroke-linecap="round"></path>
+    <path d="M17 14H11" stroke="#00F5A0" stroke-width="1.5" stroke-linecap="round"></path>
   </svg>
   VOIBACK
 </a>

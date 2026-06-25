@@ -1,0 +1,121 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/inter';
+
+/* VOIBACK 為 dark-only 主題：<html> 永遠帶 .dark，故 dark: variant 全程生效。 */
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Brand colors */
+  --color-primary: rgb(0 245 160);
+  --color-secondary: rgb(139 92 246);
+  --color-accent: rgb(255 77 109);
+
+  /* Text */
+  --color-default: rgb(230 233 242);
+  --color-heading: rgb(230 233 242);
+  --color-muted: rgb(138 138 166);
+
+  /* Surfaces */
+  --color-page: rgb(10 11 20);
+
+  /* Typography */
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  --font-heading: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+
+  --animate-fade: fadeInUp 1s both;
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(2rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+::selection {
+  background-color: rgb(0 245 160 / 30%);
+}
+
+/* Page background / text helpers used across components */
+@utility bg-page {
+  background-color: var(--color-page);
+}
+
+@utility text-page {
+  color: var(--color-default);
+}
+
+/* Buttons */
+@utility btn {
+  @apply inline-flex items-center justify-center rounded-full border border-gray-500 bg-transparent font-medium text-center text-base text-default leading-snug transition py-3.5 px-6 md:px-8 ease-in duration-200 cursor-pointer hover:bg-slate-800 hover:border-slate-700 focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-page;
+}
+
+@utility btn-primary {
+  @apply btn font-semibold bg-primary text-black border-primary hover:bg-secondary hover:border-secondary hover:text-white;
+}
+
+@utility btn-secondary {
+  @apply btn;
+}
+
+/* Visible keyboard focus ring for all interactive elements */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Scroll reveal animation */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+
+[data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-reveal-delay='100'] {
+  transition-delay: 100ms;
+}
+[data-reveal-delay='200'] {
+  transition-delay: 200ms;
+}
+[data-reveal-delay='300'] {
+  transition-delay: 300ms;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* App 內嵌模式（?embed=true）：隱藏 nav/footer 等 chrome，並縮小頁面頂部間距 */
+html.embed [data-embed-hide] {
+  display: none !important;
+}
+
+html.embed .legal-shell {
+  padding-top: 1.5rem;
+}
