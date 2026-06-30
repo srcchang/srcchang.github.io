@@ -1,0 +1,10 @@
+<!DOCTYPE html><html lang="zh-TW"> <head><meta charset="UTF-8"><meta name="robots" content="noindex"><title>Terms of Service</title><script>
+    (function () {
+      var p = new URLSearchParams(location.search);
+      var supported = ['zh-TW', 'zh-CN', 'en', 'ja', 'ko'];
+      var lang = p.get('lang');
+      if (supported.indexOf(lang) === -1) lang = 'zh-TW';
+      var embed = p.get('embed') === 'true' ? '?embed=true' : '';
+      location.replace('/voiback/' + lang + '/terms' + embed);
+    })();
+  </script></head> <body></body></html>
