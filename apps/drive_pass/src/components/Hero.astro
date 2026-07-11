@@ -3,7 +3,7 @@ import { getTranslations, t } from '../i18n/translations';
 import type { Locale } from '../i18n/config';
 import PhoneMockup from './PhoneMockup.astro';
 import VehicleGlow from './VehicleGlow.astro';
-import Icon from './Icon.astro';
+import DownloadCTA from './DownloadCTA.astro';
 
 interface Props {
   locale: string;
@@ -69,22 +69,8 @@ const tr = getTranslations(locale as Locale);
     </div>
 
     <!-- Download CTA buttons -->
-    <!-- TODO: App 上架後把 #download 換成實際 store 連結（目前無此錨點，為 placeholder） -->
-    <div class="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:gap-4">
-      <a
-        href="#download"
-        class="inline-flex items-center gap-2 rounded-xl bg-car px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-car-deep hover:shadow-lg active:scale-95"
-      >
-        <Icon name="car" size="18" />
-        {t(tr, 'hero.downloadCar')}
-      </a>
-      <a
-        href="#download"
-        class="inline-flex items-center gap-2 rounded-xl bg-moto px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-moto-deep hover:shadow-lg active:scale-95"
-      >
-        <Icon name="motorcycle" size="18" />
-        {t(tr, 'hero.downloadMoto')}
-      </a>
+    <div id="download" class="mt-10">
+      <DownloadCTA locale={locale} size="lg" />
     </div>
   </div>
 </section>

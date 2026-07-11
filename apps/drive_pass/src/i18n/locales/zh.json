@@ -18,8 +18,7 @@
     "questionsCount": "2,500+",
     "languages": "語言支援",
     "languagesCount": "5",
-    "achievements": "成就獎章",
-    "achievementsCount": "14",
+
     "platforms": "雙平台",
     "platformsLabel": "iOS + Android"
   },
@@ -34,8 +33,7 @@
       "tags": [
         "交通法規",
         "交通標誌",
-        "SM-2 複習",
-        "成就系統"
+        "智慧複習"
       ]
     },
     "moto": {
@@ -48,7 +46,7 @@
         "機車法規",
         "情境題",
         "危險感知影片",
-        "SM-2 複習"
+        "智慧複習"
       ]
     }
   },
@@ -58,33 +56,28 @@
     "items": [
       {
         "icon": "brain",
-        "title": "SM-2 智慧複習",
+        "title": "智慧複習",
         "description": "基於 SuperMemo 間隔重複演算法，自動安排最佳複習時機。答錯的題目會更頻繁出現，答對的題目間隔逐漸拉長，讓你把時間花在刀口上。"
       },
       {
-        "icon": "bar-chart",
+        "icon": "gauge",
         "title": "通過率預測",
         "description": "綜合模擬考成績、練習正確率、題庫覆蓋率，加權計算你的即時通過率。不再猜測自己準備得夠不夠，數字告訴你。"
       },
       {
-        "icon": "target",
-        "title": "每日挑戰 & 考前衝刺",
-        "description": "每天 10 題保持手感，考前啟動衝刺模式，三層瀑布推薦引擎自動挑選你最需要加強的題目。"
+        "icon": "calendar-clock",
+        "title": "每日挑戰",
+        "description": "每日挑戰 10 題保持手感，搭配智慧複習動態調整複習與新題比例，讓你把時間花在最需要加強的題目上。"
       },
       {
-        "icon": "file-text",
+        "icon": "clipboard-check",
         "title": "模擬考",
         "description": "100% 還原真實考試規格，計時自動交卷，逐題檢討。完整模擬讓你上考場不緊張。"
       },
       {
-        "icon": "rotate-ccw",
+        "icon": "book-marked",
         "title": "錯題本",
-        "description": "自動收錄答錯題目，篩選排序、批量重做。搭配 SM-2 演算法，精準攻克弱點。"
-      },
-      {
-        "icon": "trophy",
-        "title": "成就系統",
-        "description": "14 個成就獎章激勵學習動力。練習題數、連續答對、模擬考高分、連續活動天數，全方位記錄你的成長。"
+        "description": "自動收錄答錯題目，篩選排序、批量重做。搭配智慧複習演算法，精準攻克弱點。"
       }
     ]
   },
@@ -150,24 +143,24 @@
         "description": "4 大分類依序練習，進度追蹤，斷點續做"
       },
       {
-        "icon": "file-text",
+        "icon": "clipboard-check",
         "title": "模擬考",
         "description": "40 題 / 30 分鐘，計時自動交卷，逐題檢討"
       },
       {
-        "icon": "rotate-ccw",
+        "icon": "book-marked",
         "title": "錯題本",
         "description": "自動收錄答錯題目，批量重做，答錯次數追蹤"
       },
       {
         "icon": "brain",
-        "title": "SM-2 複習",
+        "title": "智慧複習",
         "description": "間隔重複演算法，智慧安排最佳複習時機"
       },
       {
-        "icon": "target",
+        "icon": "calendar-clock",
         "title": "每日挑戰",
-        "description": "每天 10 題，20% 複習 + 80% 新題"
+        "description": "每天 10 題，智慧複習優先，動態調整比例"
       },
       {
         "icon": "map-pin",
@@ -200,30 +193,51 @@
         "description": "5 大分類依序練習，含情境式題目"
       },
       {
-        "icon": "file-text",
+        "icon": "clipboard-check",
         "title": "模擬考",
         "description": "50 題 / 40 分鐘，計時自動交卷，逐題檢討"
       },
       {
-        "icon": "rotate-ccw",
+        "icon": "book-marked",
         "title": "錯題本",
         "description": "自動收錄答錯題目，批量重做，答錯次數追蹤"
       },
       {
         "icon": "brain",
-        "title": "SM-2 複習",
+        "title": "智慧複習",
         "description": "間隔重複演算法，智慧安排最佳複習時機"
       },
       {
-        "icon": "target",
+        "icon": "calendar-clock",
         "title": "每日挑戰",
-        "description": "每天 10 題，20% 複習 + 80% 新題"
+        "description": "每天 10 題，智慧複習優先，動態調整比例"
       },
       {
         "icon": "video",
         "title": "危險感知影片",
         "description": "真實情境影片題，訓練行車危險感知能力"
       }
+    ]
+  },
+  "screenshots": {
+    "car": [
+      { "label": "學習儀表板" },
+      { "label": "多語系支援" },
+      { "label": "模擬考" },
+      { "label": "智慧複習" },
+      { "label": "分類練習" },
+      { "label": "學習進度" },
+      { "label": "駕訓班地圖" }
+    ],
+    "moto": [
+      { "label": "學習儀表板" },
+      { "label": "分類練習" },
+      { "label": "多語系支援" },
+      { "label": "模擬考" },
+      { "label": "智慧複習" },
+      { "label": "學習進度" },
+      { "label": "安心首選" },
+      { "label": "常用工具" }
     ]
   },
   "examInfo": {
@@ -275,6 +289,14 @@
       "menuOpen": "開啟選單",
       "home": "駕照通首頁",
       "languageSelect": "選擇語言"
+    },
+    "storeBadge": {
+      "appStoreLabel": "從",
+      "appStoreName": "App Store 下載",
+      "appStoreAria": "從 App Store 下載",
+      "googlePlayLabel": "從",
+      "googlePlayName": "Google Play 下載",
+      "googlePlayAria": "從 Google Play 下載"
     },
     "examLabels": {
       "questionCount": "題數",
@@ -338,7 +360,7 @@
       "sections": [
         {
           "heading": "服務說明",
-          "content": "駕照通是一款台灣駕照筆試備考應用程式，提供汽車版與機車版兩個獨立 App。功能包含題庫練習、模擬考試、錯題本、SM-2 智慧複習、每日挑戰等。題庫內容來源為交通部公路局公開題庫。"
+          "content": "駕照通是一款台灣駕照筆試備考應用程式，提供汽車版與機車版兩個獨立 App。功能包含題庫練習、模擬考試、錯題本、智慧複習、每日挑戰等。題庫內容來源為交通部公路局公開題庫。"
         },
         {
           "heading": "使用資格",
@@ -381,12 +403,12 @@
   },
   "aboutPage": {
     "title": "關於駕照通",
-    "mission": "我們相信，每個人都值得擁有一個聰明的備考夥伴。駕照通結合科學的 SM-2 間隔重複演算法與直覺化的使用體驗，讓準備駕照筆試不再是痛苦的背誦，而是有系統的學習旅程。無論你的母語是什麼，我們都想幫助你順利通過台灣的駕照筆試。",
+    "mission": "我們相信，每個人都值得擁有一個聰明的備考夥伴。駕照通結合科學的間隔重複演算法與直覺化的使用體驗，讓準備駕照筆試不再是痛苦的背誦，而是有系統的學習旅程。無論你的母語是什麼，我們都想幫助你順利通過台灣的駕照筆試。",
     "productsTitle": "我們的產品",
     "carName": "汽車駕照通",
-    "carDescription": "台灣汽車駕照筆試完整備考方案。40 題模擬考、分類練習、錯題本、SM-2 智慧複習、每日挑戰，以及駕訓班地圖功能。",
+    "carDescription": "台灣汽車駕照筆試完整備考方案。40 題模擬考、分類練習、錯題本、智慧複習、每日挑戰，以及駕訓班地圖功能。",
     "motoName": "機車駕照通",
-    "motoDescription": "台灣機車駕照筆試完整備考方案。50 題模擬考、分類練習、錯題本、SM-2 智慧複習、每日挑戰，以及獨家的危險感知影片題。",
+    "motoDescription": "台灣機車駕照筆試完整備考方案。50 題模擬考、分類練習、錯題本、智慧複習、每日挑戰，以及獨家的危險感知影片題。",
     "whyTitle": "為什麼選擇駕照通",
     "highlights": [
       {
@@ -395,7 +417,7 @@
       },
       {
         "title": "科學複習方法",
-        "description": "SM-2 間隔重複演算法，根據你的答題表現智慧安排最佳複習時機。"
+        "description": "間隔重複演算法，根據你的答題表現智慧安排最佳複習時機。"
       },
       {
         "title": "五種語言支援",
@@ -414,7 +436,7 @@
     "items": [
       {
         "question": "App 是免費的嗎？",
-        "answer": "核心功能完全免費！包含完整題庫、模擬考、錯題本、SM-2 智慧複習、每日挑戰等。可透過應用內購買一次性去除廣告。"
+        "answer": "核心功能完全免費！包含完整題庫、模擬考、錯題本、智慧複習、每日挑戰等。可透過應用內購買一次性去除廣告。"
       },
       {
         "question": "支援哪些語言？",

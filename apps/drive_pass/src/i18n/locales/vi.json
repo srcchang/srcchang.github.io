@@ -18,8 +18,6 @@
     "questionsCount": "2,500+",
     "languages": "Ngôn ngữ hỗ trợ",
     "languagesCount": "5",
-    "achievements": "Huy hiệu thành tích",
-    "achievementsCount": "14",
     "platforms": "Đa nền tảng",
     "platformsLabel": "iOS + Android"
   },
@@ -34,8 +32,7 @@
       "tags": [
         "Luật giao thông",
         "Biển báo giao thông",
-        "Ôn tập SM-2",
-        "Hệ thống thành tích"
+        "Ôn tập thông minh"
       ]
     },
     "moto": {
@@ -48,7 +45,7 @@
         "Luật xe máy",
         "Câu hỏi tình huống",
         "Video nhận thức nguy hiểm",
-        "Ôn tập SM-2"
+        "Ôn tập thông minh"
       ]
     }
   },
@@ -58,33 +55,28 @@
     "items": [
       {
         "icon": "brain",
-        "title": "Ôn tập thông minh SM-2",
-        "description": "Dựa trên thuật toán lặp lại theo khoảng cách SuperMemo, tự động sắp xếp thời điểm ôn tập tối ưu. Những câu sai sẽ xuất hiện thường xuyên hơn, những câu đúng sẽ được giãn dần, giúp bạn tập trung vào điểm yếu."
+        "title": "Ôn tập thông minh",
+        "description": "Dựa trên thuật toán ôn tập thông minh, tự động sắp xếp thời điểm ôn tập tối ưu. Những câu sai sẽ xuất hiện thường xuyên hơn, những câu đúng sẽ được giãn dần, giúp bạn tập trung vào điểm yếu."
       },
       {
-        "icon": "bar-chart",
+        "icon": "gauge",
         "title": "Dự đoán tỷ lệ đậu",
         "description": "Tổng hợp điểm thi thử, tỷ lệ trả lời đúng khi luyện tập và độ phủ ngân hàng câu hỏi, tính toán tỷ lệ đậu theo thời gian thực. Không còn phải đoán mình đã ôn đủ chưa — con số sẽ cho bạn biết."
       },
       {
-        "icon": "target",
-        "title": "Thử thách hằng ngày & Nước rút trước thi",
-        "description": "10 câu mỗi ngày để duy trì phong độ, bật chế độ nước rút trước kỳ thi, hệ thống đề xuất ba tầng tự động chọn những câu bạn cần củng cố nhất."
+        "icon": "calendar-clock",
+        "title": "Thử thách hằng ngày",
+        "description": "10 câu hỏi mỗi ngày với ưu tiên ôn tập thông minh, điều chỉnh tỷ lệ câu ôn tập và câu mới"
       },
       {
-        "icon": "file-text",
+        "icon": "clipboard-check",
         "title": "Thi thử",
         "description": "Tái hiện 100% quy cách thi thật, tự động nộp bài khi hết giờ, xem lại từng câu. Thi thử đầy đủ giúp bạn tự tin khi vào phòng thi."
       },
       {
-        "icon": "rotate-ccw",
+        "icon": "book-marked",
         "title": "Sổ câu sai",
-        "description": "Tự động lưu các câu trả lời sai, lọc, sắp xếp và làm lại hàng loạt. Kết hợp thuật toán SM-2, tập trung khắc phục điểm yếu chính xác."
-      },
-      {
-        "icon": "trophy",
-        "title": "Hệ thống thành tích",
-        "description": "14 huy hiệu thành tích kích thích động lực học tập. Số câu đã luyện, chuỗi trả lời đúng, điểm cao thi thử, số ngày hoạt động liên tiếp — ghi lại sự tiến bộ toàn diện của bạn."
+        "description": "Tự động lưu các câu trả lời sai, lọc, sắp xếp và làm lại hàng loạt. Kết hợp thuật toán ôn tập thông minh, tập trung khắc phục điểm yếu chính xác."
       }
     ]
   },
@@ -150,24 +142,24 @@
         "description": "4 danh mục lớn luyện tập tuần tự, theo dõi tiến độ, tiếp tục từ chỗ đã dừng"
       },
       {
-        "icon": "file-text",
+        "icon": "clipboard-check",
         "title": "Thi thử",
         "description": "40 câu / 30 phút, tự động nộp bài khi hết giờ, xem lại từng câu"
       },
       {
-        "icon": "rotate-ccw",
+        "icon": "book-marked",
         "title": "Sổ câu sai",
         "description": "Tự động lưu câu sai, làm lại hàng loạt, theo dõi số lần sai"
       },
       {
         "icon": "brain",
-        "title": "Ôn tập SM-2",
+        "title": "Ôn tập thông minh",
         "description": "Thuật toán lặp lại theo khoảng cách, thông minh sắp xếp thời điểm ôn tập tối ưu"
       },
       {
-        "icon": "target",
+        "icon": "calendar-clock",
         "title": "Thử thách hằng ngày",
-        "description": "10 câu mỗi ngày, 20% ôn tập + 80% câu mới"
+        "description": "10 câu mỗi ngày, ưu tiên ôn tập thông minh, tỷ lệ động"
       },
       {
         "icon": "map-pin",
@@ -200,30 +192,51 @@
         "description": "5 danh mục lớn luyện tập tuần tự, bao gồm câu hỏi tình huống"
       },
       {
-        "icon": "file-text",
+        "icon": "clipboard-check",
         "title": "Thi thử",
         "description": "50 câu / 40 phút, tự động nộp bài khi hết giờ, xem lại từng câu"
       },
       {
-        "icon": "rotate-ccw",
+        "icon": "book-marked",
         "title": "Sổ câu sai",
         "description": "Tự động lưu câu sai, làm lại hàng loạt, theo dõi số lần sai"
       },
       {
         "icon": "brain",
-        "title": "Ôn tập SM-2",
+        "title": "Ôn tập thông minh",
         "description": "Thuật toán lặp lại theo khoảng cách, thông minh sắp xếp thời điểm ôn tập tối ưu"
       },
       {
-        "icon": "target",
+        "icon": "calendar-clock",
         "title": "Thử thách hằng ngày",
-        "description": "10 câu mỗi ngày, 20% ôn tập + 80% câu mới"
+        "description": "10 câu mỗi ngày, ưu tiên ôn tập thông minh, tỷ lệ động"
       },
       {
         "icon": "video",
         "title": "Video nhận thức nguy hiểm",
         "description": "Câu hỏi video tình huống thực tế, rèn luyện khả năng nhận thức nguy hiểm khi lái xe"
       }
+    ]
+  },
+  "screenshots": {
+    "car": [
+      { "label": "Bảng Điều Khiển" },
+      { "label": "Đa Ngôn Ngữ" },
+      { "label": "Thi Thử" },
+      { "label": "Ôn Tập Thông Minh" },
+      { "label": "Luyện Tập" },
+      { "label": "Tiến Độ" },
+      { "label": "Trường Dạy Lái" }
+    ],
+    "moto": [
+      { "label": "Bảng Điều Khiển" },
+      { "label": "Luyện Tập" },
+      { "label": "Đa Ngôn Ngữ" },
+      { "label": "Thi Thử" },
+      { "label": "Ôn Tập Thông Minh" },
+      { "label": "Tiến Độ" },
+      { "label": "Đáng Tin Cậy" },
+      { "label": "Công Cụ Nhanh" }
     ]
   },
   "examInfo": {
@@ -275,6 +288,14 @@
       "menuOpen": "Mở menu",
       "home": "Trang chủ Drive Pass",
       "languageSelect": "Chọn ngôn ngữ"
+    },
+    "storeBadge": {
+      "appStoreLabel": "Tải về trên",
+      "appStoreName": "App Store",
+      "appStoreAria": "Tải về trên App Store",
+      "googlePlayLabel": "Tải về trên",
+      "googlePlayName": "Google Play",
+      "googlePlayAria": "Tải về trên Google Play"
     },
     "examLabels": {
       "questionCount": "Số câu hỏi",
@@ -338,7 +359,7 @@
       "sections": [
         {
           "heading": "Mô tả dịch vụ",
-          "content": "Drive Pass là ứng dụng ôn thi lý thuyết bằng lái xe Đài Loan, cung cấp hai phiên bản riêng biệt: phiên bản ô tô và phiên bản xe máy. Ứng dụng bao gồm các tính năng như luyện tập theo danh mục, thi thử, thuật toán ôn tập SM-2, thử thách hằng ngày, sổ câu sai và dự đoán tỷ lệ đậu. Nội dung ngân hàng câu hỏi được lấy từ bộ đề công khai của Cục Đường bộ, Bộ Giao thông Vận tải Đài Loan (MOTC)."
+          "content": "Drive Pass là ứng dụng ôn thi lý thuyết bằng lái xe Đài Loan, cung cấp hai phiên bản riêng biệt: phiên bản ô tô và phiên bản xe máy. Ứng dụng bao gồm các tính năng như luyện tập theo danh mục, thi thử, thuật toán ôn tập thông minh, thử thách hằng ngày, sổ câu sai và dự đoán tỷ lệ đậu. Nội dung ngân hàng câu hỏi được lấy từ bộ đề công khai của Cục Đường bộ, Bộ Giao thông Vận tải Đài Loan (MOTC)."
         },
         {
           "heading": "Điều kiện sử dụng",
@@ -381,12 +402,12 @@
   },
   "aboutPage": {
     "title": "Về Drive Pass",
-    "mission": "Chúng tôi tin rằng mỗi người đều xứng đáng có một người đồng hành ôn thi thông minh. Drive Pass kết hợp thuật toán lặp lại theo khoảng cách SM-2 với giao diện trực quan, biến việc ôn thi lý thuyết bằng lái từ học thuộc lòng đơn điệu thành một hành trình học tập có hệ thống. Dù bạn sử dụng ngôn ngữ nào, chúng tôi đều giúp bạn vượt qua kỳ thi lý thuyết bằng lái xe tại Đài Loan.",
+    "mission": "Chúng tôi tin rằng mỗi người đều xứng đáng có một người đồng hành ôn thi thông minh. Drive Pass kết hợp thuật toán ôn tập thông minh với giao diện trực quan, biến việc ôn thi lý thuyết bằng lái từ học thuộc lòng đơn điệu thành một hành trình học tập có hệ thống. Dù bạn sử dụng ngôn ngữ nào, chúng tôi đều giúp bạn vượt qua kỳ thi lý thuyết bằng lái xe tại Đài Loan.",
     "productsTitle": "Sản phẩm của chúng tôi",
     "carName": "Drive Pass Ô tô",
-    "carDescription": "Giải pháp ôn thi lý thuyết bằng lái ô tô Đài Loan toàn diện. Thi thử 40 câu, luyện tập theo danh mục, sổ câu sai, ôn tập SM-2, thử thách hằng ngày, bản đồ trường dạy lái xe.",
+    "carDescription": "Giải pháp ôn thi lý thuyết bằng lái ô tô Đài Loan toàn diện. Thi thử 40 câu, luyện tập theo danh mục, sổ câu sai, ôn tập thông minh, thử thách hằng ngày, bản đồ trường dạy lái xe.",
     "motoName": "Drive Pass Xe máy",
-    "motoDescription": "Giải pháp ôn thi lý thuyết bằng lái xe máy Đài Loan toàn diện. Thi thử 50 câu, luyện tập theo danh mục, sổ câu sai, ôn tập SM-2, thử thách hằng ngày, video nhận thức nguy hiểm.",
+    "motoDescription": "Giải pháp ôn thi lý thuyết bằng lái xe máy Đài Loan toàn diện. Thi thử 50 câu, luyện tập theo danh mục, sổ câu sai, ôn tập thông minh, thử thách hằng ngày, video nhận thức nguy hiểm.",
     "whyTitle": "Tại sao chọn Drive Pass",
     "highlights": [
       {
@@ -395,7 +416,7 @@
       },
       {
         "title": "Ôn tập khoa học",
-        "description": "Thuật toán SM-2 sắp xếp thời điểm ôn tập tối ưu"
+        "description": "Thuật toán ôn tập thông minh sắp xếp thời điểm ôn tập tối ưu"
       },
       {
         "title": "5 ngôn ngữ",

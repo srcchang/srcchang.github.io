@@ -18,8 +18,6 @@
     "questionsCount": "2,500+",
     "languages": "Languages Supported",
     "languagesCount": "5",
-    "achievements": "Achievement Badges",
-    "achievementsCount": "14",
     "platforms": "Dual Platform",
     "platformsLabel": "iOS + Android"
   },
@@ -34,8 +32,7 @@
       "tags": [
         "Traffic Regulations",
         "Traffic Signs",
-        "SM-2 Review",
-        "Achievement System"
+        "Smart Review"
       ]
     },
     "moto": {
@@ -48,7 +45,7 @@
         "Motorcycle Regulations",
         "Situational Questions",
         "Hazard Perception Videos",
-        "SM-2 Review"
+        "Smart Review"
       ]
     }
   },
@@ -58,33 +55,28 @@
     "items": [
       {
         "icon": "brain",
-        "title": "SM-2 Smart Review",
+        "title": "Smart Review",
         "description": "Based on the SuperMemo spaced repetition algorithm, the app automatically schedules the optimal time to review each question. Questions you get wrong appear more frequently, while questions you get right are spaced further apart — so you spend your time where it matters most."
       },
       {
-        "icon": "bar-chart",
+        "icon": "gauge",
         "title": "Pass Rate Prediction",
         "description": "Your real-time pass rate is calculated by combining your mock exam scores, practice accuracy, and question bank coverage. No more guessing whether you're ready — the numbers tell you."
       },
       {
-        "icon": "target",
-        "title": "Daily Challenge & Pre-Exam Sprint",
-        "description": "10 questions every day to keep you sharp. Activate Sprint Mode before your exam, and a three-tier recommendation engine automatically selects the questions you need most."
+        "icon": "calendar-clock",
+        "title": "Daily Challenge",
+        "description": "10 questions daily with smart review priority, dynamically adjusting review and new question ratios"
       },
       {
-        "icon": "file-text",
+        "icon": "clipboard-check",
         "title": "Mock Exam",
         "description": "100% faithful to the real exam format — timed, auto-submitted, with per-question review afterward. A full simulation so you walk in confident on exam day."
       },
       {
-        "icon": "rotate-ccw",
+        "icon": "book-marked",
         "title": "Wrong Answer Notebook",
-        "description": "Automatically saves every question you answer incorrectly. Filter, sort, and redo them in bulk. Paired with the SM-2 algorithm to precisely target your weak spots."
-      },
-      {
-        "icon": "trophy",
-        "title": "Achievement System",
-        "description": "14 achievement badges to keep you motivated. Track your growth across questions practiced, consecutive correct answers, high mock exam scores, and daily streaks."
+        "description": "Automatically saves every question you answer incorrectly. Filter, sort, and redo them in bulk. Paired with the smart review algorithm to precisely target your weak spots."
       }
     ]
   },
@@ -150,24 +142,24 @@
         "description": "Practice across 4 categories in order, with progress tracking and the ability to resume where you left off"
       },
       {
-        "icon": "file-text",
+        "icon": "clipboard-check",
         "title": "Mock Exam",
         "description": "40 questions / 30 minutes, timed auto-submission with per-question review"
       },
       {
-        "icon": "rotate-ccw",
+        "icon": "book-marked",
         "title": "Wrong Answer Notebook",
         "description": "Automatically saves incorrect answers for bulk redo, with error count tracking"
       },
       {
         "icon": "brain",
-        "title": "SM-2 Review",
+        "title": "Smart Review",
         "description": "Spaced repetition algorithm schedules the optimal review time intelligently"
       },
       {
-        "icon": "target",
+        "icon": "calendar-clock",
         "title": "Daily Challenge",
-        "description": "10 questions per day — 20% review + 80% new questions"
+        "description": "10 questions daily, smart review priority, dynamic ratio"
       },
       {
         "icon": "map-pin",
@@ -200,30 +192,51 @@
         "description": "Practice across 5 categories in order, including situational questions"
       },
       {
-        "icon": "file-text",
+        "icon": "clipboard-check",
         "title": "Mock Exam",
         "description": "50 questions / 40 minutes, timed auto-submission with per-question review"
       },
       {
-        "icon": "rotate-ccw",
+        "icon": "book-marked",
         "title": "Wrong Answer Notebook",
         "description": "Automatically saves incorrect answers for bulk redo, with error count tracking"
       },
       {
         "icon": "brain",
-        "title": "SM-2 Review",
+        "title": "Smart Review",
         "description": "Spaced repetition algorithm schedules the optimal review time intelligently"
       },
       {
-        "icon": "target",
+        "icon": "calendar-clock",
         "title": "Daily Challenge",
-        "description": "10 questions per day — 20% review + 80% new questions"
+        "description": "10 questions daily, smart review priority, dynamic ratio"
       },
       {
         "icon": "video",
         "title": "Hazard Perception Videos",
         "description": "Real scenario video questions to train your driving hazard awareness"
       }
+    ]
+  },
+  "screenshots": {
+    "car": [
+      { "label": "Study Dashboard" },
+      { "label": "Multilingual" },
+      { "label": "Mock Exam" },
+      { "label": "Smart Review" },
+      { "label": "Practice" },
+      { "label": "Dashboard" },
+      { "label": "Driving Schools" }
+    ],
+    "moto": [
+      { "label": "Study Dashboard" },
+      { "label": "Practice" },
+      { "label": "Multilingual" },
+      { "label": "Mock Exam" },
+      { "label": "Smart Review" },
+      { "label": "Dashboard" },
+      { "label": "Trusted" },
+      { "label": "Quick Tools" }
     ]
   },
   "examInfo": {
@@ -275,6 +288,14 @@
       "menuOpen": "Open menu",
       "home": "Drive Pass home",
       "languageSelect": "Select language"
+    },
+    "storeBadge": {
+      "appStoreLabel": "Download on the",
+      "appStoreName": "App Store",
+      "appStoreAria": "Download on the App Store",
+      "googlePlayLabel": "Get it on",
+      "googlePlayName": "Google Play",
+      "googlePlayAria": "Get it on Google Play"
     },
     "examLabels": {
       "questionCount": "Questions",
@@ -338,7 +359,7 @@
       "sections": [
         {
           "heading": "Service Description",
-          "content": "Drive Pass is a Taiwan driver's license written test preparation app available in two separate apps: Car Edition and Motorcycle Edition. Features include question bank practice, mock exams, wrong answer notebook, SM-2 spaced repetition review, daily challenges, and more. The question bank content is sourced from the official question pool published by the Directorate General of Highways, MOTC."
+          "content": "Drive Pass is a Taiwan driver's license written test preparation app available in two separate apps: Car Edition and Motorcycle Edition. Features include question bank practice, mock exams, wrong answer notebook, smart review, daily challenges, and more. The question bank content is sourced from the official question pool published by the Directorate General of Highways, MOTC."
         },
         {
           "heading": "Eligibility",
@@ -381,12 +402,12 @@
   },
   "aboutPage": {
     "title": "About Drive Pass",
-    "mission": "We believe everyone deserves a smart study companion. Drive Pass combines the science of SM-2 spaced repetition with an intuitive user experience, turning driver's license test prep from painful memorization into a structured learning journey. No matter what language you speak, we want to help you pass Taiwan's driver's license written test.",
+    "mission": "We believe everyone deserves a smart study companion. Drive Pass combines the science of spaced repetition with an intuitive user experience, turning driver's license test prep from painful memorization into a structured learning journey. No matter what language you speak, we want to help you pass Taiwan's driver's license written test.",
     "productsTitle": "Our Products",
     "carName": "Drive Pass Car",
-    "carDescription": "Complete preparation for Taiwan's car driver's license written test. Features 40-question mock exams, categorized practice, wrong answer notebook, SM-2 smart review, daily challenges, and a driving school map.",
+    "carDescription": "Complete preparation for Taiwan's car driver's license written test. Features 40-question mock exams, categorized practice, wrong answer notebook, smart review, daily challenges, and a driving school map.",
     "motoName": "Drive Pass Moto",
-    "motoDescription": "Complete preparation for Taiwan's motorcycle driver's license written test. Features 50-question mock exams, categorized practice, wrong answer notebook, SM-2 smart review, daily challenges, and exclusive hazard perception video questions.",
+    "motoDescription": "Complete preparation for Taiwan's motorcycle driver's license written test. Features 50-question mock exams, categorized practice, wrong answer notebook, smart review, daily challenges, and exclusive hazard perception video questions.",
     "whyTitle": "Why Drive Pass",
     "highlights": [
       {
@@ -395,7 +416,7 @@
       },
       {
         "title": "Scientific Review Method",
-        "description": "SM-2 spaced repetition algorithm intelligently schedules optimal review times based on your performance."
+        "description": "Spaced repetition algorithm intelligently schedules optimal review times based on your performance."
       },
       {
         "title": "Five Languages Supported",
@@ -414,7 +435,7 @@
     "items": [
       {
         "question": "Is the app free?",
-        "answer": "Core features are completely free! This includes the full question bank, mock exams, wrong answer notebook, SM-2 smart review, and daily challenges. You can remove ads with a one-time in-app purchase."
+        "answer": "Core features are completely free! This includes the full question bank, mock exams, wrong answer notebook, smart review, and daily challenges. You can remove ads with a one-time in-app purchase."
       },
       {
         "question": "Which languages are supported?",

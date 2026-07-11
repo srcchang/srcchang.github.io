@@ -12,6 +12,7 @@ import CarIcon from '../assets/app-icon-car.png';
 import MotoIcon from '../assets/app-icon-moto.png';
 import { getTranslations, t } from '../i18n/translations';
 import type { Locale } from '../i18n/config';
+import { withBase } from '../i18n/config';
 
 interface Props {
   variant: 'car' | 'moto';
@@ -24,7 +25,7 @@ const tr = getTranslations(locale as Locale);
 const isCar = variant === 'car';
 const pageKey = isCar ? 'carPage' : 'motoPage';
 const crossVariant = isCar ? 'moto' : 'car';
-const crossPath = `/${locale}/${crossVariant}`;
+const crossPath = withBase(`/${locale}/${crossVariant}`);
 
 const pageTitle = t(tr, `${pageKey}.title`);
 const pageSubtitle = t(tr, `${pageKey}.subtitle`);
@@ -74,7 +75,7 @@ const exclusiveBadgeBg = isCar ? 'bg-car' : 'bg-moto';
       </p>
 
       <div class="mt-8">
-        <DownloadCTA locale={locale} size="lg" />
+        <DownloadCTA locale={locale} size="lg" variant={variant} />
       </div>
     </div>
   </section>
@@ -156,7 +157,7 @@ const exclusiveBadgeBg = isCar ? 'bg-car' : 'bg-moto';
         {t(tr, 'brand.cta')}
       </p>
       <div class="mt-6">
-        <DownloadCTA locale={locale} size="lg" />
+        <DownloadCTA locale={locale} size="lg" variant={variant} />
       </div>
     </div>
   </section>

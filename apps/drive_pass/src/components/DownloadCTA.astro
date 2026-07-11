@@ -1,50 +1,35 @@
 ---
 import { getTranslations, t } from '../i18n/translations';
 import type { Locale } from '../i18n/config';
-import Icon from './Icon.astro';
+import StoreBadge from './StoreBadge.astro';
 
 interface Props {
   locale: string;
   size?: 'sm' | 'lg';
+  variant?: 'car' | 'moto';
 }
 
-const { locale, size = 'lg' } = Astro.props;
+const { locale, size = 'lg', variant } = Astro.props;
 const tr = getTranslations(locale as Locale);
-
-const padding = size === 'lg' ? 'px-8 py-4 text-lg' : 'px-5 py-2.5 text-sm';
-const iconSize = size === 'lg' ? '22' : '18';
-// TODO: App 上架後把 href="#download" 換成實際 App Store / Google Play 連結
-//       （目前全站無 #download 區塊，按鈕為 placeholder）
 ---
 
-<div class="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-  <!-- Car (App Store) button -->
-  <a
-    href="#download"
-    class:list={[
-      'inline-flex items-center gap-2 rounded-xl font-semibold text-white shadow-lg transition-all',
-      'bg-gradient-to-r from-car-deep to-car',
-      'hover:scale-[1.02] hover:shadow-[0_8px_24px_rgba(249,115,22,0.4)]',
-      padding,
-    ]}
-    aria-label={t(tr, 'common.downloadCar')}
-  >
-    <Icon name="car" size={iconSize} />
-    {t(tr, 'common.downloadCar')}
-  </a>
-
-  <!-- Moto (Google Play) button -->
-  <a
-    href="#download"
-    class:list={[
-      'inline-flex items-center gap-2 rounded-xl font-semibold text-white shadow-lg transition-all',
-      'bg-gradient-to-r from-moto-deep to-moto',
-      'hover:scale-[1.02] hover:shadow-[0_8px_24px_rgba(139,92,246,0.4)]',
-      padding,
-    ]}
-    aria-label={t(tr, 'common.downloadMoto')}
-  >
-    <Icon name="motorcycle" size={iconSize} />
-    {t(tr, 'common.downloadMoto')}
-  </a>
+<div class="flex flex-col items-center gap-6 sm:flex-row sm:justify-center sm:gap-8">
+  {(!variant || variant === 'car') &&
+    <div class="flex flex-col items-center gap-3">
+      <span class="text-sm font-medium text-text-secondary">{t(tr, 'common.downloadCar')}</span>
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        <StoreBadge locale={locale} platform="ios" href="https://apps.apple.com/app/id6760884522" size={size} />
+        <StoreBadge locale={locale} platform="android" href="https://play.google.com/store/apps/details?id=com.src.app.drivepass.car" size={size} />
+      </div>
+    </div>
+  }
+  {(!variant || variant === 'moto') &&
+    <div class="flex flex-col items-center gap-3">
+      <span class="text-sm font-medium text-text-secondary">{t(tr, 'common.downloadMoto')}</span>
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        <StoreBadge locale={locale} platform="ios" href="https://apps.apple.com/app/id6761984973" size={size} />
+        <StoreBadge locale={locale} platform="android" href="https://play.google.com/store/apps/details?id=com.src.app.drivepass.moto" size={size} />
+      </div>
+    </div>
+  }
 </div>

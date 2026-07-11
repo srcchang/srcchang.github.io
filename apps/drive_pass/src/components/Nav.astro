@@ -1,6 +1,7 @@
 ---
 import { getTranslations, t } from '../i18n/translations';
 import type { Locale } from '../i18n/config';
+import { withBase } from '../i18n/config';
 import ThemeToggle from './ThemeToggle.astro';
 import LanguageSwitcher from './LanguageSwitcher.astro';
 import LogoSvg from '../assets/svg/logo.svg?raw';
@@ -14,12 +15,12 @@ const { locale, currentPath } = Astro.props;
 const tr = getTranslations(locale as Locale);
 
 const navLinks = [
-  { key: 'nav.car',      href: `/${locale}/car`,       path: '/car' },
-  { key: 'nav.moto',     href: `/${locale}/moto`,      path: '/moto' },
-  { key: 'nav.examInfo', href: `/${locale}/exam-info`, path: '/exam-info' },
+  { key: 'nav.car',      href: withBase(`/${locale}/car`),       path: '/car' },
+  { key: 'nav.moto',     href: withBase(`/${locale}/moto`),      path: '/moto' },
+  { key: 'nav.examInfo', href: withBase(`/${locale}/exam-info`), path: '/exam-info' },
 ];
 
-// TODO: App 上架後把下載按鈕的 `/${locale}#download` 換成實際 store 連結（目前無此錨點）
+// 導向 Hero 區塊的下載按鈕區
 ---
 
 <nav
@@ -29,7 +30,7 @@ const navLinks = [
   <div class="mx-auto flex max-w-[1280px] items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
 
     <!-- ── Left: Logo + Brand name ────────────────────────────────────── -->
-    <a href={`/${locale}`} class="flex items-center gap-2 shrink-0" aria-label={t(tr, 'common.a11y.home')}>
+    <a href={withBase(`/${locale}`)} class="flex items-center gap-2 shrink-0" aria-label={t(tr, 'common.a11y.home')}>
       <span class="h-8 w-8" aria-hidden="true" set:html={LogoSvg} />
       <span class="text-lg font-bold text-text-primary">駕照通</span>
     </a>
@@ -50,7 +51,7 @@ const navLinks = [
 
       <!-- Download CTA -->
       <a
-        href={`/${locale}#download`}
+        href={withBase(`/${locale}/#download`)}
         class="ml-2 rounded-lg bg-gradient-to-r from-car to-moto px-4 py-3 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
       >
         {t(tr, 'nav.download')}
@@ -93,7 +94,7 @@ const navLinks = [
 
       <!-- Download CTA (mobile) -->
       <a
-        href={`/${locale}#download`}
+        href={withBase(`/${locale}/#download`)}
         class="mt-2 block rounded-lg bg-gradient-to-r from-car to-moto px-3 py-2.5 text-center text-sm font-semibold text-white"
       >
         {t(tr, 'nav.download')}
