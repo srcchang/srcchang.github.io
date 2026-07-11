@@ -27,3 +27,19 @@ export const ogLocale: Record<Locale, string> = {
   th: 'th_TH',
   id: 'id_ID',
 };
+
+/** Strip the leading `/{locale}` segment from a path, returning the rest (or '/'). */
+export function stripLocale(path: string): string {
+  return path.replace(/^\/[^\/]+/, '') || '/';
+}
+
+/**
+ * 部署 base 前綴（不含結尾斜線）。本站部署於子路徑 `/drive_pass`，
+ * 取自 astro.config 的 `base`（Vite 注入 import.meta.env.BASE_URL）。
+ */
+export const BASE_PATH = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+/** 將站內絕對路徑（以 `/` 開頭）加上部署 base 前綴。 */
+export function withBase(path: string): string {
+  return BASE_PATH + (path.startsWith('/') ? path : `/${path}`);
+}
