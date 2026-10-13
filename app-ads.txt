@@ -625,3 +625,16 @@ pubmatic.com, 163754, RESELLER, 5d62403b186f2ace
 smartadserver.com, 4721-OB, RESELLER, 060d053dcf45cbf3
 mobupps.com, c74d97b01eae257e44aa9d5bade97baf5001, RESELLER
 themediagrid.com,IRK975,RESELLER,35d5010d7789b49d
+adingo.jp, 31595, RESELLER
+pubnative.net, 1018308, RESELLER, d641df8625486a7b
+smaato.com, 1100060477, RESELLER, 07bcf65f187117b4
+smaato.com, 1100060475, RESELLER, 07bcf65f187117b4
+risecodes.com, 6a952bfdeb73a000010a2f63, RESELLER
+taurusx.com, 80657, RESELLER
+bid-matrix.com, d576e3be59319075, RESELLER
+adorphic.com, 4067, RESELLER
+vistars.ai, d7njl5dbhjes73cnd8tg, RESELLER
+gravite.net, c6f2f6708dc1f6e2ae1165c0a861b3b0, RESELLER
+openx.com, 564879531, RESELLER, 6a698e2ec38604c6
+conversantmedia.com, 101349, RESELLER, 03113cd04947736d
+krushmedia.com, AJxF6R719a9M6CaTvK, RESELLER
