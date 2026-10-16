@@ -638,3 +638,4 @@ gravite.net, c6f2f6708dc1f6e2ae1165c0a861b3b0, RESELLER
 openx.com, 564879531, RESELLER, 6a698e2ec38604c6
 conversantmedia.com, 101349, RESELLER, 03113cd04947736d
 krushmedia.com, AJxF6R719a9M6CaTvK, RESELLER
+insticator.com, e2d3e33c-9911-477a-8ae2-f059870c67c0, RESELLER, b3511ffcafb23a32
